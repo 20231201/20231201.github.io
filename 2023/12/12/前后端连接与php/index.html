@@ -1,0 +1,531 @@
+
+
+<!DOCTYPE html>
+<html lang="cn" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>前后端连接与php基础 - Hexo</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="PHP基础语法">
+  <meta name="author" content="20231201">
+  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_1445822_p6ry5n7lrr.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      loading: {
+        gif: '/images/theme/loading.gif',
+        lottie: ''
+      },
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: {
+          gif: '/images/theme/loading.gif',
+          lottie: ''
+        }
+      },
+      donate: {
+        enable: true,
+        alipay: 'https://pic.izhaoo.com/alipay.jpg',
+        wechat: 'https://pic.izhaoo.com/wechat.jpg'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: false
+      },
+      preview: {
+        background: {
+          default: '',
+          api: ''
+        },
+        motto: {
+          default: '我在开了灯的床头下，想问问自己的心啊。',
+          typing: true,
+          api: 'https://v2.jinrishici.com/one.json',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: true,
+        type: 'url',
+        image: 'https://pic.izhaoo.com/weapp-code.jpg',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        type: 'default'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      },
+      search: {
+        enable: false,
+        path: ''
+      }
+    }
+  </script>
+
+  
+
+  
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body class="lock-screen">
+  <div class="loading" id="loading"></div>
+  
+    
+
+
+  <nav class="navbar">
+    <div class="left">
+      
+        <i class="iconfont iconhome j-navbar-back-home"></i>
+      
+      
+        <i class="iconfont iconqrcode j-navbar-qrcode"></i>
+      
+      
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      
+      
+    </div>
+    <div class="center">前后端连接与php基础</div>
+    <div class="right">
+      <i class="iconfont iconmenu j-navbar-menu"></i>
+    </div>
+    
+      <div id="qrcode-navbar"></div>
+    
+  </nav>
+
+  
+  
+
+<nav class="menu">
+  <div class="menu-container">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> 首页</a>
+      </li><li class="menu-item">
+        <a href="/galleries/ " class="underline "> 摄影</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> 归档</a>
+      </li><li class="menu-item">
+        <a href="/tags/ " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/categories/ " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/theme/post-image.webp" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">前后端连接与php基础</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>December 12, 2023</span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>7</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        
+        <h2 id="PHP基础语法"><a href="#PHP基础语法" class="headerlink" title="PHP基础语法"></a>PHP基础语法</h2><?php
+
+// $b = "1";
+
+// $a = "1.0";
+
+// $s=$a.$s."bbb";//变量与变量之间用点连接
+
+// echo $s;
+
+// if($a ===$b){   //==弱类型匹配，只匹配值，不匹配类型,===是强类型
+
+//   echo 1;
+
+//   echo $a;
+
+// }else{
+
+//   echo 2;
+
+// }
+
+// $a=$_GET['a'];//可以从浏览器输入数据
+
+// echo $a;
+
+### for循环例题
+
+假设在笼子里有头数为8的动物，总共有22只脚。
+
+  $a=2;
+
+  $b=4;
+
+for ($i = 0; $i < 8; $i++) {
+
+  if($a*$i+$b*(8-$i)==22){
+
+​    $p=8-$i;
+
+​    echo '鸡='.$i.PHP_EOL,'兔='.$p;
+
+  }
+
+}
+
+n张5毛，y张1块，z张10块，t张50，x张100，问我手上一共有156钱，一共有多少种组合，满足我手上的钱
+
+  function countCombinations($n, $y, $z, $t, $x, $total) {  
+
+​    $combinations = 0;  
+
+​     
+
+​    // 遍历每种面额的组合数量  
+
+​    for ($i = 0; $i <= $n; $i++) {  
+
+​      for ($j = 0; $j <= $y; $j++) {  
+
+​        for ($k = 0; $k <= $z; $k++) {  
+
+​          for ($l = 0; $l <= $t; $l++) {  
+
+​            for ($m = 0; $m <= $x; $m++) {  
+
+​              // 计算当前组合的总金额  
+
+​              $currentTotal = $i * 0.5 + $j * 1 + $k * 10 + $l * 50 + $m * 100;  
+
+​               
+
+​              // 如果当前组合的总金额等于给定总金额，则增加组合数量  
+
+​              if ($currentTotal === $total) {  
+
+​                $combinations++;  
+
+​              }  
+
+​            }  
+
+​          }  
+
+​        }  
+
+​      }  
+
+​    }  
+
+​     
+
+​    return $combinations;  
+
+  }  
+
+   
+
+  // 给定总金额和每种面额的数量  
+
+  $total = 156;  
+
+  $n = 5; // 5毛的数量  
+
+  $y = 3; // 1块的数量  
+
+  $z = 2; // 10块的数量  
+
+  $t = 0; // 50的数量  
+
+  $x = 1; // 100的数量  
+
+  // 调用函数计算组合数量  
+
+  $combinations = countCombinations($n, $y, $z, $t, $x, $total);  
+
+  echo "满足条件的组合数量为：$combinations";  
+
+?>
+
+<h2 id="前后端连接"><a href="#前后端连接" class="headerlink" title="前后端连接"></a>前后端连接</h2><p>下载并安装phpstudy_pro与navicat</p>
+<h3 id="在phpstudy-pro中设置为："><a href="#在phpstudy-pro中设置为：" class="headerlink" title="在phpstudy_pro中设置为："></a>在phpstudy_pro中设置为：</h3><p><img    class="lazyload" data-original="/../img/%E5%90%AF%E5%8A%A8apache%E4%B8%8EMySQL.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">启动apache与MySQL</span></p>
+<p>并在数据库bin目录下设置：</p>
+<p><img    class="lazyload" data-original="/../img/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E7%BD%AE.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">数据库设置</span></p>
+<h3 id="打开navicat，连接："><a href="#打开navicat，连接：" class="headerlink" title="打开navicat，连接："></a>打开navicat，连接：</h3><p><img    class="lazyload" data-original="/../img/%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">连接数据库</span></p>
+<p>在连接的数据库中新建security数据库，并新建查询输入如下代码：</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br></pre></td><td class="code"><pre><code class="hljs txt">/*<br> Navicat Premium Data Transfer<br><br> Source Server         : 1<br> Source Server Type    : MySQL<br> Source Server Version : 50741<br> Source Host           : localhost:3306<br> Source Schema         : security<br><br> Target Server Type    : MySQL<br> Target Server Version : 50741<br> File Encoding         : 65001<br><br> Date: 12/12/2023 15:44:36<br>*/<br><br>SET NAMES utf8mb4;<br>SET FOREIGN_KEY_CHECKS = 0;<br><br>-- ----------------------------<br>-- Table structure for emails<br>-- ----------------------------<br>DROP TABLE IF EXISTS `emails`;<br>CREATE TABLE `emails`  (<br>  `id` int(3) NOT NULL AUTO_INCREMENT,<br>  `email_id` varchar(30) CHARACTER SET gbk COLLATE gbk_chinese_ci NOT NULL,<br>  PRIMARY KEY (`id`) USING BTREE<br>) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = gbk COLLATE = gbk_chinese_ci ROW_FORMAT = Dynamic;<br><br>-- ----------------------------<br>-- Records of emails<br>-- ----------------------------<br>INSERT INTO `emails` VALUES (1, &#x27;Dumb@dhakkan.com&#x27;);<br>INSERT INTO `emails` VALUES (2, &#x27;Angel@iloveu.com&#x27;);<br>INSERT INTO `emails` VALUES (3, &#x27;Dummy@dhakkan.local&#x27;);<br>INSERT INTO `emails` VALUES (4, &#x27;secure@dhakkan.local&#x27;);<br>INSERT INTO `emails` VALUES (5, &#x27;stupid@dhakkan.local&#x27;);<br>INSERT INTO `emails` VALUES (6, &#x27;superman@dhakkan.local&#x27;);<br>INSERT INTO `emails` VALUES (7, &#x27;batman@dhakkan.local&#x27;);<br>INSERT INTO `emails` VALUES (8, &#x27;admin@dhakkan.com&#x27;);<br><br>-- ----------------------------<br>-- Table structure for referers<br>-- ----------------------------<br>DROP TABLE IF EXISTS `referers`;<br>CREATE TABLE `referers`  (<br>  `id` int(3) NOT NULL AUTO_INCREMENT,<br>  `referer` varchar(256) CHARACTER SET gbk COLLATE gbk_chinese_ci NOT NULL,<br>  `ip_address` varchar(35) CHARACTER SET gbk COLLATE gbk_chinese_ci NOT NULL,<br>  PRIMARY KEY (`id`) USING BTREE<br>) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = gbk COLLATE = gbk_chinese_ci ROW_FORMAT = Dynamic;<br><br>-- ----------------------------<br>-- Table structure for uagents<br>-- ----------------------------<br>DROP TABLE IF EXISTS `uagents`;<br>CREATE TABLE `uagents`  (<br>  `id` int(3) NOT NULL AUTO_INCREMENT,<br>  `uagent` varchar(256) CHARACTER SET gbk COLLATE gbk_chinese_ci NOT NULL,<br>  `ip_address` varchar(35) CHARACTER SET gbk COLLATE gbk_chinese_ci NOT NULL,<br>  `username` varchar(20) CHARACTER SET gbk COLLATE gbk_chinese_ci NOT NULL,<br>  PRIMARY KEY (`id`) USING BTREE<br>) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = gbk COLLATE = gbk_chinese_ci ROW_FORMAT = Dynamic;<br><br>-- ----------------------------<br>-- Table structure for users<br>-- ----------------------------<br>DROP TABLE IF EXISTS `users`;<br>CREATE TABLE `users`  (<br>  `id` int(3) NOT NULL AUTO_INCREMENT,<br>  `username` varchar(20) CHARACTER SET gbk COLLATE gbk_chinese_ci NOT NULL,<br>  `password` varchar(20) CHARACTER SET gbk COLLATE gbk_chinese_ci NOT NULL,<br>  PRIMARY KEY (`id`) USING BTREE<br>) ENGINE = InnoDB AUTO_INCREMENT = 15 CHARACTER SET = gbk COLLATE = gbk_chinese_ci ROW_FORMAT = Dynamic;<br><br>-- ----------------------------<br>-- Records of users<br>-- ----------------------------<br>INSERT INTO `users` VALUES (1, &#x27;Dumb&#x27;, &#x27;Dumb&#x27;);<br>INSERT INTO `users` VALUES (2, &#x27;Angelina&#x27;, &#x27;I-kill-you&#x27;);<br>INSERT INTO `users` VALUES (3, &#x27;Dummy&#x27;, &#x27;p@ssword&#x27;);<br>INSERT INTO `users` VALUES (4, &#x27;secure&#x27;, &#x27;crappy&#x27;);<br>INSERT INTO `users` VALUES (5, &#x27;stupid&#x27;, &#x27;stupidity&#x27;);<br>INSERT INTO `users` VALUES (6, &#x27;superman&#x27;, &#x27;genious&#x27;);<br>INSERT INTO `users` VALUES (7, &#x27;batman&#x27;, &#x27;mob!le&#x27;);<br>INSERT INTO `users` VALUES (8, &#x27;admin&#x27;, &#x27;admin&#x27;);<br>INSERT INTO `users` VALUES (9, &#x27;admin1&#x27;, &#x27;admin1&#x27;);<br>INSERT INTO `users` VALUES (10, &#x27;admin2&#x27;, &#x27;admin2&#x27;);<br>INSERT INTO `users` VALUES (11, &#x27;admin3&#x27;, &#x27;admin3&#x27;);<br>INSERT INTO `users` VALUES (12, &#x27;dhakkan&#x27;, &#x27;dumbo&#x27;);<br>INSERT INTO `users` VALUES (14, &#x27;admin4&#x27;, &#x27;admin4&#x27;);<br><br>SET FOREIGN_KEY_CHECKS = 1;<br><br></code></pre></td></tr></table></figure>
+
+<p>此时可见该数据库中添加了四张表格。</p>
+<p><img    class="lazyload" data-original="/../img/navicat%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8%E6%A0%BC.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">navicat数据库表格</span></p>
+<h3 id="打开vscode，"><a href="#打开vscode，" class="headerlink" title="打开vscode，"></a>打开vscode，</h3><p>在phpstudy_pro的www目录下新建index.php与link.php文件</p>
+<p><img    class="lazyload" data-original="/../img/image-20231212202120426.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">index与link</span></p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs txt">//link.php<br>&lt;?php<br>header(&#x27;content-type: text/html; charset=utf-8&#x27;);<br> if(isset($_POST[&#x27;submit&#x27;]))&#123;<br>     $u = trim($_POST[&#x27;username&#x27;]);<br>     $p = trim($_POST[&#x27;password&#x27;]);<br>    $link=mysqli_connect(&quot;127.0.0.1&quot;,&quot;root&quot;,&quot;root&quot;,&quot;security&quot;)or exit(&quot;Error connecting&quot;);<br>      mysqli_query($link,&quot;set names utf8&quot;);<br>  $sql=  &quot;select * from users where username=&#x27;$u&#x27; and password=&#x27;$p&#x27;&quot;;<br>  $result=mysqli_query($link, $sql) ;<br>   $row=mysqli_fetch_array($result) ;<br> if($row)&#123;<br>   echo &quot;&lt;font size=&#x27;5&#x27; color= &#x27;#99FF00&#x27;&gt;&quot;;<br>   echo &#x27;Your Login name:&#x27;. $row[&#x27;username&#x27;].&quot;&lt;br&gt;&quot;;<br>   echo &#x27;Your Password:&#x27; .$row[&#x27;password&#x27;];<br>   echo &quot;&lt;/font&gt;&quot;;<br> &#125;<br>&#125;<br>?&gt;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs txt">index.php<br>&lt;!DOCTYPE html&gt;<br>&lt;html lang=&quot;en&quot;&gt;<br>&lt;head&gt;<br>&lt;meta charset=&quot;utf-8&quot;&gt;<br>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0&quot;&gt;<br>&lt;title&gt;Document&lt;/title&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br> <br>&lt;form method=&quot;post&quot; action=&quot;link.php&quot;&gt;<br>&lt;tr&gt;&lt;td&gt;用户名: &lt;/td&gt;&lt;td&gt;&lt;input type=&quot;text&quot; name=&quot;username&quot;&gt;&lt;/td&gt;&lt;/tr&gt;<br>&lt;br&gt;<br>&lt;tr&gt;&lt;td&gt;密码:&lt;/td&gt;&lt;td&gt;&lt;input type=&quot;password&quot; name=&quot;password&quot;&gt;&lt;/td&gt;&lt;/tr&gt;<br>&lt;td&gt;&lt;input type=&quot;checkbox&quot; name=&quot;remeber&quot; value=&quot;yes&quot;&gt;记住密码&lt;/td&gt;&lt;br&gt;<br>&lt;td&gt;<br>&lt;input type=&quot;submit&quot; name=&quot;submit&quot; value=&quot;提交&quot;&gt;<br>&lt;/td&gt;<br>&lt;td&gt;&lt;input type=&quot;reset&quot; value=&quot;重置&quot;&gt;&lt;/td&gt;<br>&lt;/form&gt;<br> <br>&lt;/body&gt;<br>&lt;/html&gt;<br></code></pre></td></tr></table></figure>
+
+<p>测试运行检查是否连接到数据库，在输入正确的用户名与密码后正常登入。</p>
+<h3 id="完善页面"><a href="#完善页面" class="headerlink" title="完善页面"></a>完善页面</h3><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs txt">link.php<br>&lt;?php<br>header(&#x27;content-type: text/html; charset=utf-8&#x27;);<br>session_start();<br><br>if(isset($_POST[&#x27;submit&#x27;]))&#123;<br>    $u = trim($_POST[&#x27;username&#x27;]);<br>    $p = trim($_POST[&#x27;password&#x27;]);<br> $link=mysqli_connect(&quot;127.0.0.1&quot;,&quot;root&quot;,&quot;root&quot;,&quot;security&quot;)or exit(&quot;Error connecting&quot;);<br>      mysqli_query($link,&quot;set names utf8&quot;);<br>  $sql=  &quot;select * from users where username=&#x27;$u&#x27; and password=&#x27;$p&#x27;&quot;;<br>  $result=mysqli_query($link, $sql) ;<br>  if(mysqli_num_rows($result)&gt;=1)&#123;<br>        $_SESSION[&#x27;user&#x27;]=$u;       <br>        setcookie(&#x27;password&#x27;,$p,time()+7*12*60*60);<br>        header(&#x27;Location:zhuye.php&#x27;);<br>        exit();<br>    &#125;else&#123;<br>        echo &quot;&lt;br&gt;&quot;;<br>        echo &#x27;用户名或密码错误!请重新输入!&#x27;;<br>		//sleep(3);<br>		echo &#x27;&lt;h1&gt;&lt;a href=&quot;./index.php&quot;&gt;返回&lt;/a&gt;&lt;/h1&gt;&#x27;;<br>        &#125;<br>&#125;<br><br><br>?&gt;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs txt">zhuye.php<br>&lt;?php<br>session_start();<br>include(&quot;./comment.php&quot;);<br>include(&quot;./upload.php&quot;);<br>header(&#x27;Content-Type: text/html; charset=utf-8&#x27;);<br><br>if(isset($_SESSION[&#x27;user&#x27;]))&#123;<br>	echo &#x27;当前登录用户:&#x27;.$_SESSION[&#x27;user&#x27;].&#x27;&#x27;; <br>	<br><br><br>if (isset($_GET[&#x27;logout&#x27;])) &#123;<br>    // 清除会话数据<br>    session_unset();<br>    session_destroy();<br>    echo &quot;您已成功注销。&lt;br&gt;&quot;;<br>	header(&#x27;Location:index.php&#x27;);<br>&#125;<br><br><br>echo &#x27;&lt;h1&gt;&lt;a href=&quot;?logout=true&quot;&gt;注销&lt;/a&gt;&lt;/h1&gt;&#x27;;<br><br><br>&#125;else&#123;<br>echo &#x27;错误!&#x27;;<br>header(&#x27;Location:index.php&#x27;);<br>&#125;<br>?&gt;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs txt">upload.php<br>&lt;?php<br>echo &#x27;<br>&lt;form action=&quot;&quot; method=&quot;post&quot; enctype=&quot;multipart/form-data&quot;&gt;<br>&lt;label for=&quot;upload&quot;&gt;上传你的头像&lt;/label&gt;<br>&lt;input name=&quot;file&quot; id=&quot;upload&quot; type=&quot;file&quot; &gt;<br>&lt;label for=&quot;submit&quot;  &gt;文件上传&lt;/label&gt;<br>&lt;input name=&quot;submit&quot; id=&quot;submit&quot; type=&quot;submit&quot;&gt;<br>&lt;h1&gt;下面是接收到的文件&lt;/h1&gt;<br>&lt;/form&gt;<br>&#x27;;<br>header(&#x27;Content-Type: text/html; charset=utf-8&#x27;);<br>if(isset($_FILES[&quot;file&quot;]))&#123;<br>    $upload_dir = &quot;uploads&quot;;<br>    $file_name = $_FILES[&quot;file&quot;][&quot;name&quot;];<br>    $file_type = $_FILES[&quot;file&quot;][&quot;type&quot;];<br>    $file_size = $_FILES[&quot;file&quot;][&quot;size&quot;];<br>    $file_tmp = $_FILES[&quot;file&quot;][&quot;tmp_name&quot;];<br>    $target_path = $upload_dir.&#x27;/&#x27;.$file_name;<br>    if (move_uploaded_file($file_tmp, $target_path))&#123;<br>        echo &quot;上传成功&quot;.&quot;&lt;br&gt;&quot;;<br>        echo &quot;文件类型: &quot; . $file_type . &quot;&lt;br&gt;&quot;;<br>        echo &quot;文件大小: &quot; . ($file_size / 1024) . &quot; kB&lt;br&gt;&quot;;<br>        echo &quot;文件存储的位置: &quot; . $target_path;<br>    &#125;else&#123;<br>        echo &quot;上传失败&quot;.&quot;&lt;br&gt;&quot;;<br>    &#125;<br>	echo &quot;&lt;br/&gt;&quot;;<br>echo &quot;&lt;img src=&#x27;./$target_path.&#x27;&gt;&quot;;<br>&#125;<br>?&gt;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><code class="hljs txt">comment.php<br>&lt;!DOCTYPE html&gt;<br>&lt;html lang=&quot;en&quot;&gt;<br><br>&lt;head&gt;<br>    &lt;meta charset=&quot;UTF-8&quot;&gt;<br>    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;<br>    &lt;title&gt;Document&lt;/title&gt;<br>&lt;/head&gt;<br><br>&lt;body&gt;<br>    &lt;form method=&quot;post&quot; action=&quot;&quot;&gt;<br>        &lt;label for=&quot;comment&quot;&gt;发表评论&lt;/label&gt;&lt;br /&gt;<br>        &lt;textarea name=&quot;comment&quot; id=&quot;comment&quot; rows=&quot;10&quot; cols=&quot;80&quot;&gt;&lt;/textarea&gt;&lt;br /&gt;<br>        &lt;input type=&quot;submit&quot; name=&quot;submit&quot; value=&quot;提交评论&quot;&gt;<br>    &lt;/form&gt;<br>    &lt;h1&gt;历史评论&lt;/h1&gt;<br>    &lt;?php<br>    if ($_SERVER[&#x27;REQUEST_METHOD&#x27;] == &#x27;POST&#x27;) &#123;<br>        if (isset($_POST[&#x27;comment&#x27;]) &amp;&amp; !empty($_POST[&#x27;comment&#x27;])) &#123;<br>            $comment = $_POST[&#x27;comment&#x27;];<br>            $link = mysqli_connect(&quot;localhost&quot;, &quot;root&quot;, &quot;root&quot;, &quot;security&quot;) or exit(&quot;数据库连接失败！&quot;);<br>            mysqli_query($link, &quot;set names utf8&quot;);<br>            $ChaRu = &quot;insert INTO comments (comment) VALUES(&#x27;$comment&#x27;)&quot;;<br>            if (mysqli_query($link, $ChaRu)) &#123;<br>                echo &quot;&lt;p&gt;你的评论已成功保存到数据库。&lt;/p&gt;&quot;;<br>            &#125; else &#123;<br>                echo &quot;&lt;p style=&#x27;color: red;&#x27;&gt;保存评论时出错。&lt;/p&gt;&quot;;<br>            &#125;<br>            mysqli_close($link);<br>        &#125;<br>    &#125;<br>    // 显示最近的20条评论<br>    $link = mysqli_connect(&quot;localhost&quot;, &quot;root&quot;, &quot;root&quot;, &quot;security&quot;) or exit(&quot;数据库连接失败！&quot;);<br>    mysqli_query($link, &quot;set names utf8&quot;);<br><br>    $query = &quot;SELECT * FROM comments ORDER BY id DESC LIMIT 20&quot;;    <br>    $result = mysqli_query($link, $query);<br><br>    if ($result) &#123;<br>        echo &quot;&lt;h2&gt;最近的评论&lt;/h2&gt;&quot;;<br>        while ($row = mysqli_fetch_assoc($result)) &#123;<br>            echo &quot;&lt;p&gt;&#123;$row[&#x27;comment&#x27;]&#125;&lt;/p&gt;&quot;;<br>        &#125;<br>    &#125; else &#123;<br>        echo &quot;&lt;p style=&#x27;color: red;&#x27;&gt;获取评论时出错。&lt;/p&gt;&quot;;<br>    &#125;<br><br>    mysqli_close($link);<br>    ?&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;<br></code></pre></td></tr></table></figure>
+
+<p>同时在navicat的security数据库中新建表：comments，包含id和comment两个字段。</p>
+<p>comment：</p>
+<p><img    class="lazyload" data-original="/../img/%E8%AF%84%E8%AE%BA.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">评论</span></p>
+<p>upload</p>
+<p><img    class="lazyload" data-original="/../img/%E6%8F%90%E4%BA%A4%E6%96%87%E4%BB%B6.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">提交文件</span></p>
+
+      </section>
+      <section class="extra">
+        
+          <ul class="copyright">
+  
+    <li><strong>本文作者：</strong>20231201</li>
+    <li><strong>本文链接：</strong><a href="http://example.com/2023/12/12/%E5%89%8D%E5%90%8E%E7%AB%AF%E8%BF%9E%E6%8E%A5%E4%B8%8Ephp/index.html" title="http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;12&#x2F;12&#x2F;%E5%89%8D%E5%90%8E%E7%AB%AF%E8%BF%9E%E6%8E%A5%E4%B8%8Ephp&#x2F;index.html">http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;12&#x2F;12&#x2F;%E5%89%8D%E5%90%8E%E7%AB%AF%E8%BF%9E%E6%8E%A5%E4%B8%8Ephp&#x2F;index.html</a></li>
+    <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
+  
+</ul>
+        
+        
+          <section class="donate">
+  <div id="qrcode-donate">
+    <img   class="lazyload" data-original="https://pic.izhaoo.com/alipay.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        
+        
+  <nav class="nav">
+    <a></a>
+    <a href="/2023/12/07/%E7%BD%91%E5%AE%89%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9F%9F%E5%90%8D%EF%BC%8C%E7%AB%AF%E5%8F%A3%E7%AD%89%EF%BC%89vue%E5%9F%BA%E7%A1%80/">网安基础（网址解析，汇编语言等）vue基础<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#PHP%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95"><span class="toc-text">PHP基础语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E5%90%8E%E7%AB%AF%E8%BF%9E%E6%8E%A5"><span class="toc-text">前后端连接</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8phpstudy-pro%E4%B8%AD%E8%AE%BE%E7%BD%AE%E4%B8%BA%EF%BC%9A"><span class="toc-text">在phpstudy_pro中设置为：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%93%E5%BC%80navicat%EF%BC%8C%E8%BF%9E%E6%8E%A5%EF%BC%9A"><span class="toc-text">打开navicat，连接：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%93%E5%BC%80vscode%EF%BC%8C"><span class="toc-text">打开vscode，</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%8C%E5%96%84%E9%A1%B5%E9%9D%A2"><span class="toc-text">完善页面</span></a></li></ol></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"><a 
+        href="tencent://message/?Menu=yes&uin=894519210 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#12B7F5'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconQQ "></i>
+      </a><a 
+        href="javascript:; "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#09BB07'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconwechat-fill "></i>
+      </a><a 
+        href="https://www.instagram.com/izhaoo/ "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#DA2E76'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconinstagram "></i>
+      </a><a 
+        href="https://github.com/zhaoo "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#9f7be1'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  icongithub-fill "></i>
+      </a><a 
+        href="mailto:izhaoo@163.com "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color=#FF3B00" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconmail"></i>
+      </a></div>
+  
+    <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+  
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

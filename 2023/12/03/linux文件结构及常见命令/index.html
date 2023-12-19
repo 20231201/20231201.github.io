@@ -201,7 +201,7 @@
     <div class="head-info">
       <span class="post-info-item"><i class="iconfont iconcalendar"></i>December 03, 2023</span>
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>7770</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>7789</span>
     </div>
   </div>
 </section>
@@ -309,33 +309,52 @@
 <p>find命令</p>
 <p>find是一个基于查找的功能非常强大的命令，相对而言，它的使用也相对较为复杂，参数也比较多，所以在这里将给把它们分类列出，它的基本语法如下：</p>
 <ol>
-<li>find [PATH] [option] [action] </li>
-<li></li>
-<li># 与时间有关的参数： </li>
-<li>-mtime n : n为数字，意思为在n天之前的“一天内”被更改过的文件； </li>
-<li>-mtime +n : 列出在n天之前（不含n天本身）被更改过的文件名； </li>
-<li>-mtime -n : 列出在n天之内（含n天本身）被更改过的文件名； </li>
-<li>-newer file : 列出比file还要新的文件名 </li>
-<li># 例如： </li>
-<li>find &#x2F;root -mtime 0 <!--# 在当前目录下查找今天之内有改动的文件-->  </li>
-<li># 与用户或用户组名有关的参数： </li>
-<li>-user name : 列出文件所有者为name的文件</li>
-<li>-group name : 列出文件所属用户组为name的文件</li>
-<li>-uid n : 列出文件所有者为用户ID为n的文件</li>
-<li>-gid n : 列出文件所属用户组为用户组ID为n的文件 </li>
-<li># 例如： </li>
-<li>find &#x2F;home&#x2F;ljianhui -user ljianhui <!--# 在目录/home/ljianhui中找出所有者为ljianhui的文件--> </li>
-<li># 与文件权限及名称有关的参数： </li>
-<li>-name filename ：找出文件名为filename的文件</li>
-<li>-size [+-]SIZE ：找出比SIZE还要大（+）或小（-）的文件</li>
-<li>-tpye TYPE ：查找文件的类型为TYPE的文件，TYPE的值主要有：一般文件（f)、设备文件（b、c）、 目录（d）、连接文件（l）、socket（s）、FIFO管道文件（p）；</li>
-<li>-perm mode ：查找文件权限刚好等于mode的文件，mode用数字表示，如0755；</li>
-<li>-perm -mode ：查找文件权限必须要全部包括mode权限的文件，mode用数字表示 </li>
-<li>-perm +mode ：查找文件权限包含任一mode的权限的文件，mode用数字表示</li>
-<li># 例如： </li>
-<li>find &#x2F; -name passwd <!--# 查找文件名为passwd的文件--> </li>
-<li>find . -perm 0755 <!--# 查找当前目录中文件权限的0755的文件--> </li>
-<li>find . -size +12k <!--# 查找当前目录中大于12KB的文件，注意c表示byte--></li>
+<li><p>find [PATH] [option] [action] </p>
+<p># 与时间有关的参数： </p>
+</li>
+<li><p>-mtime n : n为数字，意思为在n天之前的“一天内”被更改过的文件； </p>
+</li>
+<li><p>-mtime +n : 列出在n天之前（不含n天本身）被更改过的文件名； </p>
+</li>
+<li><p>-mtime -n : 列出在n天之内（含n天本身）被更改过的文件名； </p>
+</li>
+<li><p>-newer file : 列出比file还要新的文件名 </p>
+<p># 例如： </p>
+</li>
+<li><p>find &#x2F;root -mtime 0 <!--# 在当前目录下查找今天之内有改动的文件-->  </p>
+<p># 与用户或用户组名有关的参数： </p>
+</li>
+<li><p>-user name : 列出文件所有者为name的文件</p>
+</li>
+<li><p>-group name : 列出文件所属用户组为name的文件</p>
+</li>
+<li><p>-uid n : 列出文件所有者为用户ID为n的文件</p>
+</li>
+<li><p>-gid n : 列出文件所属用户组为用户组ID为n的文件 </p>
+<p># 例如： </p>
+</li>
+<li><p>find &#x2F;home&#x2F;ljianhui -user ljianhui <!--# 在目录/home/ljianhui中找出所有者为ljianhui的文件--> </p>
+<p># 与文件权限及名称有关的参数： </p>
+</li>
+<li><p>-name filename ：找出文件名为filename的文件</p>
+</li>
+<li><p>-size [+-]SIZE ：找出比SIZE还要大（+）或小（-）的文件</p>
+</li>
+<li><p>-tpye TYPE ：查找文件的类型为TYPE的文件，TYPE的值主要有：一般文件（f)、设备文件（b、c）、 目录（d）、连接文件（l）、socket（s）、FIFO管道文件（p）；</p>
+</li>
+<li><p>-perm mode ：查找文件权限刚好等于mode的文件，mode用数字表示，如0755；</p>
+</li>
+<li><p>-perm -mode ：查找文件权限必须要全部包括mode权限的文件，mode用数字表示 </p>
+</li>
+<li><p>-perm +mode ：查找文件权限包含任一mode的权限的文件，mode用数字表示</p>
+<p># 例如： </p>
+</li>
+<li><p>find &#x2F; -name passwd <!--# 查找文件名为passwd的文件--> </p>
+</li>
+<li><p>find . -perm 0755 <!--# 查找当前目录中文件权限的0755的文件--> </p>
+</li>
+<li><p>find . -size +12k <!--# 查找当前目录中大于12KB的文件，注意c表示byte--></p>
+</li>
 </ol>
 <p><code>ip addr</code>:查看IP</p>
 <p>passwd：（更改用户密码)  passwd root:(指定更改用户密码）<br>touch：（创建文件）   touch  &#x2F;x&#x2F;x&#x2F;x：（创建在同意目录下多个文件）<br>bc：（计算器）quit：退出计算器<br>logout：（注销） reboot；（重启）     init 6 :(重启） inito：（关机）<br>echo：（回显内容）<br>wc -l：（查看文件数量或文件行数）<br>tail：（查看文件倒数十列）    tac:(文件倒序） head：（查看文件前十行）<br> head -。：（加-几就显示几行）</p>

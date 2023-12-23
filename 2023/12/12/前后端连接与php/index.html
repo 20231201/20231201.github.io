@@ -11,7 +11,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="google" content="notranslate" />
   
-  <meta name="description" content="PHP基础语法">
+  <meta name="description" content="PHP基础语法&lt;?php
+// $b = &qu...">
   <meta name="author" content="20231201">
   <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
   <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
@@ -200,133 +201,72 @@
     <div class="head-info">
       <span class="post-info-item"><i class="iconfont iconcalendar"></i>December 12, 2023</span>
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>7</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>43961</span>
     </div>
   </div>
 </section>
     <section class="main">
       <section class="content">
         
-        <h2 id="PHP基础语法"><a href="#PHP基础语法" class="headerlink" title="PHP基础语法"></a>PHP基础语法</h2><?php
-
-// $b = "1";
-
-// $a = "1.0";
-
-// $s=$a.$s."bbb";//变量与变量之间用点连接
-
-// echo $s;
-
-// if($a ===$b){   //==弱类型匹配，只匹配值，不匹配类型,===是强类型
-
-//   echo 1;
-
-//   echo $a;
-
-// }else{
-
-//   echo 2;
-
-// }
-
-// $a=$_GET['a'];//可以从浏览器输入数据
-
-// echo $a;
-
-### for循环例题
-
-假设在笼子里有头数为8的动物，总共有22只脚。
-
-  $a=2;
-
-  $b=4;
-
-for ($i = 0; $i < 8; $i++) {
-
-  if($a*$i+$b*(8-$i)==22){
-
-​    $p=8-$i;
-
-​    echo '鸡='.$i.PHP_EOL,'兔='.$p;
-
-  }
-
-}
-
-n张5毛，y张1块，z张10块，t张50，x张100，问我手上一共有156钱，一共有多少种组合，满足我手上的钱
-
-  function countCombinations($n, $y, $z, $t, $x, $total) {  
-
-​    $combinations = 0;  
-
-​     
-
-​    // 遍历每种面额的组合数量  
-
-​    for ($i = 0; $i <= $n; $i++) {  
-
-​      for ($j = 0; $j <= $y; $j++) {  
-
-​        for ($k = 0; $k <= $z; $k++) {  
-
-​          for ($l = 0; $l <= $t; $l++) {  
-
-​            for ($m = 0; $m <= $x; $m++) {  
-
-​              // 计算当前组合的总金额  
-
-​              $currentTotal = $i * 0.5 + $j * 1 + $k * 10 + $l * 50 + $m * 100;  
-
-​               
-
-​              // 如果当前组合的总金额等于给定总金额，则增加组合数量  
-
-​              if ($currentTotal === $total) {  
-
-​                $combinations++;  
-
-​              }  
-
-​            }  
-
-​          }  
-
-​        }  
-
-​      }  
-
-​    }  
-
-​     
-
-​    return $combinations;  
-
-  }  
-
-   
-
-  // 给定总金额和每种面额的数量  
-
-  $total = 156;  
-
-  $n = 5; // 5毛的数量  
-
-  $y = 3; // 1块的数量  
-
-  $z = 2; // 10块的数量  
-
-  $t = 0; // 50的数量  
-
-  $x = 1; // 100的数量  
-
-  // 调用函数计算组合数量  
-
-  $combinations = countCombinations($n, $y, $z, $t, $x, $total);  
-
-  echo "满足条件的组合数量为：$combinations";  
-
-?>
-
+        <h2 id="PHP基础语法"><a href="#PHP基础语法" class="headerlink" title="PHP基础语法"></a>PHP基础语法</h2><p><code>&lt;?php</code></p>
+<p><code>// $b = &quot;1&quot;;</code></p>
+<p><code>// $a = &quot;1.0&quot;;</code></p>
+<p><code>// $s=$a.$s.&quot;bbb&quot;;//变量与变量之间用点连接</code></p>
+<p><code>// echo $s;</code></p>
+<p><code>// if($a ===$b)&#123;   //==弱类型匹配，只匹配值，不匹配类型,===是强类型</code></p>
+<p><code>//   echo 1;</code></p>
+<p><code>//   echo $a;</code></p>
+<p><code>// &#125;else&#123;</code></p>
+<p><code>//   echo 2;</code></p>
+<p><code>// &#125;</code></p>
+<p><code>// $a=$_GET[&#39;a&#39;];//可以从浏览器输入数据</code></p>
+<p><code>// echo $a;</code></p>
+<h3 id="for循环例题"><a href="#for循环例题" class="headerlink" title="for循环例题"></a>for循环例题</h3><p>假设在笼子里有头数为8的动物，总共有22只脚。</p>
+<p>  <code>$a=2;</code></p>
+<p>  <code>$b=4;</code></p>
+<p><code>for ($i = 0; $i &lt; 8; $i++) &#123;</code></p>
+<p>  <code>if($a*$i+$b*(8-$i)==22)&#123;</code></p>
+<p>​    <code>$p=8-$i;</code></p>
+<p>​    <code>echo &#39;鸡=&#39;.$i.PHP_EOL,&#39;兔=&#39;.$p;</code></p>
+<p>  <code>&#125;</code></p>
+<p><code>&#125;</code></p>
+<p>n张5毛，y张1块，z张10块，t张50，x张100，问我手上一共有156钱，一共有多少种组合，满足我手上的钱</p>
+<p>  <code>function countCombinations($n, $y, $z, $t, $x, $total) &#123;</code>  </p>
+<p>​    <code>$combinations = 0;</code>  </p>
+<p>&#96;&#96;     </p>
+<p>​    <code>// 遍历每种面额的组合数量</code>  </p>
+<p>​    <code>for ($i = 0; $i &lt;= $n; $i++) &#123;</code>  </p>
+<p>​      <code>for ($j = 0; $j &lt;= $y; $j++) &#123;</code>  </p>
+<p>​        <code>for ($k = 0; $k &lt;= $z; $k++) &#123;</code>  </p>
+<p>​          <code>for ($l = 0; $l &lt;= $t; $l++) &#123;</code>  </p>
+<p>​            <code>for ($m = 0; $m &lt;= $x; $m++) &#123;</code>  </p>
+<p>​              <code>// 计算当前组合的总金额</code>  </p>
+<p>​              <code>$currentTotal = $i * 0.5 + $j * 1 + $k * 10 + $l * 50 + $m * 100;</code>  </p>
+<p>&#96;&#96;               </p>
+<p>​              <code>// 如果当前组合的总金额等于给定总金额，则增加组合数量</code>  </p>
+<p>​              <code>if ($currentTotal === $total) &#123;</code>  </p>
+<p>​                <code>$combinations++;</code>  </p>
+<p>​              <code>&#125;</code>  </p>
+<p>​            <code>&#125;</code>  </p>
+<p>​          <code>&#125;</code>  </p>
+<p>​        <code>&#125;</code>  </p>
+<p>​      <code>&#125;</code>  </p>
+<p>​    <code>&#125;</code>  </p>
+<p>&#96;&#96;     </p>
+<p>​    <code>return $combinations;</code>  </p>
+<p>  <code>&#125;</code>  </p>
+<p>&#96;&#96;   </p>
+<p>  <code>// 给定总金额和每种面额的数量</code>  </p>
+<p>  <code>$total = 156;</code>  </p>
+<p>  <code>$n = 5; // 5毛的数量</code>  </p>
+<p>  <code>$y = 3; // 1块的数量</code>  </p>
+<p>  <code>$z = 2; // 10块的数量</code>  </p>
+<p>  <code>$t = 0; // 50的数量</code>  </p>
+<p>  <code>$x = 1; // 100的数量</code>  </p>
+<p>  <code>// 调用函数计算组合数量</code>  </p>
+<p>  <code>$combinations = countCombinations($n, $y, $z, $t, $x, $total);</code>  </p>
+<p>  <code>echo &quot;满足条件的组合数量为：$combinations&quot;;</code>  </p>
+<p><code>?&gt;</code></p>
 <h2 id="前后端连接"><a href="#前后端连接" class="headerlink" title="前后端连接"></a>前后端连接</h2><p>下载并安装phpstudy_pro与navicat</p>
 <h3 id="在phpstudy-pro中设置为："><a href="#在phpstudy-pro中设置为：" class="headerlink" title="在phpstudy_pro中设置为："></a>在phpstudy_pro中设置为：</h3><p><img    class="lazyload" data-original="/../img/%E5%90%AF%E5%8A%A8apache%E4%B8%8EMySQL.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">启动apache与MySQL</span></p>
 <p>并在数据库bin目录下设置：</p>
@@ -437,7 +377,7 @@ n张5毛，y张1块，z张10块，t张50，x张100，问我手上一共有156钱
           
   <aside class="toc-wrap">
     <h3 class="toc-title">文章目录：</h3>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#PHP%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95"><span class="toc-text">PHP基础语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E5%90%8E%E7%AB%AF%E8%BF%9E%E6%8E%A5"><span class="toc-text">前后端连接</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8phpstudy-pro%E4%B8%AD%E8%AE%BE%E7%BD%AE%E4%B8%BA%EF%BC%9A"><span class="toc-text">在phpstudy_pro中设置为：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%93%E5%BC%80navicat%EF%BC%8C%E8%BF%9E%E6%8E%A5%EF%BC%9A"><span class="toc-text">打开navicat，连接：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%93%E5%BC%80vscode%EF%BC%8C"><span class="toc-text">打开vscode，</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%8C%E5%96%84%E9%A1%B5%E9%9D%A2"><span class="toc-text">完善页面</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#php%E8%BF%9B%E9%98%B6"><span class="toc-text">php进阶</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E4%B9%A6%E5%80%9F%E9%98%85%E7%BD%91%E7%AB%99"><span class="toc-text">图书借阅网站</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#PHP%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95"><span class="toc-text">PHP基础语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#for%E5%BE%AA%E7%8E%AF%E4%BE%8B%E9%A2%98"><span class="toc-text">for循环例题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E5%90%8E%E7%AB%AF%E8%BF%9E%E6%8E%A5"><span class="toc-text">前后端连接</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8phpstudy-pro%E4%B8%AD%E8%AE%BE%E7%BD%AE%E4%B8%BA%EF%BC%9A"><span class="toc-text">在phpstudy_pro中设置为：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%93%E5%BC%80navicat%EF%BC%8C%E8%BF%9E%E6%8E%A5%EF%BC%9A"><span class="toc-text">打开navicat，连接：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%93%E5%BC%80vscode%EF%BC%8C"><span class="toc-text">打开vscode，</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%8C%E5%96%84%E9%A1%B5%E9%9D%A2"><span class="toc-text">完善页面</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#php%E8%BF%9B%E9%98%B6"><span class="toc-text">php进阶</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E4%B9%A6%E5%80%9F%E9%98%85%E7%BD%91%E7%AB%99"><span class="toc-text">图书借阅网站</span></a></li></ol></li></ol>
   </aside>
 
         

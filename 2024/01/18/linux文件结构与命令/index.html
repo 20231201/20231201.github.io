@@ -6,20 +6,12 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title> - Hexo</title>
+  <title>linux文件结构及常见命令 - Hexo</title>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="google" content="notranslate" />
   
-  <meta name="description" content="
-
-
-
-
-  
-  
-  
-  linux文件结构及常...">
+  <meta name="description" content="linux文件结构及常见命令​      Decemb...">
   <meta name="author" content="John Doe">
   <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
   <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
@@ -139,195 +131,7 @@
 
   
 
-</head>
-
-<body class="lock-screen">
-  <div class="loading" id="loading"></div>
-  
-    
-
-
-  
-  
-
-<nav class="menu">
-  <div class="menu-container">
-    <div class="menu-close">
-      <i class="iconfont iconbaseline-close-px"></i>
-    </div>
-    <ul class="menu-content"><li class="menu-item">
-        <a href="/ " class="underline "> 首页</a>
-      </li><li class="menu-item">
-        <a href="/galleries/ " class="underline "> 摄影</a>
-      </li><li class="menu-item">
-        <a href="/archives/ " class="underline "> 归档</a>
-      </li><li class="menu-item">
-        <a href="/tags/ " class="underline "> 标签</a>
-      </li><li class="menu-item">
-        <a href="/categories/ " class="underline "> 分类</a>
-      </li><li class="menu-item">
-        <a href="/about/ " class="underline "> 关于</a>
-      </li></ul>
-    
-      <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
-    
-  </div>
-</nav>
-  <main id="main">
-  <div class="article-wrap">
-    <div class="row container">
-      <div class="col-xl-3"></div>
-      <div class="col-xl-6"><article class="article">
-  <div class="wrap">
-    <section class="head">
-  <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
-  <div class="head-mask">
-    <h1 class="head-title"></h1>
-    <div class="head-info">
-      <span class="post-info-item"><i class="iconfont iconcalendar"></i>January 18, 2024</span>
-      
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>11215</span>
-    </div>
-  </div>
-</section>
-    <section class="main">
-      <section class="content">
-        
-        
-
-<!DOCTYPE html>
-<html lang="cn" color-mode=light>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>linux文件结构及常见命令 - Hexo</title>
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="google" content="notranslate" />
-  
-  <meta name="description" content="1.linux文件结构\1. 根目录（&#x2F;）
-...">
-  <meta name="author" content="20231201">
-  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
-  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
-  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
-  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
-  
-    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
-    <meta rel="msapplication-TileColor" content="#000000">
-  
-
-  
-<link rel="stylesheet" href="/css/style.css">
-
-
-  
-    
-<link rel="stylesheet" href="https://at.alicdn.com/t/font_1445822_p6ry5n7lrr.css">
-
-  
-
-  
-    
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
-
-  
-
-  
-    
-      
-        
-        
-<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css" name="highlight-style" mode="light">
-
-      
-        
-        
-<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
-
-      
-  
-
-  <script>
-    var CONFIG = window.CONFIG || {};
-    var ZHAOO = window.ZHAOO || {};
-    CONFIG = {
-      isHome: false,
-      fancybox: true,
-      pjax: false,
-      loading: {
-        gif: '/images/theme/loading.gif',
-        lottie: ''
-      },
-      lazyload: {
-        enable: true,
-        only_post: 'false',
-        loading: {
-          gif: '/images/theme/loading.gif',
-          lottie: ''
-        }
-      },
-      donate: {
-        enable: true,
-        alipay: 'https://pic.izhaoo.com/alipay.jpg',
-        wechat: 'https://pic.izhaoo.com/wechat.jpg'
-      },
-      galleries: {
-        enable: true
-      },
-      fab: {
-        enable: true,
-        always_show: false
-      },
-      carrier: {
-        enable: true
-      },
-      daovoice: {
-        enable: false
-      },
-      preview: {
-        background: {
-          default: '',
-          api: ''
-        },
-        motto: {
-          default: '我在开了灯的床头下，想问问自己的心啊。',
-          typing: true,
-          api: 'https://v2.jinrishici.com/one.json',
-          data_contents: '["data","content"]'
-        },
-      },
-      qrcode: {
-        enable: true,
-        type: 'url',
-        image: 'https://pic.izhaoo.com/weapp-code.jpg',
-      },
-      toc: {
-        enable: true
-      },
-      scrollbar: {
-        type: 'default'
-      },
-      notification: {
-        enable: false,
-        delay: 4500,
-        list: '',
-        page_white_list: '',
-        page_black_list: ''
-      },
-      search: {
-        enable: false,
-        path: ''
-      }
-    }
-  </script>
-
-  
-
-  
-
-<meta name="generator" content="Hexo 7.0.0"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 <body class="lock-screen">
   <div class="loading" id="loading"></div>
@@ -390,20 +194,21 @@
       <div class="col-xl-6"><article class="article">
   <div class="wrap">
     <section class="head">
-  <img   class="lazyload" data-original="/images/theme/post-image.webp" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
   <div class="head-mask">
     <h1 class="head-title">linux文件结构及常见命令</h1>
     <div class="head-info">
-      <span class="post-info-item"><i class="iconfont iconcalendar"></i>December 03, 2023</span>
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>January 18, 2024</span>
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>7789</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>7826</span>
     </div>
   </div>
 </section>
     <section class="main">
       <section class="content">
         
-        <h2 id="1-linux文件结构"><a href="#1-linux文件结构" class="headerlink" title="1.linux文件结构"></a>1.linux文件结构</h2><p>\1. 根目录（&#x2F;）</p>
+        <h1 id="linux文件结构及常见命令"><a href="#linux文件结构及常见命令" class="headerlink" title="linux文件结构及常见命令"></a>linux文件结构及常见命令</h1><p>​      December 03, 2023            7789    </p>
+<h2 id="1-linux文件结构"><a href="#1-linux文件结构" class="headerlink" title="1.linux文件结构"></a>1.linux文件结构</h2><p>\1. 根目录（&#x2F;）</p>
 <p>根目录是整个文件系统的顶级目录，所有其他目录和文件都是从根目录开始的。在Linux中，根目录用斜杠（&#x2F;）表示。<br>\2. &#x2F;bin</p>
 <p>&#x2F;bin目录包含一些基本的可执行文件，这些文件是系统启动和运行所必需的。例如，&#x2F;bin目录包含常用的命令如ls、cp、rm等。<br>\3. &#x2F;boot</p>
 <p>&#x2F;boot目录包含启动加载程序（bootloader）的相关文件，包括内核映像文件和引导配置文件。在启动过程中，系统会使用&#x2F;boot目录下的文件来引导操作系统。<br>\4. &#x2F;dev</p>
@@ -440,28 +245,21 @@
 <p>cat命令</p>
 <p>该命令用于查看文本文件的内容，后接要查看的文件名，通常可用管道与more和less一起使用，从而可以一页页地查看数据。例如：</p>
 <ol>
-<li>cat text | less <!--# 查看text文件中的内容--> </li>
-<li><!--\# 注：这条命令也可以使用less text来代替--></li>
+<li>cat text | less  </li>
+<li></li>
 </ol>
 <p>more：（查看全部内容）</p>
 <p>ls：（查看当前目录或文件）</p>
 <p>ls命令</p>
 <p>这是一个非常有用的查看文件与目录的命令，list之意，它的参数非常多，下面就列出一些常用的参数吧，如下：</p>
 <ol>
-<li><p>-l ：列出长数据串，包含文件的属性与权限数据等 </p>
-</li>
-<li><p>-a ：列出全部的文件，连同隐藏文件（开头为.的文件）一起列出来（常用） </p>
-</li>
-<li><p>-d ：仅列出目录本身，而不是列出目录的文件数据 </p>
-</li>
-<li><p>-h ：将文件容量以较易读的方式（GB，kB等）列出来 </p>
-</li>
-<li><p>-R ：连同子目录的内容一起列出（递归列出），等于该目录下的所有文件都会显示出来 </p>
-</li>
-<li><p><code>ls -l #以长数据串的形式列出当前目录下的数据文件和目录</code> </p>
-</li>
-<li><p><code>ls -lR #以长数据串的形式列出当前目录下的所有文件</code></p>
-</li>
+<li>-l ：列出长数据串，包含文件的属性与权限数据等 </li>
+<li>-a ：列出全部的文件，连同隐藏文件（开头为.的文件）一起列出来（常用） </li>
+<li>-d ：仅列出目录本身，而不是列出目录的文件数据 </li>
+<li>-h ：将文件容量以较易读的方式（GB，kB等）列出来 </li>
+<li>-R ：连同子目录的内容一起列出（递归列出），等于该目录下的所有文件都会显示出来 </li>
+<li><code>ls -l #以长数据串的形式列出当前目录下的数据文件和目录</code> </li>
+<li><code>ls -lR #以长数据串的形式列出当前目录下的所有文件</code></li>
 </ol>
 <p>pwd：（显示当前位置）</p>
 <p>rm:(删除） rm -rf：（删除任何文件）</p>
@@ -474,8 +272,8 @@
 </ol>
 <p>例如：</p>
 <ol>
-<li>rm -i file <!--# 删除文件file，在删除之前会询问是否进行该操作--> </li>
-<li>rm -fr dir <!--# 强制删除目录dir中的所有文件--></li>
+<li>rm -i file  </li>
+<li>rm -fr dir</li>
 </ol>
 <p>file命令</p>
 <p>该命令用于判断接在file命令后的文件的基本数据，因为在Linux下文件的类型并不是以后缀为分的，所以这个命令对我们来说就很有用了，它的用法非常简单，基本语法如下：</p>
@@ -493,12 +291,10 @@
 <li>-i ：若目标文件已经存在，就会询问是否覆盖 </li>
 <li>-u ：若目标文件已经存在，且比目标文件新，才会更新</li>
 </ol>
-<!--该命令可以把一个文件或多个文件一次移动一个文件夹中，但是最后一个目标文件一定要是“目录”。-->
-
 <p>例如：</p>
 <ol>
-<li>mv file1 file2 file3 dir <!--# 把文件file1、file2、file3移动到目录dir中--> </li>
-<li>mv file1 file2 <!--# 把文件file1重命名为file2--></li>
+<li>mv file1 file2 file3 dir  </li>
+<li>mv file1 file2</li>
 </ol>
 <p>find:(查找）  参考：find 路径 -name ifcfg-eth0</p>
 <p>find命令</p>
@@ -516,7 +312,7 @@
 <li><p>-newer file : 列出比file还要新的文件名 </p>
 <p># 例如： </p>
 </li>
-<li><p>find &#x2F;root -mtime 0 <!--# 在当前目录下查找今天之内有改动的文件-->  </p>
+<li><p>find &#x2F;root -mtime 0   </p>
 <p># 与用户或用户组名有关的参数： </p>
 </li>
 <li><p>-user name : 列出文件所有者为name的文件</p>
@@ -528,7 +324,7 @@
 <li><p>-gid n : 列出文件所属用户组为用户组ID为n的文件 </p>
 <p># 例如： </p>
 </li>
-<li><p>find &#x2F;home&#x2F;ljianhui -user ljianhui <!--# 在目录/home/ljianhui中找出所有者为ljianhui的文件--> </p>
+<li><p>find &#x2F;home&#x2F;ljianhui -user ljianhui  </p>
 <p># 与文件权限及名称有关的参数： </p>
 </li>
 <li><p>-name filename ：找出文件名为filename的文件</p>
@@ -544,11 +340,11 @@
 <li><p>-perm +mode ：查找文件权限包含任一mode的权限的文件，mode用数字表示</p>
 <p># 例如： </p>
 </li>
-<li><p>find &#x2F; -name passwd <!--# 查找文件名为passwd的文件--> </p>
+<li><p>find &#x2F; -name passwd  </p>
 </li>
-<li><p>find . -perm 0755 <!--# 查找当前目录中文件权限的0755的文件--> </p>
+<li><p>find . -perm 0755  </p>
 </li>
-<li><p>find . -size +12k <!--# 查找当前目录中大于12KB的文件，注意c表示byte--></p>
+<li><p>find . -size +12k</p>
 </li>
 </ol>
 <p><code>ip addr</code>:查看IP</p>
@@ -565,10 +361,10 @@
 <li>-c ：计算找到‘查找字符串’的次数 </li>
 <li>-i ：忽略大小写的区别，即把大小写视为相同 </li>
 <li>-v ：反向选择，即显示出没有‘查找字符串’内容的那一行 </li>
-<li><!-- 例如：--> </li>
-<li><!-- 取出文件/etc/man.config中包含MANPATH的行，并把找到的关键字加上颜色--> </li>
+<li></li>
+<li></li>
 <li>grep –color&#x3D;auto ‘MANPATH’ &#x2F;etc&#x2F;man.config </li>
-<li><!-- 把ls -l的输出中包含字母file（不区分大小写）的内容输出--> </li>
+<li></li>
 <li><code>ls -l | grep -i file</code></li>
 </ol>
 <p>df：（查看磁盘使用情况）<br>top：（查看内存，CPU性能）<br>Netstat：（显示各种网络相关信息）                      （光驱）（目录）<br>mount：（挂载本地文件或磁盘） 参考：mount&#x2F;dev&#x2F;sr0 &#x2F;opt Umount：（删除挂载）<br>free：（查看内存使用情况）            （文件名）（目录名）<br>su:(切换用户） EXIT:(退出登录）<br>userdel：（删除用户）      参考：userdel 123<br>graupadd：（创建组名） groupdel：（删除组）<br>iostat：（查看磁盘状态）（导出）（文件名）（安装包）<br>sz：（导出文件）   参考：sz 123 lrzsz yum install：（安装软件包）</p>
@@ -604,10 +400,10 @@
 </ol>
 <p>其实我们只要记住ps一般使用的命令参数搭配即可，它们并不多，如下：</p>
 <ol>
-<li>ps aux <!--# 查看系统所有的进程数据--> </li>
-<li>ps ax <!--# 查看不与terminal有关的所有进程--> </li>
-<li>ps -lA <!--# 查看系统所有的进程数据--> </li>
-<li>ps axjf <!--# 查看连同一部分进程树状态--></li>
+<li>ps aux  </li>
+<li>ps ax  </li>
+<li>ps -lA  </li>
+<li>ps axjf</li>
 </ol>
 <p>wget：（下载）     wget 下载东西的链接<br>du：（查看文件或目录大小）</p>
 <p>kill：（杀掉）      参考：kill 1231</p>
@@ -622,7 +418,7 @@
 <li>-e ：表示后面接的command name要一致，但command name不能超过15个字符 </li>
 <li>-I ：命令名称忽略大小写 </li>
 <li># 例如： </li>
-<li>killall -SIGHUP syslogd <!--# 重新启动syslogd--></li>
+<li>killall -SIGHUP syslogd</li>
 </ol>
 <p>clear：（清屏）           （月）（年）<br>cal：（显示日历）    参考：cal 4 2016</p>
 <p>cp：（复制）              （属性）   ( 文    件   名 ）</p>
@@ -637,8 +433,8 @@
 </ol>
 <p>例如 ：</p>
 <ol>
-<li>cp -a file1 file2 <!--#连同文件的所有特性把文件file1复制成文件file2--> </li>
-<li>cp file1 file2 file3 dir <!--#把文件file1、file2、file3复制到目录dir中--></li>
+<li>cp -a file1 file2  </li>
+<li>cp file1 file2 file3 dir</li>
 </ol>
 <p>chmod：（修改文件权限）  参考： chmod 357 123.txt       （文件名）</p>
 <p>chmod命令</p>
@@ -650,8 +446,8 @@
 <p>同时，chmod还可以使用u（user）、g（group）、o（other）、a（all）和+（加入）、-（删除）、&#x3D;（设置）跟rwx搭配来对文件的权限进行更改。</p>
 <ol>
 <li># 例如： </li>
-<li>chmod 0755 file <!--# 把file的文件权限改变为-rxwr-xr-x--> </li>
-<li>chmod g+w file <!--# 向file的文件权限中加入用户组可写权限--></li>
+<li>chmod 0755 file  </li>
+<li>chmod g+w file</li>
 </ol>
 <p>chgrp命令</p>
 <p>该命令用于改变文件所属用户组，它的使用非常简单，它的基本用法如下：</p>
@@ -659,7 +455,7 @@
 <li>chgrp [-R] dirname&#x2F;filename </li>
 <li>-R ：进行递归的持续对所有文件和子目录更改 </li>
 <li># 例如： </li>
-<li>chgrp users -R .&#x2F;dir <!--# 递归地把dir目录下中的所有文件和子目录下所有文件的用户组修改为user-->s</li>
+<li>chgrp users -R .&#x2F;dir s</li>
 </ol>
 <p>chwon：（修改文件属主属组) 参考：chown 123：321  123 （属主)(属组）</p>
 <p>chown命令</p>
@@ -677,9 +473,9 @@
 <li>-std&#x3D; ：用于指定把使用的C语言的版本 </li>
 <li></li>
 <li># 例如： </li>
-<li><!--\# 把源文件test.c按照c99标准编译成可执行程序test--> </li>
+<li></li>
 <li>gcc -o test test.c -lm -std&#x3D;c99 </li>
-<li><!--\#把源文件test.c转换为相应的汇编程序源文件test.s--> </li>
+<li></li>
 <li>gcc -S test.c</li>
 </ol>
 <p>time命令</p>
@@ -692,179 +488,7 @@
 <p>user：用户CPU时间，命令执行完成花费的用户CPU时间，即命令在用户态中执行时间总和；</p>
 <p>system：系统CPU时间，命令执行完成花费的系统CPU时间，即命令在核心态中执行时间总和；</p>
 <p>real：实际时间，从command命令行开始执行到运行终止的消失时间；</p>
-<!--注：用户CPU时间和系统CPU时间之和为CPU时间，即命令占用CPU执行的时间总和。实际时间要大于CPU时间，因为Linux是多任务操作系统，往往在执行一条命令时，系统还要处理其它任务。另一个需要注意的问题是即使每次执行相同命令，但所花费的时间也是不一样，其花费时间是与系统运行相关的。-->
 
-      </section>
-      <section class="extra">
-        
-          <ul class="copyright">
-  
-    <li><strong>本文作者：</strong>20231201</li>
-    <li><strong>本文链接：</strong><a href="http://example.com/2023/12/03/linux%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E5%8F%8A%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4/index.html" title="http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;12&#x2F;03&#x2F;linux%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E5%8F%8A%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4&#x2F;index.html">http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;12&#x2F;03&#x2F;linux%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E5%8F%8A%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4&#x2F;index.html</a></li>
-    <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
-  
-</ul>
-        
-        
-          <section class="donate">
-  <div id="qrcode-donate">
-    <img   class="lazyload" data-original="https://pic.izhaoo.com/alipay.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
-  </div>
-  <div class="icon">
-    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
-    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
-  </div>
-</section>
-        
-        
-        
-  <nav class="nav">
-    <a href="/2023/12/03/github%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/"><i class="iconfont iconleft"></i>github博客的搭建</a>
-    <a href="/2023/12/02/hello-world/">Hello World<i class="iconfont iconright"></i></a>
-  </nav>
-
-      </section>
-      
-    </section>
-  </div>
-</article></div>
-      <div class="col-xl-3">
-        
-          
-  <aside class="toc-wrap">
-    <h3 class="toc-title">文章目录：</h3>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-linux%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84"><span class="toc-text">1.linux文件结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-text">2.linux常用命令</span></a></li></ol>
-  </aside>
-
-        
-      </div>
-    </div>
-  </div>
-</main>
-  
-
-<footer class="footer">
-  <div class="footer-social"><a 
-        href="tencent://message/?Menu=yes&uin=894519210 "
-        target="_blank"
-        class="footer-social-item"
-        onMouseOver="this.style.color= '#12B7F5'" 
-        onMouseOut="this.style.color='#33333D'">
-          <i class="iconfont  iconQQ "></i>
-      </a><a 
-        href="javascript:; "
-        target="_blank"
-        class="footer-social-item"
-        onMouseOver="this.style.color= '#09BB07'" 
-        onMouseOut="this.style.color='#33333D'">
-          <i class="iconfont  iconwechat-fill "></i>
-      </a><a 
-        href="https://www.instagram.com/izhaoo/ "
-        target="_blank"
-        class="footer-social-item"
-        onMouseOver="this.style.color= '#DA2E76'" 
-        onMouseOut="this.style.color='#33333D'">
-          <i class="iconfont  iconinstagram "></i>
-      </a><a 
-        href="https://github.com/zhaoo "
-        target="_blank"
-        class="footer-social-item"
-        onMouseOver="this.style.color= '#9f7be1'" 
-        onMouseOut="this.style.color='#33333D'">
-          <i class="iconfont  icongithub-fill "></i>
-      </a><a 
-        href="mailto:izhaoo@163.com "
-        target="_blank"
-        class="footer-social-item"
-        onMouseOver="this.style.color=#FF3B00" 
-        onMouseOut="this.style.color='#33333D'">
-          <i class="iconfont  iconmail"></i>
-      </a></div>
-  
-    <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
-  
-</footer>
-  
-      <div class="fab fab-plus">
-    <i class="iconfont iconplus"></i>
-  </div>
-  
-  
-  
-  <div class="fab fab-up">
-    <i class="iconfont iconcaret-up"></i>
-  </div>
-  
-  
-  
-    
-<script src="/js/color-mode.js"></script>
-
-  
-  
-</body>
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-
-
-
-
-  
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
-
-
-
-
-  
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-
-
-
-
-
-
-  
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
-
-
-
-
-<script src="/js/utils.js"></script>
-<script src="/js/script.js"></script>
-
-
-
-
-
-
-
-  <script>
-    (function () {
-      var bp = document.createElement('script');
-      var curProtocol = window.location.protocol.split(':')[0];
-      if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-      } else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-      }
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(bp, s);
-    })();
-  </script>
-
-
-
-
-
-
-
-
-
-
-
-
-</html>
       </section>
       <section class="extra">
         
@@ -890,8 +514,8 @@
         
         
   <nav class="nav">
-    <a href="/2024/01/18/html%E5%9F%BA%E7%A1%80/"><i class="iconfont iconleft"></i></a>
-    <a href="/2024/01/18/sqli/"><i class="iconfont iconright"></i></a>
+    <a href="/2024/01/18/shell%EF%BC%8Cip%E7%AD%89/"><i class="iconfont iconleft"></i>网安基础知识（shell,ip,osi,vm联网,proxifer等）python基础</a>
+    <a href="/2024/01/18/sqli/">sql注入<i class="iconfont iconright"></i></a>
   </nav>
 
       </section>
@@ -904,7 +528,7 @@
           
   <aside class="toc-wrap">
     <h3 class="toc-title">文章目录：</h3>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#main"><span class="toc-text">linux文件结构及常见命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-linux%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84"><span class="toc-text">1.linux文件结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-text">2.linux常用命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#main"><span class="toc-text">文章目录：</span></a></li></ol></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#linux%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E5%8F%8A%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4"><span class="toc-text">linux文件结构及常见命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-linux%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84"><span class="toc-text">1.linux文件结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-text">2.linux常用命令</span></a></li></ol></li></ol>
   </aside>
 
         

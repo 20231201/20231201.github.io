@@ -1,0 +1,955 @@
+
+
+<!DOCTYPE html>
+<html lang="en" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> - Hexo</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="
+
+
+
+
+  
+  
+  
+  网安基础知识（shel...">
+  <meta name="author" content="John Doe">
+  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_1445822_p6ry5n7lrr.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      loading: {
+        gif: '/images/theme/loading.gif',
+        lottie: ''
+      },
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: {
+          gif: '/images/theme/loading.gif',
+          lottie: ''
+        }
+      },
+      donate: {
+        enable: true,
+        alipay: 'https://pic.izhaoo.com/alipay.jpg',
+        wechat: 'https://pic.izhaoo.com/wechat.jpg'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: false
+      },
+      preview: {
+        background: {
+          default: '',
+          api: ''
+        },
+        motto: {
+          default: '我在开了灯的床头下，想问问自己的心啊。',
+          typing: true,
+          api: 'https://v2.jinrishici.com/one.json',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: true,
+        type: 'url',
+        image: 'https://pic.izhaoo.com/weapp-code.jpg',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        type: 'default'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      },
+      search: {
+        enable: false,
+        path: ''
+      }
+    }
+  </script>
+
+  
+
+  
+
+</head>
+
+<body class="lock-screen">
+  <div class="loading" id="loading"></div>
+  
+    
+
+
+  
+  
+
+<nav class="menu">
+  <div class="menu-container">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> 首页</a>
+      </li><li class="menu-item">
+        <a href="/galleries/ " class="underline "> 摄影</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> 归档</a>
+      </li><li class="menu-item">
+        <a href="/tags/ " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/categories/ " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title"></h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>January 18, 2024</span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>13963</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        
+        
+
+<!DOCTYPE html>
+<html lang="cn" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>网安基础知识（shell,ip,osi,vm联网,proxifer等）python基础 - Hexo</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="[TOC]
+shell的方式在实战中，大多数采用反向s...">
+  <meta name="author" content="20231201">
+  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_1445822_p6ry5n7lrr.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      loading: {
+        gif: '/images/theme/loading.gif',
+        lottie: ''
+      },
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: {
+          gif: '/images/theme/loading.gif',
+          lottie: ''
+        }
+      },
+      donate: {
+        enable: true,
+        alipay: 'https://pic.izhaoo.com/alipay.jpg',
+        wechat: 'https://pic.izhaoo.com/wechat.jpg'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: false
+      },
+      preview: {
+        background: {
+          default: '',
+          api: ''
+        },
+        motto: {
+          default: '我在开了灯的床头下，想问问自己的心啊。',
+          typing: true,
+          api: 'https://v2.jinrishici.com/one.json',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: true,
+        type: 'url',
+        image: 'https://pic.izhaoo.com/weapp-code.jpg',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        type: 'default'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      },
+      search: {
+        enable: false,
+        path: ''
+      }
+    }
+  </script>
+
+  
+
+  
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body class="lock-screen">
+  <div class="loading" id="loading"></div>
+  
+    
+
+
+  <nav class="navbar">
+    <div class="left">
+      
+        <i class="iconfont iconhome j-navbar-back-home"></i>
+      
+      
+        <i class="iconfont iconqrcode j-navbar-qrcode"></i>
+      
+      
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      
+      
+    </div>
+    <div class="center">网安基础知识（shell,ip,osi,vm联网,proxifer等）python基础</div>
+    <div class="right">
+      <i class="iconfont iconmenu j-navbar-menu"></i>
+    </div>
+    
+      <div id="qrcode-navbar"></div>
+    
+  </nav>
+
+  
+  
+
+<nav class="menu">
+  <div class="menu-container">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> 首页</a>
+      </li><li class="menu-item">
+        <a href="/galleries/ " class="underline "> 摄影</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> 归档</a>
+      </li><li class="menu-item">
+        <a href="/tags/ " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/categories/ " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/theme/post-image.webp" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">网安基础知识（shell,ip,osi,vm联网,proxifer等）python基础</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>December 04, 2023</span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>10150</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        
+        <p>[TOC]</p>
+<h2 id="shell的方式"><a href="#shell的方式" class="headerlink" title="shell的方式"></a>shell的方式</h2><p>在实战中，大多数采用反向shell，因为正向shell有很多因素导致连接失败，<br>比如说硬件设备有防火墙，入侵防御系统等，还有网站防火墙，端口占用，权限不足等场景，特别是硬件设备如果你正向连接被防火墙拦截导致打草惊蛇，后期攻击相当繁琐。<br>反向shell：而被控制端主动向外发送的数据包通常都不会被拦截。</p>
+<p><img    class="lazyload" data-original="https://img-blog.csdnimg.cn/4497a7d9ecea43c5ae77e944b20ce737.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBATmlnaHROZWtv,size_20,color_FFFFFF,t_70,g_se,x_16" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">点击查看图片来源</span></p>
+<p><img    class="lazyload" data-original="/../img/shell.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">shell</span></p>
+<h3 id="1-反弹shell"><a href="#1-反弹shell" class="headerlink" title="1.反弹shell"></a>1.反弹shell</h3><p>反向shell：服务端想要获得客户端的shell（也就是反弹shell），被控制端主动连接控制端</p>
+<p><img    class="lazyload" data-original="https://image.3001.net/images/20171130/15120501155693.png%21small" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">反弹shell</span></p>
+<p><img    class="lazyload" data-original="/../img/%E5%8F%8D%E5%BC%B9.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">反弹</span></p>
+<p><img    class="lazyload" data-original="https://image.3001.net/images/20180719/15319944699194.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">反弹shell过程</span></p>
+<h3 id="2-正向shell"><a href="#2-正向shell" class="headerlink" title="2.正向shell"></a>2.正向shell</h3><p>正向shell：客户端想要获得服务端的shell，控制端主动发起连接去连接被控制端</p>
+<p><img    class="lazyload" data-original="/../img/%E6%AD%A3%E5%90%91.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">正向</span></p>
+<h2 id="IP"><a href="#IP" class="headerlink" title="IP"></a>IP</h2><p>ping 其它主机</p>
+<p><img    class="lazyload" data-original="/../img/ping.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">ping</span></p>
+<p>防火墙问题</p>
+<p><img    class="lazyload" data-original="/../img/%E9%98%B2%E7%81%AB%E5%A2%99.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">防火墙</span></p>
+<p><img    class="lazyload" data-original="/../img/%E9%98%B2%E7%81%AB%E5%A2%991.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">防火墙1</span></p>
+<h3 id="IP格式"><a href="#IP格式" class="headerlink" title="IP格式"></a>IP格式</h3><p>IPv4和IPv6是Internet Protocol version 4和Internet Protocol version 6的简称。它们都是Internet上用于标识和定位设备的IP地址格式。</p>
+<p>IPv4是较早的IP协议版本，它使用一个32位二进制数字来表示IP地址。也就是说，一个IPv4地址，通常呈现为4个由点分开的十进制整数，每个整数取值范围为0到255。例如，192.168.1.1就是一个常见的IPv4地址。这种格式的IP地址已经被广泛应用于现代互联网，但是IPv4地址的可用数量有限，只有约42亿个地址是可用的。由于互联网的快速发展，IPv4地址空间在数年内就被耗尽。8.8.8.8&#x2F;n</p>
+<p>IPv6是IPv4的继任者，它使用一个128位的二进制数字来表示IP地址。IPv6的地址长度远比IPv4更长，其地址格式通常呈现为8个由冒号分开的十六进制整数，每个整数取值范围为0到FFFF。例如，2001:0db8:85a3:0000:0000:8a2e:0370:7334就是一个IPv6地址。IPv6比IPv4支持更多的地址，其可用的地址数量可以达到3402的39次方，远远超过了IPv4地址空间的极限。IPv6的地址格式通常为8组由冒号分隔的16位十六进制数</p>
+<p><img    class="lazyload" data-original="/../img/IPv46.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">IPv46</span></p>
+<p><img    class="lazyload" data-original="https://i2.51cto.com/images/blog/201805/04/b449237fb9fd3950b91a8368f4f3bdee.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_100,g_se,x_10,y_10,shadow_90,type_ZmFuZ3poZW5naGVpdGk=" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">IP地址</span></p>
+<h3 id="子网掩码"><a href="#子网掩码" class="headerlink" title="子网掩码"></a><a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E5%AD%90%E7%BD%91%E6%8E%A9%E7%A0%81&spm=1001.2101.3001.7020">子网掩码</a></h3><p>子网掩码是用来划分网络地址和主机地址的一种二进制值。它是由32 bits或128 bits二进制数字组成。在TCP&#x2F;IP网络中，网络地址和主机地址是由IP地址组成的。子网掩码定义了一个网络中的主机地址和网络地址之间的边界，通常用于划分网络和主机地址。子网掩码和IP地址一起用于标识网络中的主机。子网掩码通常用点分十进制形式表示，例如255.255.255.0。在划分网络时，子网掩码可以被修改，以便分配更多或更少的IP地址给不同的子网。这对于组织内部或大型网络来说是非常有用的，因为它能够更有效地分配IP地址，并提高网络的性能和管理能力。</p>
+<h3 id="网络地址"><a href="#网络地址" class="headerlink" title="网络地址"></a>网络地址</h3><p>网络地址是一种IP地址，用于标识网络中的一个节点或子网。在IPv4协议中，网络地址通常由一个32位的二进制数表示，通常用四个十进制数字表示，每个数字之间由句点（.）隔开，如192.168.1.0。</p>
+<p>网络地址通常是由网络管理员或ISP分配给网络中的所有设备和主机使用。他们将拥有相同的网络地址，但是在同一个网络中的每个设备和主机都需要一个唯一的主机地址。这个唯一的主机地址可以通过给每个设备和主机分配不同的IP地址来完成。</p>
+<p>网络地址在子网中起到重要作用。它定义了子网的范围和边界，并对子网中的主机地址进行了控制。当主机试图发送数据到其他子网或互联网时，它们需要将数据包发送到网关（也称为路由器），由网关对数据包进行转发。</p>
+<p>需要注意的是，网络地址本身不能用于唯一标识特定的设备或主机。一个网络地址可以被分配给多个设备或主机，这些设备或主机通过使用不同的主机地址来区分彼此。</p>
+<h3 id="广播地址"><a href="#广播地址" class="headerlink" title="广播地址"></a>广播地址</h3><p>广播地址是指一种特殊的IP地址，用于将数据包从一个网络中的所有主机传递到另一个网络中的所有主机。在IPv4协议中，广播地址通常是由网络地址和一个全网掩码组成，其中主机部分全部为1。</p>
+<p>例如，在192.168.1.0&#x2F;24子网中，广播地址为192.168.1.255，这意味着当一个数据包被发送到这个地址时，它将被发送到这个子网中的所有主机。</p>
+<p>广播地址常用于一些网络协议和应用程序中，比如DHCP、ARP、TCP&#x2F;IP等，可以用来发送请求或通知所有的主机。但需要注意的是，在企业网络中，为了安全和性能方面的考虑，广播地址通常是被禁止的，只有在特定的情况下才会被允许使用。</p>
+<h3 id="网关"><a href="#网关" class="headerlink" title="网关"></a>网关</h3><p>在计算机网络中，网关（Gateway）是连接不同网络之间的一个网络节点，即两个或多个网络的交汇处，负责将数据包转发到目标网络。网关通常是一台路由器，具有路由选择、地址转换等功能。</p>
+<p>在本地网络中，网关通常指本地网络到其他网络之间的连接设备，比如路由器或者交换机。当本地网络中的计算机需要访问其他网络时，必须通过网关来进行数据包的转发和接收。同时，网关也可以作为出入本地网络的”关卡”，对网络流量进行监控和管理，控制从本地网络向其他网络的数据流量。</p>
+<p>网关通常需要配置一个IP地址，该地址应该和本地网络中的IP地址在同一个网段，并且不和其他已有的IP地址冲突。当网络流量需要转发至其他网络时，数据包会被发送至网关的IP地址，然后网关会根据路由表，将数据包转发到目标网络。</p>
+<p>例题：</p>
+<p>192.168.1.1&#x2F;30有多少个可供分配的IP地址</p>
+<p>在IP子网划分中，一个&#x2F;30的子网掩码意味着该子网中有4个IP地址。这是因为子网掩码&#x2F;30将IP地址分为四个部分，其中包括：</p>
+<ol>
+<li>网络地址：这是子网的第一个IP地址，用于标识整个子网。在这个例子中，它是192.168.1.0。</li>
+<li>网关地址：这是子网的第二个IP地址，通常分配给网关或路由器。在这个例子中，它是192.168.1.1。</li>
+<li>可用主机地址1：这是子网的第三个IP地址，可用于分配给网络中的设备。在这个例子中，它是192.168.1.2。</li>
+<li>可用主机地址2：这是子网的第四个IP地址，同样可用于分配给网络中的设备。在这个例子中，它是192.168.1.3。</li>
+<li>广播地址：这是子网的最后一个IP地址，用于向子网内所有设备发送广播消息。在这个例子中，它是192.168.1.4。</li>
+</ol>
+<p>因此，在192.168.1.1&#x2F;30子网中，有2个可供分配的IP地址（192.168.1.2和192.168.1.3），其中192.168.1.1通常是分配给网关的，而其他的地址都有特定的用途。注意，不同的设备和操作系统可能会对这些地址有不同的使用限制和配置要求。</p>
+<h3 id="传统的用户IP分配方式"><a href="#传统的用户IP分配方式" class="headerlink" title="传统的用户IP分配方式"></a>传统的用户IP分配方式</h3><p><img    class="lazyload" data-original="/../img/%E7%BD%91%E7%BB%9C%E8%BF%87%E7%A8%8B.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">网络过程</span></p>
+<p>一般用户所能分配的IP（私网）</p>
+<p><img    class="lazyload" data-original="/../img/%E7%A7%81%E7%BD%91IP.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">私网IP</span></p>
+<h3 id="公网IP的分配"><a href="#公网IP的分配" class="headerlink" title="公网IP的分配"></a>公网IP的分配</h3><p><img    class="lazyload" data-original="https://raw.githubusercontent.com/20231201/20231201.github.io/main/img/1-720-png_6_0_0_134_271_623_468_892.979_1262.879-960-0-0-960.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">路由器内网pc通过公网ip访问映射的内网server案例</span></p>
+<p><img   class="lazyload" data-original="/../img/%E4%BA%A4%E6%8D%A2%E6%9C%BA.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" ></p>
+<h2 id="培训学习注意事项"><a href="#培训学习注意事项" class="headerlink" title="培训学习注意事项"></a>培训学习注意事项</h2><p><img    class="lazyload" data-original="/../img/%E8%A7%84%E5%88%99.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">规则</span></p>
+<h2 id="动态静态路由与动态静态IP及osi"><a href="#动态静态路由与动态静态IP及osi" class="headerlink" title="动态静态路由与动态静态IP及osi"></a>动态静态路由与动态静态IP及osi</h2><h3 id="动态静态路由"><a href="#动态静态路由" class="headerlink" title="动态静态路由"></a>动态静态路由</h3><p>动态IP服务器分配，静态手动输入</p>
+<p><img    class="lazyload" data-original="/../img/%E9%9D%99%E6%80%81%E4%B8%8E%E5%8A%A8%E6%80%81IP%E8%B7%AF%E7%94%B1.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">静态与动态IP路由</span></p>
+<h3 id="osi7层协议"><a href="#osi7层协议" class="headerlink" title="osi7层协议"></a>osi7层协议</h3><p>OSI7层参考模型的各个层面的划定遵循下列原则：</p>
+<p>　　1、同一层中的各节点都是有相同的层次模型，具备相同的功效。</p>
+<p>　　2、相同节点内邻近层间根据接口（可以是逻辑接口）展开通信。</p>
+<p>　　3、7层结构中的每一层采用下一层带来的服务，同时向其上层带来服务。</p>
+<p>　　4、各个节点的相同层依照协议完成对等层间的通信。</p>
+<p>　　第一层：物理层（PhysicalLayer)</p>
+<p>　　要求通讯设备的机械的、电气的、功效的和流程的特点，用于创建、维护和拆卸物理链路连接。详细地讲，机械特点要求了网络连接时所需接插件的标准规格、引脚个数和排布情况等；电气特点要求了在物理连接上传送bit流时线路上讯号电平的高低、阻抗匹配、传输速度距离规定等；功效特点是指对各个讯号先分配确切的讯号含义，即界定了DTE和DCE间各个线路的功效；规程特性界定了运用信号线展开bit流传送的一组操作流程，是指在物理连接的创建、维护、互换信息是，DTE和DCE双放在各电路上的行为系列。在这一层，数据的单位被称作比特（bit）。是属于物理层界定的典型要求代表包括：EIA&#x2F;TIARS-232、EIA&#x2F;TIARS-449、V.35、RJ-45等。</p>
+<p>　　第二层：数据链路层（DataLinkLayer)</p>
+<p>　　在物理层带来比特流服务的前提上，创建邻近结点间的数据链路，根据差错控制带来数据帧（Frame）在信道上无差错的传送，并展开各电路上的行为系列。数据链路层在不稳定的物理介质上带来稳定的传送。该层的作用包括：物理地址寻址、数据的成帧、流量监控、数据的检错、重发等。在这一层，数据的单位被称作帧（frame）。数据链路层协议的代表包括：SDLC、HDLC、PPP、STP、帧中继等。</p>
+<p>　　第三层：网络层（NetworkLayer)</p>
+<p>　　在通信网络中开展通讯的两个计算机相互之间或许会历经许多个数据链路，也可能还需要历经许多通信子网。网络层的工作就是挑选适宜的网间路由和交换结点，保证数据及时数据传输。网络层将数据链路层带来的帧构成数据包，包中封装有网络层包头，当中含有逻辑地址数据–源站点和目标站点地址的网络地址。假如你在讨论一个IP地址，那你是在处理第3层的问题，这是“数据包”问题，而不是第2层的“帧”。IP是第3层问题的其中一部分，除此之外也有一部分路由协议和地址解析协议（ARP）。关于路由的所有问题都是在这第3层处理。地址解析和路由是3层的重要目标。网络层还可以实现拥塞控制、网际互连等用途。在这一层，数据的单位被称作数据包（packet）。网络层协议的代表包含：IP、IPX、RIP、OSPF等。</p>
+<p>　　第四层：处理数据的传输层（TransimissionLayer)</p>
+<p>　　第4层的数据单元也称作数据包（packets）。可是，如果你讨论TCP等详细的协议时又有特殊的称呼，TCP的数据单元被称作段（segments）而UDP协议的数据单元被称作“数据报（datagrams）”。这个层承担抓取所有数据，因此，它必须追踪数据单元碎片、乱序抵达的数据包和其余在数据传输过程中或许发生的风险。第4层为上层带来端到端（最终用户到最终用户）的透明的、可靠的数据传输服务。所为透明的数据传输是指在通讯过程中传输层对上层屏蔽了通讯数据传输系统的详细细节。传输层协议的代表包含：TCP、UDP、SPX等。</p>
+<p>　　第五层：会话层（SessionLayer)</p>
+<p>　　这一层还可以被称作会晤层或对话层，在会话层及以上的高层次中，数据数据传输的单位不会再另外命名，往往是统称为报文。会话层不参与详细的数据传输，它带来包含访问认证和会话管理以内的建立和维护应用相互之间通讯的机制。如服务器认证用户登入便是由会话层完成的。</p>
+<p>　　第六层：表示层（PresentationLayer)</p>
+<p>　　这一层主要是处理拥护数据的语法表达问题。它将欲交换的数据从合适于某个用户的抽象语法，变换为合适于OSI系统内部使用的数据传输语法。即带来格式化的表达和变换数据服务。数据的压缩和解压缩，加密和解密等工作都由表示层承担。</p>
+<p>　　第七层：应用层（ApplicationLayer)</p>
+<p>　　应用层为操作系统或网络应用程序带来访问网络服务的接口。应用层协议的代表包含：Telnet、FTP、HTTP、SNMP等。</p>
+<h3 id="socks5传播"><a href="#socks5传播" class="headerlink" title="socks5传播"></a>socks5传播</h3><p>套接字（socket）是通信的基石，是支持TCP&#x2F;IP协议的网络通信的基本操作单元。</p>
+<p>它是网络通信过程中端点的抽象表示，包含进行网络通信必须的五种信息：</p>
+<p>① 连接使用的协议；</p>
+<p>② 本地主机的IP地址；</p>
+<p>③ 本地进程的协议端口；</p>
+<p>④ 远地主机的IP地址；</p>
+<p>⑤ 远地进程的协议端口。</p>
+<p>应用层通过传输层进行数据通信时，TCP会遇到同时为多个应用程序进程提供并发服务的问题。多个TCP连接或多个应用程序进程可能需要通过同一个<br>TCP协议端口传输数据。为了区别不同的应用程序进程和连接，许多计算机操作系统为应用程序与TCP／IP协议交互提供了套接字(Socket)接口。应<br>用层可以和传输层通过Socket接口，区分来自不同应用程序进程或网络连接的通信，实现数据传输的并发服务。</p>
+<p><img    class="lazyload" data-original="/../img/socksosi%E4%BC%A0%E9%80%92.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">socksosi传递</span></p>
+<h3 id="路由器-ping的过程"><a href="#路由器-ping的过程" class="headerlink" title="路由器 ping的过程"></a>路由器 ping的过程</h3><p>假设有A、B、C、D四台机器，一台路由RA，子网掩码均为255.255.255.0，默认网关是192.168.0.1<br> 　　1.同一网段<br> 　　我们来看一下在A主机上执行“Ping 192.168.0.5”后，都发生了些什么。首先，Ping会通知系统建立一个固定格式的ICMP请求数据包，然后由ICMP协议打包这个数据包和地址“192.168.0.5”转交给IP层协议（一组后台运行的进程，与ICMP类似），IP层协议将以地址“192.168.0.5”作为目的地址，本机IP地址作为源地址，加上一些其他的控制信息，构建一个IP数据包，并想办法得到192.168.0.5的MAC地址（物理地址，这是数据链路层协议构建数据链路层的传输单元——帧所必需的），以便交给数据链路层构建一个数据帧。关键就在这里，IP层协议通过机器B的IP地址和自己的子网掩码，发现它跟自己属同一网络，就直接在本网络内查找这台机器的MAC，如果以前两机有过通信，在A机的ARP缓存表应该有B机IP与其MAC的映射关系，如果没有，就发一个ARP请求广播，得到B机的MAC，一并交给数据链路层。后者构建一个数据帧，目的地址是IP层传过来的物理地址，源地址则是本机的物理地址，还要附加上一些控制信息，依据以太网的介质访问规则，将它们传送出去。<br> 　　主机B收到这个数据帧后，先检查它的目的地址，并和本机的物理地址对比，如符合，则接收；否则丢弃。接收后检查该数据帧，将IP数据包从帧中提取出来，交给本机的IP层协议。同样，IP层检查后，将有用的信息提取后交给ICMP协议，后者处理后，马上构建一个ICMP应答包，发送给主机A，其过程和主机A发送ICMP请求包到主机B一模一样。<br> 　　2.不同网段<br> 　　在主机A上执行“Ping 192.168.1.4”后，开始跟上面一样，到了怎样得到MAC地址时，IP协议通过计算发现D机与自己不在同一网段内，就直接将交由路由处理，也就是将路由的MAC取过来，至于怎样得到路由的MAC，跟上面一样，先在ARP缓存表找，找不到可以利用广播。路由得到这个数据帧后，再跟主机D进行联系，如果找不到，就向主机A返回一个超时的信息。  </p>
+<p><img    class="lazyload" data-original="/../img/%E8%B7%AF%E7%94%B1.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">路由</span></p>
+<p><img    class="lazyload" data-original="/../img/%E8%B7%AF%E7%94%B11.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">pc1pingpc2经由路由12</span></p>
+<h2 id="VMwareworkstation的联网"><a href="#VMwareworkstation的联网" class="headerlink" title="VMwareworkstation的联网"></a>VMwareworkstation的联网</h2><p>VMware虚拟网络各模式与路由的交互</p>
+<p><img    class="lazyload" data-original="/../img/%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%AE%BE%E7%BD%AE.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">虚拟机设置</span></p>
+<p><img    class="lazyload" data-original="/../img/%E6%A1%A5%E6%8E%A5.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">桥接</span></p>
+<p><img    class="lazyload" data-original="/../img/nat.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">nat</span></p>
+<p>仅主机相当于断网了，此处不考虑</p>
+<h2 id="proxifer"><a href="#proxifer" class="headerlink" title="proxifer"></a>proxifer</h2><h3 id="下载proxifer"><a href="#下载proxifer" class="headerlink" title="下载proxifer"></a>下载proxifer</h3><h3 id="代理服务器设置"><a href="#代理服务器设置" class="headerlink" title="代理服务器设置"></a>代理服务器设置</h3><p><img    class="lazyload" data-original="/../img/Proxifier1.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">Proxifier服务器</span></p>
+<h3 id="代理规则设置"><a href="#代理规则设置" class="headerlink" title="代理规则设置"></a>代理规则设置</h3><p><img    class="lazyload" data-original="/../img/Proxifier2.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">Proxifier代理规则</span></p>
+<h3 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h3><p>尝试ping其它主机并查看proxifer以验证是否成功</p>
+<p><img    class="lazyload" data-original="/../img/Proxifier3.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">Proxifier3</span></p>
+<h3 id="工作方式"><a href="#工作方式" class="headerlink" title="工作方式"></a>工作方式</h3><p><img    class="lazyload" data-original="https://pic3.zhimg.com/80/v2-38a4c3937c57b87dead7ca9573effe86_720w.webp" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">img</span></p>
+<p><img    class="lazyload" data-original="/../img/proxy.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">proxy</span></p>
+<h1 id="python基础"><a href="#python基础" class="headerlink" title="python基础"></a>python基础</h1><h2 id="bytes"><a href="#bytes" class="headerlink" title="bytes"></a>bytes</h2><h3 id="字符集和编码介绍"><a href="#字符集和编码介绍" class="headerlink" title="字符集和编码介绍"></a>字符集和编码介绍</h3><p><img    class="lazyload" data-original="/../img/image-20231205214312950.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">编码小结</span></p>
+<h3 id="编码与解码"><a href="#编码与解码" class="headerlink" title="编码与解码"></a>编码与解码</h3><p><img    class="lazyload" data-original="/../img/%E4%BE%8B%E5%AD%90%EF%BC%9A%E5%91%A8%E6%9D%B0%E4%BC%A6%E7%94%A8gbk%E7%BC%96%E7%A0%81%E6%98%AF6%E4%B8%AA%E5%AD%97%E8%8A%82,btf-8%E6%98%AF9%E4%B8%AA%E5%AD%97%E8%8A%82.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">例子：周杰伦用gbk编码是6个字节,btf-8是9个字节</span></p>
+<p><img    class="lazyload" data-original="/../img/%E8%A7%A3%E7%A0%81.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">解码</span></p>
+<h2 id="python字典"><a href="#python字典" class="headerlink" title="python字典"></a>python字典</h2><h3 id="字典的基本概念"><a href="#字典的基本概念" class="headerlink" title="字典的基本概念"></a>字典的基本概念</h3><p><img    class="lazyload" data-original="/../img/%E8%A1%A8%E7%A4%BA%E6%96%B9%E5%BC%8F.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">表示方式</span></p>
+<p><img    class="lazyload" data-original="/../img/key%E5%92%8Cvalue%E7%9A%84%E7%B1%BB%E5%9E%8B%E8%A6%81%E6%B1%82.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">key和value的类型要求</span></p>
+<h3 id="基本字典操作"><a href="#基本字典操作" class="headerlink" title="基本字典操作"></a>基本字典操作</h3><p>增加，修改</p>
+<p><img    class="lazyload" data-original="/../img/image-20231205214945877.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">增加修改</span></p>
+<p>删除</p>
+<p><img    class="lazyload" data-original="/../img/image-20231205215123341.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">删除</span></p>
+<p>查询</p>
+<p><img    class="lazyload" data-original="/../img/image-20231205215341101.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">image-20231205215341101</span></p>
+<p><img    class="lazyload" data-original="/../img/image-20231205215457561.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">查询</span></p>
+<p>None元素</p>
+<p><img    class="lazyload" data-original="/../img/image-20231205220144603.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">none</span></p>
+<p>字典查询</p>
+<p><img    class="lazyload" data-original="/../img/image-20231205220055301.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">查询</span></p>
+<h3 id="字典的key和value循环"><a href="#字典的key和value循环" class="headerlink" title="字典的key和value循环"></a>字典的key和value循环</h3><p><img    class="lazyload" data-original="/../img/%E5%AD%97%E5%85%B8%E7%9A%84key%E5%92%8Cvalue%E5%BE%AA%E7%8E%AF.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">字典的key和value循环</span></p>
+<p><img    class="lazyload" data-original="/../img/%E7%9B%B4%E6%8E%A5%E6%8B%BF%E5%88%B0key%E5%92%8Cvalue.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">直接拿到key和value</span></p>
+<p>元组和列表结构</p>
+<p><img    class="lazyload" data-original="/../img/%E5%85%83%E7%BB%84%E5%92%8C%E5%88%97%E8%A1%A8%E7%9A%84%E7%BB%93%E6%9E%84.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">元组和列表的结构</span></p>
+<p>item是只有两项元素，通过a，b可直接指代</p>
+<p><img    class="lazyload" data-original="/../img/%E9%80%9A%E8%BF%87item%E7%9B%B4%E6%8E%A5%E6%8B%BF%E5%88%B0key%E5%92%8Cvalue.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">通过item直接拿到key和value</span></p>
+<h3 id="字典嵌套"><a href="#字典嵌套" class="headerlink" title="字典嵌套"></a>字典嵌套</h3><p><img    class="lazyload" data-original="/../img/%E5%AD%97%E5%85%B8%E5%B5%8C%E5%A5%97.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">字典嵌套</span></p>
+<p>操作方式</p>
+<p><img    class="lazyload" data-original="/../img/%E5%AF%B9%E5%B5%8C%E5%A5%97%E5%86%85%E6%93%8D%E4%BD%9C.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">对嵌套内操作</span></p>
+<p><img    class="lazyload" data-original="/../img/%E5%AD%97%E5%85%B8%E7%9A%84%E5%BE%AA%E7%8E%AF%E5%88%A0%E9%99%A4.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">字典的循环删除</span></p>
+<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><h3 id="算术运算"><a href="#算术运算" class="headerlink" title="算术运算"></a>算术运算</h3><p>+-*&#x2F;%&#x2F;&#x2F;</p>
+<p>例如a&#x3D;5,b&#x3D;2</p>
+<p>+  两个对象相加               a+b&#x3D;7</p>
+<p>-  两个对象相减               a-b&#x3D;3</p>
+<p>*  两个对象相乘               a*b&#x3D;10</p>
+<p>&#x2F;  两个数相除的结果（商）            a&#x2F;b&#x3D;2.5</p>
+<p>&#x2F;&#x2F;  两个数相除后取整（返回商的整数部分（<strong>向下取整</strong>））   a&#x2F;&#x2F;b&#x3D;2   -9&#x2F;&#x2F;2&#x3D;-5</p>
+<p>%  两个数相除的余数　　　　　　　　　　　　　　　　　   a%b&#x3D;1</p>
+<p>**  a的多少次方　　　　　　　　　　　　　　　　　　　   a**b&#x3D;25</p>
+<h3 id="比较运算"><a href="#比较运算" class="headerlink" title="比较运算"></a>比较运算</h3><p>Python中的比较运算符包括：</p>
+<ol>
+<li>等于（&#x3D;&#x3D;）：检查两个值是否相等。例如，3 &#x3D;&#x3D; 3.0返回True。</li>
+<li>不等于（!&#x3D;）：检查两个值是否不相等。例如，3 !&#x3D; 3.0返回False。</li>
+<li>大于（&gt;）：检查左侧的值是否大于右侧的值。例如，3 &gt; 2返回True。</li>
+<li>小于（&lt;）：检查左侧的值是否小于右侧的值。例如，2 &lt; 3返回True。</li>
+<li>大于或等于（&gt;&#x3D;）：检查左侧的值是否大于或等于右侧的值。例如，3 &gt;&#x3D; 2返回True。</li>
+<li>小于或等于（&lt;&#x3D;）：检查左侧的值是否小于或等于右侧的值。例如，2 &lt;&#x3D; 3返回True。</li>
+</ol>
+<p>这些比较运算符可以用于任何数值类型，包括整数、浮点数和复数。此外，它们也可以用于字符串，但比较是基于字符的ASCII值进行的，而不是基于字符串的内容。例如，”abc” &lt; “xyz”返回True，因为’a’的ASCII值小于’x’。</p>
+<h3 id="赋值运算"><a href="#赋值运算" class="headerlink" title="赋值运算"></a>赋值运算</h3><p>在Python中，赋值运算符用于将值赋给变量。最常用的赋值运算符是等于（&#x3D;）。</p>
+<p>下面是一些Python赋值运算符的例子：</p>
+<ol>
+<li>等于（&#x3D;）：</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">x = <span class="hljs-number">10</span>  <span class="hljs-comment"># 将10赋给变量x</span><br></code></pre></td></tr></table></figure>
+<ol start="2">
+<li>加等于（+&#x3D;）：</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">x = <span class="hljs-number">10</span><br>x += <span class="hljs-number">5</span>  <span class="hljs-comment"># x = x + 5，所以 x 现在是15</span><br></code></pre></td></tr></table></figure>
+<ol start="3">
+<li>减等于（-&#x3D;）：</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">x = <span class="hljs-number">15</span><br>x -= <span class="hljs-number">5</span>  <span class="hljs-comment"># x = x - 5，所以 x 现在是10</span><br></code></pre></td></tr></table></figure>
+<ol start="4">
+<li>乘等于（*&#x3D;）：</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">x = <span class="hljs-number">5</span><br>x *= <span class="hljs-number">3</span>  <span class="hljs-comment"># x = x * 3，所以 x 现在是15</span><br></code></pre></td></tr></table></figure>
+<ol start="5">
+<li>除等于（&#x2F;&#x3D;）：</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">x = <span class="hljs-number">15</span><br>x /= <span class="hljs-number">3</span>  <span class="hljs-comment"># x = x / 3，所以 x 现在是5.0</span><br></code></pre></td></tr></table></figure>
+<ol start="6">
+<li>取模等于（%&#x3D;）：</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">x = <span class="hljs-number">10</span><br>x %= <span class="hljs-number">3</span>  <span class="hljs-comment"># x = x % 3，所以 x 现在是1，因为10除以3的余数是1</span><br></code></pre></td></tr></table></figure>
+<ol start="7">
+<li>幂等于（**&#x3D;）：</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">x = <span class="hljs-number">2</span><br>x **= <span class="hljs-number">3</span>  <span class="hljs-comment"># x = x ** 3，所以 x 现在是8，因为2的3次方是8</span><br></code></pre></td></tr></table></figure>
+
+<p><img    class="lazyload" data-original="/../img/%E4%BA%92%E6%8D%A2%E6%93%8D%E4%BD%9C.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">互换操作</span></p>
+<h3 id="逻辑运算"><a href="#逻辑运算" class="headerlink" title="逻辑运算"></a>逻辑运算</h3><p>Python中的逻辑运算符包括<code>and</code>、<code>or</code>和<code>not</code>。</p>
+<p>以下是一些使用这些运算符的例子：</p>
+<ol>
+<li><code>and</code>运算符：</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 如果x大于0且小于10，返回True</span><br>x = <span class="hljs-number">5</span><br><span class="hljs-keyword">if</span> x &gt; <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> x &lt; <span class="hljs-number">10</span>:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;x 在 0 和 10 之间&quot;</span>)<br></code></pre></td></tr></table></figure>
+<p>在这个例子中，如果<code>x</code>大于0且小于10，那么条件会返回True。<br>2. <code>or</code>运算符：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 如果x等于0或10，返回True</span><br>x = <span class="hljs-number">5</span><br><span class="hljs-keyword">if</span> x == <span class="hljs-number">0</span> <span class="hljs-keyword">or</span> x == <span class="hljs-number">10</span>:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;x 等于 0 或 10&quot;</span>)<br></code></pre></td></tr></table></figure>
+<p>在这个例子中，如果<code>x</code>等于0或者10，那么条件会返回True。<br>3. <code>not</code>运算符：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 如果x不等于0，返回True</span><br>x = <span class="hljs-number">5</span><br><span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> x == <span class="hljs-number">0</span>:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;x 不等于 0&quot;</span>)<br></code></pre></td></tr></table></figure>
+<p>在这个例子中，如果<code>x</code>不等于0，那么条件会返回True。注意<code>not</code>运算符只对后面的条件进行否定。</p>
+<p>以上就是Python中的逻辑运算符及其用法的简单示例。</p>
+<p><strong>如果同时出现时，优先级括号&gt;not&gt;and&gt;or</strong></p>
+<h3 id="成员运算"><a href="#成员运算" class="headerlink" title="成员运算"></a>成员运算</h3><p>Python中的成员运算符是<code>in</code>和<code>not in</code>。这些运算符用于检查一个值是否存在于一个序列（如列表、元组、字典、集合或字符串）中。</p>
+<p>以下是一些使用成员运算符的例子：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 检查一个值是否在列表中</span><br>fruits = [<span class="hljs-string">&#x27;apple&#x27;</span>, <span class="hljs-string">&#x27;banana&#x27;</span>, <span class="hljs-string">&#x27;cherry&#x27;</span>]<br><span class="hljs-keyword">if</span> <span class="hljs-string">&#x27;apple&#x27;</span> <span class="hljs-keyword">in</span> fruits:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Apple is in the list.&#x27;</span>)<br><br><span class="hljs-comment"># 检查一个值是否在元组中</span><br>colors = (<span class="hljs-string">&#x27;red&#x27;</span>, <span class="hljs-string">&#x27;green&#x27;</span>, <span class="hljs-string">&#x27;blue&#x27;</span>)<br><span class="hljs-keyword">if</span> <span class="hljs-string">&#x27;red&#x27;</span> <span class="hljs-keyword">in</span> colors:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Red is in the tuple.&#x27;</span>)<br><br><span class="hljs-comment"># 检查一个值是否在字典中</span><br>person = &#123;<span class="hljs-string">&#x27;name&#x27;</span>: <span class="hljs-string">&#x27;Alice&#x27;</span>, <span class="hljs-string">&#x27;age&#x27;</span>: <span class="hljs-number">25</span>&#125;<br><span class="hljs-keyword">if</span> <span class="hljs-string">&#x27;Alice&#x27;</span> <span class="hljs-keyword">in</span> person:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Alice is in the dictionary.&#x27;</span>)<br><br><span class="hljs-comment"># 检查一个值是否在集合中</span><br>colors = &#123;<span class="hljs-string">&#x27;red&#x27;</span>, <span class="hljs-string">&#x27;green&#x27;</span>, <span class="hljs-string">&#x27;blue&#x27;</span>&#125;<br><span class="hljs-keyword">if</span> <span class="hljs-string">&#x27;red&#x27;</span> <span class="hljs-keyword">in</span> colors:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Red is in the set.&#x27;</span>)<br><br><span class="hljs-comment"># 检查一个字符是否在字符串中</span><br>text = <span class="hljs-string">&#x27;Hello, world!&#x27;</span><br><span class="hljs-keyword">if</span> <span class="hljs-string">&#x27;l&#x27;</span> <span class="hljs-keyword">in</span> text:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;The letter &quot;l&quot; is in the string.&#x27;</span>)<br></code></pre></td></tr></table></figure>
+<p>对于字符串，<code>in</code>运算符检查一个字符是否存在于字符串中。对于其他序列类型（如列表、元组、字典和集合），<code>in</code>运算符检查一个值是否存在于序列中。</p>
+<h2 id="python文件操作"><a href="#python文件操作" class="headerlink" title="python文件操作"></a>python文件操作</h2><h3 id="打开文件"><a href="#打开文件" class="headerlink" title="打开文件"></a>打开文件</h3><p>使用 Python 打开一个文件，我们需要用到 open() 函数：</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">f = open(&quot;FishC.txt&quot;, &quot;w&quot;)<br></code></pre></td></tr></table></figure>
+
+<p>第一个参数指定的是文件路径和文件名，这里我们没有添加路径的话，那么默认是将文件创建在 Python 的主文件夹下面，因为执行 IDLE 的程序就放在那里嘛（同样的道理，如果我们在桌面创建一个 test.py 的源文件，然后输入打开文件的代码，那么它就会在桌面创建一个 FishC.txt 的文本文件）。<br>第二个参数是指定文件的打开模式：<br><img    class="lazyload" data-original="https://img-blog.csdnimg.cn/6a9f5e380198482f814f512b9c8d86b3.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">打开模式字符含义</span></p>
+<h3 id="文件对象方法详细解析"><a href="#文件对象方法详细解析" class="headerlink" title="文件对象方法详细解析"></a>文件对象方法详细解析</h3><p>（1）有两个方法可以将字符串写入到文本对象种，一个是 write()，一个是 writelines()：</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">f.write(&quot;I love Python.&quot;)<br></code></pre></td></tr></table></figure>
+
+<p>使用 write() 方法，它有一个返回值，就是总共写入到文件对象中的字符个数。</p>
+<p>使用 writelines() 方法，则可以将多个字符串同时写入：</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">f.writelines([&quot;I love FishC.\n&quot;, &quot;I love my wife.&quot;])<br></code></pre></td></tr></table></figure>
+
+<p>注意：虽然 writelines() 方法支持传入多个字符串，但它不会帮你添加换行符，所以我们要自己添加才行。[&#x2F;code]</p>
+<h3 id="关闭文件"><a href="#关闭文件" class="headerlink" title="关闭文件"></a>关闭文件</h3><p>我们使用 close() 方法来关闭文件：</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">f.close()<br></code></pre></td></tr></table></figure>
+
+<p>注意，文件对象关闭之后，我们就没办法对它进行操作了。</p>
+<p>如果想要继续操作文件，那么我们必须重新打开它。</p>
+<p><img    class="lazyload" data-original="https://img-blog.csdnimg.cn/367dd2cc2c274d50a7c13d0a91c851f5.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">注意事项</span></p>
+<h3 id="路径修改"><a href="#路径修改" class="headerlink" title="路径修改"></a>路径修改</h3><p>不同操作系统，它的这个路径分隔符是不一样的，比如 Windows 系统是使用反斜杠，而其他大多数操作系统则是使用斜杠来分隔。</p>
+<p>这个 Windows 采用的反斜杠，跟字符串中的转义字符的反斜杠是同一条杠，那么，如果你想要在 Windows 上使用反斜杠来分隔路径，你就不得不用另一条反斜杠来转移反斜杠，或者使用原始字符串，并不是说这么做有多困难吧，就是觉得这样做不是那么优雅……</p>
+<h3 id="相对路径和绝对路径"><a href="#相对路径和绝对路径" class="headerlink" title="相对路径和绝对路径"></a>相对路径和绝对路径</h3><p>相对路径：以当前目录作为基准，进而逐级推导（. . 表示上级目录；. 当前目录）。<br>绝对路径：文件真正存在的路径，从根目录逐级推导到指定的文件 &#x2F; 文件夹。</p>
+
+      </section>
+      <section class="extra">
+        
+          <ul class="copyright">
+  
+    <li><strong>本文作者：</strong>20231201</li>
+    <li><strong>本文链接：</strong><a href="http://example.com/2023/12/04/%E7%BD%91%E5%AE%89%E5%9F%BA%E7%A1%80%EF%BC%88shell,ip%E7%AD%89%EF%BC%89python%E5%9F%BA%E7%A1%80/index.html" title="http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;12&#x2F;04&#x2F;%E7%BD%91%E5%AE%89%E5%9F%BA%E7%A1%80%EF%BC%88shell,ip%E7%AD%89%EF%BC%89python%E5%9F%BA%E7%A1%80&#x2F;index.html">http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;12&#x2F;04&#x2F;%E7%BD%91%E5%AE%89%E5%9F%BA%E7%A1%80%EF%BC%88shell,ip%E7%AD%89%EF%BC%89python%E5%9F%BA%E7%A1%80&#x2F;index.html</a></li>
+    <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
+  
+</ul>
+        
+        
+          <section class="donate">
+  <div id="qrcode-donate">
+    <img   class="lazyload" data-original="https://pic.izhaoo.com/alipay.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        
+        
+  <nav class="nav">
+    <a href="/2023/12/06/docker%E5%AE%89%E8%A3%85%E4%B8%8Ehtml5%E5%9F%BA%E7%A1%80/"><i class="iconfont iconleft"></i>docker安装与html5基础</a>
+    <a href="/2023/12/03/github%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA/">github博客的搭建<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#shell%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="toc-text">shell的方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%8F%8D%E5%BC%B9shell"><span class="toc-text">1.反弹shell</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%AD%A3%E5%90%91shell"><span class="toc-text">2.正向shell</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IP"><span class="toc-text">IP</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#IP%E6%A0%BC%E5%BC%8F"><span class="toc-text">IP格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%90%E7%BD%91%E6%8E%A9%E7%A0%81"><span class="toc-text">子网掩码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E5%9C%B0%E5%9D%80"><span class="toc-text">网络地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%BF%E6%92%AD%E5%9C%B0%E5%9D%80"><span class="toc-text">广播地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E5%85%B3"><span class="toc-text">网关</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%A0%E7%BB%9F%E7%9A%84%E7%94%A8%E6%88%B7IP%E5%88%86%E9%85%8D%E6%96%B9%E5%BC%8F"><span class="toc-text">传统的用户IP分配方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AC%E7%BD%91IP%E7%9A%84%E5%88%86%E9%85%8D"><span class="toc-text">公网IP的分配</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%B9%E8%AE%AD%E5%AD%A6%E4%B9%A0%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">培训学习注意事项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E9%9D%99%E6%80%81%E8%B7%AF%E7%94%B1%E4%B8%8E%E5%8A%A8%E6%80%81%E9%9D%99%E6%80%81IP%E5%8F%8Aosi"><span class="toc-text">动态静态路由与动态静态IP及osi</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E9%9D%99%E6%80%81%E8%B7%AF%E7%94%B1"><span class="toc-text">动态静态路由</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#osi7%E5%B1%82%E5%8D%8F%E8%AE%AE"><span class="toc-text">osi7层协议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#socks5%E4%BC%A0%E6%92%AD"><span class="toc-text">socks5传播</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B7%AF%E7%94%B1%E5%99%A8-ping%E7%9A%84%E8%BF%87%E7%A8%8B"><span class="toc-text">路由器 ping的过程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VMwareworkstation%E7%9A%84%E8%81%94%E7%BD%91"><span class="toc-text">VMwareworkstation的联网</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#proxifer"><span class="toc-text">proxifer</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BDproxifer"><span class="toc-text">下载proxifer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE"><span class="toc-text">代理服务器设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%90%86%E8%A7%84%E5%88%99%E8%AE%BE%E7%BD%AE"><span class="toc-text">代理规则设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AA%8C%E8%AF%81"><span class="toc-text">验证</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F"><span class="toc-text">工作方式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#python%E5%9F%BA%E7%A1%80"><span class="toc-text">python基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#bytes"><span class="toc-text">bytes</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E9%9B%86%E5%92%8C%E7%BC%96%E7%A0%81%E4%BB%8B%E7%BB%8D"><span class="toc-text">字符集和编码介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E7%A0%81%E4%B8%8E%E8%A7%A3%E7%A0%81"><span class="toc-text">编码与解码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#python%E5%AD%97%E5%85%B8"><span class="toc-text">python字典</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E5%85%B8%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">字典的基本概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E5%AD%97%E5%85%B8%E6%93%8D%E4%BD%9C"><span class="toc-text">基本字典操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E5%85%B8%E7%9A%84key%E5%92%8Cvalue%E5%BE%AA%E7%8E%AF"><span class="toc-text">字典的key和value循环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E5%85%B8%E5%B5%8C%E5%A5%97"><span class="toc-text">字典嵌套</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97"><span class="toc-text">算术运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97"><span class="toc-text">比较运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97"><span class="toc-text">赋值运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97"><span class="toc-text">逻辑运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%90%E5%91%98%E8%BF%90%E7%AE%97"><span class="toc-text">成员运算</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#python%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="toc-text">python文件操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6"><span class="toc-text">打开文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95%E8%AF%A6%E7%BB%86%E8%A7%A3%E6%9E%90"><span class="toc-text">文件对象方法详细解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E9%97%AD%E6%96%87%E4%BB%B6"><span class="toc-text">关闭文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B7%AF%E5%BE%84%E4%BF%AE%E6%94%B9"><span class="toc-text">路径修改</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84%E5%92%8C%E7%BB%9D%E5%AF%B9%E8%B7%AF%E5%BE%84"><span class="toc-text">相对路径和绝对路径</span></a></li></ol></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"><a 
+        href="tencent://message/?Menu=yes&uin=894519210 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#12B7F5'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconQQ "></i>
+      </a><a 
+        href="javascript:; "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#09BB07'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconwechat-fill "></i>
+      </a><a 
+        href="https://www.instagram.com/izhaoo/ "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#DA2E76'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconinstagram "></i>
+      </a><a 
+        href="https://github.com/zhaoo "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#9f7be1'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  icongithub-fill "></i>
+      </a><a 
+        href="mailto:izhaoo@163.com "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color=#FF3B00" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconmail"></i>
+      </a></div>
+  
+    <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+  
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
+      </section>
+      <section class="extra">
+        
+          <ul class="copyright">
+  
+    <li><strong>本文作者：</strong>John Doe</li>
+    <li><strong>本文链接：</strong><a href="http://example.com/2024/01/18/shell%EF%BC%8Cip%E7%AD%89/index.html" title="http:&#x2F;&#x2F;example.com&#x2F;2024&#x2F;01&#x2F;18&#x2F;shell%EF%BC%8Cip%E7%AD%89&#x2F;index.html">http:&#x2F;&#x2F;example.com&#x2F;2024&#x2F;01&#x2F;18&#x2F;shell%EF%BC%8Cip%E7%AD%89&#x2F;index.html</a></li>
+    <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
+  
+</ul>
+        
+        
+          <section class="donate">
+  <div id="qrcode-donate">
+    <img   class="lazyload" data-original="https://pic.izhaoo.com/alipay.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        
+        
+  <nav class="nav">
+    <a href="/2024/01/18/sqli/"><i class="iconfont iconleft"></i></a>
+    <a href="/2024/01/18/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/"><i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#main"><span class="toc-text">网安基础知识（shell,ip,osi,vm联网,proxifer等）python基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#shell%E7%9A%84%E6%96%B9%E5%BC%8F"><span class="toc-text">shell的方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%8F%8D%E5%BC%B9shell"><span class="toc-text">1.反弹shell</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%AD%A3%E5%90%91shell"><span class="toc-text">2.正向shell</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IP"><span class="toc-text">IP</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#IP%E6%A0%BC%E5%BC%8F"><span class="toc-text">IP格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%90%E7%BD%91%E6%8E%A9%E7%A0%81"><span class="toc-text">子网掩码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E5%9C%B0%E5%9D%80"><span class="toc-text">网络地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%BF%E6%92%AD%E5%9C%B0%E5%9D%80"><span class="toc-text">广播地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E5%85%B3"><span class="toc-text">网关</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%A0%E7%BB%9F%E7%9A%84%E7%94%A8%E6%88%B7IP%E5%88%86%E9%85%8D%E6%96%B9%E5%BC%8F"><span class="toc-text">传统的用户IP分配方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AC%E7%BD%91IP%E7%9A%84%E5%88%86%E9%85%8D"><span class="toc-text">公网IP的分配</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%B9%E8%AE%AD%E5%AD%A6%E4%B9%A0%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">培训学习注意事项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E9%9D%99%E6%80%81%E8%B7%AF%E7%94%B1%E4%B8%8E%E5%8A%A8%E6%80%81%E9%9D%99%E6%80%81IP%E5%8F%8Aosi"><span class="toc-text">动态静态路由与动态静态IP及osi</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E9%9D%99%E6%80%81%E8%B7%AF%E7%94%B1"><span class="toc-text">动态静态路由</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#osi7%E5%B1%82%E5%8D%8F%E8%AE%AE"><span class="toc-text">osi7层协议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#socks5%E4%BC%A0%E6%92%AD"><span class="toc-text">socks5传播</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B7%AF%E7%94%B1%E5%99%A8-ping%E7%9A%84%E8%BF%87%E7%A8%8B"><span class="toc-text">路由器 ping的过程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VMwareworkstation%E7%9A%84%E8%81%94%E7%BD%91"><span class="toc-text">VMwareworkstation的联网</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#proxifer"><span class="toc-text">proxifer</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BDproxifer"><span class="toc-text">下载proxifer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE"><span class="toc-text">代理服务器设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%90%86%E8%A7%84%E5%88%99%E8%AE%BE%E7%BD%AE"><span class="toc-text">代理规则设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AA%8C%E8%AF%81"><span class="toc-text">验证</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F"><span class="toc-text">工作方式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#python%E5%9F%BA%E7%A1%80"><span class="toc-text">python基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#bytes"><span class="toc-text">bytes</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E9%9B%86%E5%92%8C%E7%BC%96%E7%A0%81%E4%BB%8B%E7%BB%8D"><span class="toc-text">字符集和编码介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E7%A0%81%E4%B8%8E%E8%A7%A3%E7%A0%81"><span class="toc-text">编码与解码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#python%E5%AD%97%E5%85%B8"><span class="toc-text">python字典</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E5%85%B8%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">字典的基本概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E5%AD%97%E5%85%B8%E6%93%8D%E4%BD%9C"><span class="toc-text">基本字典操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E5%85%B8%E7%9A%84key%E5%92%8Cvalue%E5%BE%AA%E7%8E%AF"><span class="toc-text">字典的key和value循环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E5%85%B8%E5%B5%8C%E5%A5%97"><span class="toc-text">字典嵌套</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97"><span class="toc-text">算术运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97"><span class="toc-text">比较运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97"><span class="toc-text">赋值运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97"><span class="toc-text">逻辑运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%90%E5%91%98%E8%BF%90%E7%AE%97"><span class="toc-text">成员运算</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#python%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="toc-text">python文件操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6"><span class="toc-text">打开文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95%E8%AF%A6%E7%BB%86%E8%A7%A3%E6%9E%90"><span class="toc-text">文件对象方法详细解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E9%97%AD%E6%96%87%E4%BB%B6"><span class="toc-text">关闭文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B7%AF%E5%BE%84%E4%BF%AE%E6%94%B9"><span class="toc-text">路径修改</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84%E5%92%8C%E7%BB%9D%E5%AF%B9%E8%B7%AF%E5%BE%84"><span class="toc-text">相对路径和绝对路径</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#main"><span class="toc-text">文章目录：</span></a></li></ol></li></ol></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"><a 
+        href="tencent://message/?Menu=yes&uin=894519210 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#12B7F5'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconQQ "></i>
+      </a><a 
+        href="javascript:; "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#09BB07'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconwechat-fill "></i>
+      </a><a 
+        href="https://www.instagram.com/izhaoo/ "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#DA2E76'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconinstagram "></i>
+      </a><a 
+        href="https://github.com/zhaoo "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#9f7be1'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  icongithub-fill "></i>
+      </a><a 
+        href="mailto:izhaoo@163.com "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color=#FF3B00" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconmail"></i>
+      </a></div>
+  
+    <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+  
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

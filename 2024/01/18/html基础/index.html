@@ -1,0 +1,849 @@
+
+
+<!DOCTYPE html>
+<html lang="en" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> - Hexo</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="
+
+
+
+
+  
+  
+  
+  docker安装与ht...">
+  <meta name="author" content="John Doe">
+  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_1445822_p6ry5n7lrr.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      loading: {
+        gif: '/images/theme/loading.gif',
+        lottie: ''
+      },
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: {
+          gif: '/images/theme/loading.gif',
+          lottie: ''
+        }
+      },
+      donate: {
+        enable: true,
+        alipay: 'https://pic.izhaoo.com/alipay.jpg',
+        wechat: 'https://pic.izhaoo.com/wechat.jpg'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: false
+      },
+      preview: {
+        background: {
+          default: '',
+          api: ''
+        },
+        motto: {
+          default: '我在开了灯的床头下，想问问自己的心啊。',
+          typing: true,
+          api: 'https://v2.jinrishici.com/one.json',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: true,
+        type: 'url',
+        image: 'https://pic.izhaoo.com/weapp-code.jpg',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        type: 'default'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      },
+      search: {
+        enable: false,
+        path: ''
+      }
+    }
+  </script>
+
+  
+
+  
+
+</head>
+
+<body class="lock-screen">
+  <div class="loading" id="loading"></div>
+  
+    
+
+
+  
+  
+
+<nav class="menu">
+  <div class="menu-container">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> 首页</a>
+      </li><li class="menu-item">
+        <a href="/galleries/ " class="underline "> 摄影</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> 归档</a>
+      </li><li class="menu-item">
+        <a href="/tags/ " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/categories/ " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title"></h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>January 18, 2024</span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>12989</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        
+        
+
+<!DOCTYPE html>
+<html lang="cn" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>docker安装与html5基础 - Hexo</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="[TOC]
+虚拟机docker安装pip安装pip安装...">
+  <meta name="author" content="20231201">
+  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_1445822_p6ry5n7lrr.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      loading: {
+        gif: '/images/theme/loading.gif',
+        lottie: ''
+      },
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: {
+          gif: '/images/theme/loading.gif',
+          lottie: ''
+        }
+      },
+      donate: {
+        enable: true,
+        alipay: 'https://pic.izhaoo.com/alipay.jpg',
+        wechat: 'https://pic.izhaoo.com/wechat.jpg'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: false
+      },
+      preview: {
+        background: {
+          default: '',
+          api: ''
+        },
+        motto: {
+          default: '我在开了灯的床头下，想问问自己的心啊。',
+          typing: true,
+          api: 'https://v2.jinrishici.com/one.json',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: true,
+        type: 'url',
+        image: 'https://pic.izhaoo.com/weapp-code.jpg',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        type: 'default'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      },
+      search: {
+        enable: false,
+        path: ''
+      }
+    }
+  </script>
+
+  
+
+  
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body class="lock-screen">
+  <div class="loading" id="loading"></div>
+  
+    
+
+
+  <nav class="navbar">
+    <div class="left">
+      
+        <i class="iconfont iconhome j-navbar-back-home"></i>
+      
+      
+        <i class="iconfont iconqrcode j-navbar-qrcode"></i>
+      
+      
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      
+      
+    </div>
+    <div class="center">docker安装与html5基础</div>
+    <div class="right">
+      <i class="iconfont iconmenu j-navbar-menu"></i>
+    </div>
+    
+      <div id="qrcode-navbar"></div>
+    
+  </nav>
+
+  
+  
+
+<nav class="menu">
+  <div class="menu-container">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> 首页</a>
+      </li><li class="menu-item">
+        <a href="/galleries/ " class="underline "> 摄影</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> 归档</a>
+      </li><li class="menu-item">
+        <a href="/tags/ " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/categories/ " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/theme/post-image.webp" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">docker安装与html5基础</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>December 06, 2023</span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>9474</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        
+        <p>[TOC]</p>
+<h2 id="虚拟机docker安装"><a href="#虚拟机docker安装" class="headerlink" title="虚拟机docker安装"></a>虚拟机docker安装</h2><h3 id="pip安装"><a href="#pip安装" class="headerlink" title="pip安装"></a>pip安装</h3><p><img    class="lazyload" data-original="/../img/pip%E5%AE%89%E8%A3%85.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">pip安装</span></p>
+<h3 id="bash脚本"><a href="#bash脚本" class="headerlink" title="bash脚本"></a>bash脚本</h3><p><img    class="lazyload" data-original="/../img/bash%E8%84%9A%E6%9C%AC.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">bash脚本</span></p>
+<p>docker安装完成</p>
+<p>![docker start docker-wordpress-nginx](..&#x2F;img&#x2F;docker start docker-wordpress-nginx.png)</p>
+<h2 id="ssh登录"><a href="#ssh登录" class="headerlink" title="ssh登录"></a>ssh登录</h2><p><img    class="lazyload" data-original="/../img/ssh%E7%99%BB%E5%BD%95.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">ssh登录</span></p>
+<h2 id="html5基础"><a href="#html5基础" class="headerlink" title="html5基础"></a>html5基础</h2><h3 id="基础元素"><a href="#基础元素" class="headerlink" title="基础元素"></a>基础元素</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><code class="hljs text">&lt;!doctype html&gt;<br>&lt;html&gt;<br>&lt;head&gt;<br>&lt;meta charset=&quot;utf-8&quot;&gt;<br>&lt;!-- TemplateBeginEditable name=&quot;doctitle&quot; --&gt;<br>&lt;title&gt;html5基础&lt;/title&gt;<br>&lt;!-- TemplateEndEditable --&gt;<br>&lt;!-- TemplateBeginEditable name=&quot;head&quot; --&gt;<br>&lt;!-- TemplateEndEditable --&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br>&lt;b&gt; 	定义粗体文本<br>&lt;em&gt; 	定义着重文字<br>&lt;i&gt; 	定义斜体字<br>&lt;small&gt; 定义小号字<br>&lt;strong&gt;定义加重语气<br>&lt;sub&gt; 	定义下标字<br>&lt;sup&gt; 	定义上标字<br>&lt;ins&gt; 	定义插入字<br>&lt;del&gt; 	定义删除字<br>&lt;br&gt;<br>sup<br>strong<br>&lt;p&gt;p&lt;/p&gt;<br>&lt;p&gt;abc&lt;img src=&quot;../img/docker start docker-wordpress-nginx.png&quot; width=&quot;70&quot; height=&quot;20&quot; alt=&quot;1&quot;/&gt;def&lt;/p&gt;<br>&lt;table border=&quot;1&quot;&gt;<br>	&lt;tr&gt;<br>    	&lt;td&gt;1&lt;/td&gt;<br>        &lt;td&gt;2&lt;/td&gt;<br>        &lt;td&gt;3&lt;/td&gt;<br>    &lt;/tr&gt;<br>    &lt;tr&gt;<br>    	&lt;td&gt;4&lt;/td&gt;<br>        &lt;td&gt;5&lt;/td&gt;<br>        &lt;td&gt;6&lt;/td&gt;<br>    &lt;/tr&gt;<br>&lt;/table&gt;<br>&lt;form action=&quot;/submit_form&quot; method=&quot;post&quot;&gt;  <br>&lt;label for=&quot;fname&quot;&gt;First Name:&lt;/label&gt;&lt;br&gt;  <br>&lt;input type=&quot;text&quot; id=&quot;fname&quot; name=&quot;fname&quot;&gt;&lt;br&gt;  <br>&lt;label for=&quot;lname&quot;&gt;Last Name:&lt;/label&gt;&lt;br&gt;  <br>&lt;input type=&quot;text&quot; id=&quot;lname&quot; name=&quot;lname&quot;&gt;&lt;br&gt;  <br>&lt;label for=&quot;email&quot;&gt;Email:&lt;/label&gt;&lt;br&gt;  <br>&lt;input type=&quot;email&quot; id=&quot;email&quot; name=&quot;email&quot;&gt;&lt;br&gt;  <br>&lt;label for=&quot;pwd&quot;&gt;Password:&lt;/label&gt;&lt;br&gt;  <br>&lt;input type=&quot;password&quot; id=&quot;pwd&quot; name=&quot;pwd&quot;&gt;&lt;br&gt;  <br>&lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;  <br>&lt;/form&gt;   <br>&lt;/body&gt;<br>&lt;/html&gt;<br></code></pre></td></tr></table></figure>
+
+
+<table>
+<thead>
+<tr>
+<th><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/tag-head.html"></a>head</th>
+<th align="left">定义了文档的信息</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/tag-title.html"></a>title</td>
+<td align="left">定义了文档的标题</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/tag-base.html"></a>base</td>
+<td align="left">定义了页面链接标签的默认链接地址</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/tag-link.html"></a>link</td>
+<td align="left">定义了一个文档和外部资源之间的关系</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/tag-meta.html"></a>meta</td>
+<td align="left">定义了HTML文档中的元数据</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/tag-script.html"></a>script</td>
+<td align="left">定义了客户端的脚本文件</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.runoob.com/tags/tag-style.html"></a>style</td>
+<td align="left">定义了HTML文档的样式文件</td>
+</tr>
+</tbody></table>
+<h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><p>以下是 HTML 中创建链接的基本语法和属性：<code>&lt;a&gt;</code> 元素：创建链接的主要HTML元素是<code>&lt;a&gt;</code>（锚）元素。<code>&lt;a&gt;</code>元素具有以下属性：</p>
+<ul>
+<li><p><code>href</code>：指定链接目标的URL，这是链接的最重要属性。可以是另一个网页的URL、文件的URL或其他资源的URL。</p>
+</li>
+<li><p><code>target</code>（可选）：指定链接如何在浏览器中打开。常见的值包括 <code>_blank</code>（在新标签或窗口中打开链接）和 <code>_self</code>（在当前标签或窗口中打开链接）。</p>
+</li>
+<li><p><code>title</code>（可选）：提供链接的额外信息，通常在鼠标悬停在链接上时显示为工具提示。</p>
+</li>
+<li><p><code>rel</code>（可选）：指定与链接目标的关系，如 nofollow、noopener 等。</p>
+<p>出现形式：</p>
+</li>
+<li><p>一个未访问过的链接显示为蓝色字体并带有下划线。</p>
+</li>
+<li><p>访问过的链接显示为紫色并带有下划线。</p>
+</li>
+<li><p>点击链接时，链接显示为红色并带有下划线。</p>
+</li>
+</ul>
+<h3 id="css"><a href="#css" class="headerlink" title="css"></a>css</h3><p>CSS 可以通过以下方式添加到HTML中:</p>
+<ul>
+<li>内联样式- 在HTML元素中使用”style” <strong>属性</strong> </li>
+<li>内部样式表 -在HTML文档头部 <code>&lt;head&gt;</code> 区域使用<code>&lt;style&gt;</code> <strong>元素</strong> 来包含CSS</li>
+<li>外部引用 - 使用外部 CSS文件</li>
+</ul>
+<p>背景色属性（background-color）定义一个元素的背景颜色.</p>
+<p>我们可以使用font-family（字体），color（颜色），和font-size（字体大小）属性来定义字体的样式:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">&lt;h1 style=&quot;font-family:verdana;&quot;&gt;一个标题&lt;/h1&gt; &lt;p style=&quot;font-family:arial;color:red;font-size:20px;&quot;&gt;一个段落。&lt;/p&gt;<br></code></pre></td></tr></table></figure>
+
+<p>使用 text-align（文字对齐）属性指定文本的水平与垂直对齐方式.</p>
+<p>内部样式表：</p>
+<p>当单个文件需要特别样式时，就可以使用内部样式表。你可以在<code>&lt;head&gt;</code>  部分通过 <code>&lt;style&gt;</code>标签定义内部样式表:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs text">&lt;head&gt;<br>&lt;style type=&quot;text/css&quot;&gt;<br>body &#123;background-color:yellow;&#125;<br>p &#123;color:blue;&#125;<br>&lt;/style&gt;<br>&lt;/head&gt;<br></code></pre></td></tr></table></figure>
+
+
+<p>外部样式表：</p>
+<p>当样式需要被应用到很多页面的时候，外部样式表将是理想的选择。使用外部样式表，你就可以通过更改一个文件来改变整个站点的外观。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs text">&lt;head&gt;<br>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;mystyle.css&quot;&gt;<br>&lt;/head&gt;<br></code></pre></td></tr></table></figure>
+
+
+<p>在 HTML 中，图像由<code>&lt;img&gt;</code> 标签定义。</p>
+<p><code>&lt;img&gt;</code> 是空标签，意思是说，它只包含属性，并且没有闭合标签。</p>
+<p>要在页面上显示图像，你需要使用源属性（src）。src 指 “source”。源属性的值是图像的 URL 地址。</p>
+<p>定义图像的语法是：</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">&lt;img src=&quot;url&quot; alt=&quot;some_text&quot;&gt;&lt;!--URL 指存储图像的位置--&gt;<br></code></pre></td></tr></table></figure>
+
+<p>alt 属性用来为图像定义一串预备的可替换的文本。</p>
+<p>替换文本属性的值是用户定义的。</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">&lt;img src=&quot;2.gif&quot; alt=&quot;Big Boat&quot;&gt;<br></code></pre></td></tr></table></figure>
+
+<p>height（高度） 与 width（宽度）属性用于设置图像的高度与宽度。</p>
+<p>属性值默认单位为像素:</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">&lt;img src=&quot;3.jpg&quot; alt=&quot;Pulpit rock&quot; width=&quot;304&quot; height=&quot;228&quot;&gt;<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs text">&lt;!doctype html&gt;<br>&lt;html&gt;<br>&lt;head&gt;<br>&lt;meta charset=&quot;utf-8&quot;&gt;<br>&lt;!-- TemplateBeginEditable name=&quot;doctitle&quot; --&gt;<br>&lt;title&gt;无标题文档&lt;/title&gt;<br>&lt;!-- TemplateEndEditable --&gt;<br>&lt;!-- TemplateBeginEditable name=&quot;head&quot; --&gt;<br>&lt;!-- TemplateEndEditable --&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br>&lt;label for=&quot;name&quot;&gt;姓名：&lt;/label&gt;<br>&lt;input type=&quot;text&quot; id=&quot;name&quot; name=&quot;name&quot; required&gt;&lt;br&gt;<br>&lt;label for=&quot;password&quot;&gt;密码：&lt;/label&gt;<br>&lt;input type=&quot;password&quot; id=&quot;password&quot; name=&quot;password&quot; required&gt;&lt;br&gt;<br>    &lt;label&gt;性别:&lt;/label&gt;<br>    &lt;input type=&quot;radio&quot; id=&quot;male&quot; name=&quot;gender&quot; value=&quot;male&quot; checked&gt;<br>    &lt;label for=&quot;male&quot;&gt;男&lt;/label&gt;<br>    &lt;input type=&quot;radio&quot; id=&quot;female&quot; name=&quot;gender&quot; value=&quot;female&quot;&gt;<br>    &lt;label for=&quot;female&quot;&gt;女&lt;/label&gt;<br>&lt;br&gt;<br>&lt;p&gt;爱好&lt;/p&gt;<br>&lt;label for=&quot;subscribe1&quot;&gt;1&lt;/label&gt;<br>&lt;input type=&quot;checkbox&quot; id=&quot;subscribe1&quot; name=&quot;subscribe&quot;&gt;<br>&lt;label for=&quot;subscribe2&quot;&gt;2&lt;/label&gt;<br>&lt;input type=&quot;checkbox&quot; id=&quot;subscribe2&quot; name=&quot;subscribe&quot; &gt;<br>&lt;label for=&quot;subscribe3&quot;&gt;3&lt;/label&gt;<br>&lt;input type=&quot;checkbox&quot; id=&quot;subscribe3&quot; name=&quot;subscribe&quot; &gt;<br>&lt;br&gt;<br>&lt;label for=&quot;country&quot;&gt;国家&lt;/label&gt;<br>&lt;select id=&quot;country&quot; name=&quot;country&quot;&gt;<br>	&lt;option value=&quot;&quot;&gt;cn&lt;/option&gt;<br>    &lt;option value=&quot;&quot;&gt;usa&lt;/option&gt;<br>    &lt;option value=&quot;&quot;&gt;uk&lt;/option&gt;<br>&lt;/select&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;<br></code></pre></td></tr></table></figure>
+
+<p><img    class="lazyload" data-original="/../img/image-20231207112107366.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">表单</span></p>
+<h3 id="实现类似http-www-hunan-gov-cn-的页面"><a href="#实现类似http-www-hunan-gov-cn-的页面" class="headerlink" title="实现类似http://www.hunan.gov.cn/的页面"></a>实现类似<a target="_blank" rel="noopener" href="http://www.hunan.gov.cn/%E7%9A%84%E9%A1%B5%E9%9D%A2">http://www.hunan.gov.cn/的页面</a></h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><code class="hljs text">&lt;!DOCTYPE html&gt;  <br>&lt;html&gt;  <br>&lt;head&gt;  <br>  &lt;meta charset=&quot;UTF-8&quot;&gt;  <br>  &lt;title&gt;湖南省政府网站&lt;/title&gt;  <br>  &lt;style&gt;  <br>    body &#123;  <br>      font-family: Arial, sans-serif;  <br>      margin: 0;  <br>      padding: 0;  <br>    &#125;  <br>    header &#123;  <br>      background-color: #333;  <br>      color: #fff;  <br>      padding: 10px;  <br>      text-align: center;  <br>    &#125;  <br>    nav &#123;  <br>      background-color: #555;  <br>      color: #fff;  <br>      padding: 10px;  <br>      text-align: center;  <br>    &#125;  <br>    nav ul &#123;  <br>      list-style-type: none;  <br>      margin: 0;  <br>      padding: 0;  <br>      overflow: hidden;  <br>    &#125;  <br>    nav ul li &#123;  <br>      float: left;  <br>    &#125;  <br>    nav ul li a &#123;  <br>      display: block;  <br>      color: #fff;  <br>      text-align: center;  <br>      padding: 14px 16px;  <br>      text-decoration: none;  <br>    &#125;  <br>    main &#123;  <br>      margin: 15px;  <br>    &#125;  <br>    article &#123;  <br>      margin-bottom: 30px;  <br>    &#125;  <br>    article h1 &#123;  <br>      font-size: 24px;  <br>    &#125;  <br>    article p &#123;  <br>      font-size: 16px;  <br>    &#125;  <br>    aside &#123;  <br>      background-color: #f1f1f1;  <br>      padding: 10px;  <br>    &#125;  <br>    footer &#123;  <br>      background-color: #333;  <br>      color: #fff;  <br>      padding: 10px;  <br>      text-align: center;  <br>    &#125;  <br>  &lt;/style&gt;  <br>&lt;/head&gt;  <br>&lt;body&gt;  <br>  &lt;header&gt;  <br>    &lt;nav&gt;  <br>      &lt;ul&gt;  <br>        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;首页&lt;/a&gt;&lt;/li&gt;  <br>        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;新闻&lt;/a&gt;&lt;/li&gt;  <br>        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;政务公开&lt;/a&gt;&lt;/li&gt;  <br>        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;互动交流&lt;/a&gt;&lt;/li&gt;  <br>        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;专题专栏&lt;/a&gt;&lt;/li&gt;  <br>        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;联系我们&lt;/a&gt;&lt;/li&gt;  <br>      &lt;/ul&gt;  <br>    &lt;/nav&gt;  &lt;/header&gt;  &lt;nav&gt;   &lt;ul&gt;   &lt;li&gt;&lt;a href=&quot;#&quot;&gt;政策法规&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;发展规划&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;财政资金&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;公共资源&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#&quot;&gt;人事信息&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/nav&gt;&lt;main&gt;   &lt;article&gt;   &lt;h1&gt;欢迎来到湖南省政府网站&lt;/h1&gt;   &lt;p&gt;此网站旨在提供湖南省政府的相关信息。&lt;/p&gt;   &lt;p&gt;&lt;/p&gt;   &lt;figure&gt;<br>    &lt;img src=&quot;屏幕截图 2023-12-07 162816.png&quot; width=&quot;1000&quot; alt=&quot;Image 1&quot;&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;/figure&gt;   &lt;figure&gt;<br>    &lt;img src=&quot;2.png&quot; width=&quot;1000&quot; alt=&quot;Image 2&quot;&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;/figure&gt;   &lt;figure&gt;<br>    &lt;img src=&quot;3.png&quot; width=&quot;1000&quot; alt=&quot;Image 3&quot;&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;/figure&gt;   &lt;figure&gt;<br>    &lt;img src=&quot;4.png&quot; width=&quot;1000&quot; alt=&quot;Image 4&quot;&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;/figure&gt;&lt;/article&gt;&lt;article&gt;   &lt;h2&gt;相关链接&lt;/h2&gt;   <br>    &lt;ul&gt;   <br>    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;链接1&lt;/a&gt;&lt;/li&gt;<br>    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;链接2&lt;/a&gt;&lt;/li&gt;<br>    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;链接3&lt;/a&gt;&lt;/li&gt;<br>    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;链接4&lt;/a&gt;&lt;/li&gt;<br>    &lt;/ul&gt;<br>&lt;/article&gt;&lt;/main&gt;<br>&lt;footer&gt;&amp;copy; 2023 湖南省政府。保留所有权利。&lt;/footer&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;<br></code></pre></td></tr></table></figure>
+
+
+      </section>
+      <section class="extra">
+        
+          <ul class="copyright">
+  
+    <li><strong>本文作者：</strong>20231201</li>
+    <li><strong>本文链接：</strong><a href="http://example.com/2023/12/06/docker%E5%AE%89%E8%A3%85%E4%B8%8Ehtml5%E5%9F%BA%E7%A1%80/index.html" title="http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;12&#x2F;06&#x2F;docker%E5%AE%89%E8%A3%85%E4%B8%8Ehtml5%E5%9F%BA%E7%A1%80&#x2F;index.html">http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;12&#x2F;06&#x2F;docker%E5%AE%89%E8%A3%85%E4%B8%8Ehtml5%E5%9F%BA%E7%A1%80&#x2F;index.html</a></li>
+    <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
+  
+</ul>
+        
+        
+          <section class="donate">
+  <div id="qrcode-donate">
+    <img   class="lazyload" data-original="https://pic.izhaoo.com/alipay.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        
+        
+  <nav class="nav">
+    <a href="/2023/12/07/%E7%BD%91%E5%AE%89%E5%9F%BA%E7%A1%80%EF%BC%88%E5%9F%9F%E5%90%8D%EF%BC%8C%E7%AB%AF%E5%8F%A3%E7%AD%89%EF%BC%89vue%E5%9F%BA%E7%A1%80/"><i class="iconfont iconleft"></i>网安基础（网址解析，汇编语言发展等）vue基础</a>
+    <a href="/2023/12/04/%E7%BD%91%E5%AE%89%E5%9F%BA%E7%A1%80%EF%BC%88shell,ip%E7%AD%89%EF%BC%89python%E5%9F%BA%E7%A1%80/">网安基础知识（shell,ip,osi,vm联网,proxifer等）python基础<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E6%9C%BAdocker%E5%AE%89%E8%A3%85"><span class="toc-text">虚拟机docker安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#pip%E5%AE%89%E8%A3%85"><span class="toc-text">pip安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#bash%E8%84%9A%E6%9C%AC"><span class="toc-text">bash脚本</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ssh%E7%99%BB%E5%BD%95"><span class="toc-text">ssh登录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#html5%E5%9F%BA%E7%A1%80"><span class="toc-text">html5基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E5%85%83%E7%B4%A0"><span class="toc-text">基础元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%93%BE%E6%8E%A5"><span class="toc-text">链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#css"><span class="toc-text">css</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A8%E5%8D%95"><span class="toc-text">表单</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E7%B1%BB%E4%BC%BChttp-www-hunan-gov-cn-%E7%9A%84%E9%A1%B5%E9%9D%A2"><span class="toc-text">实现类似http:&#x2F;&#x2F;www.hunan.gov.cn&#x2F;的页面</span></a></li></ol></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"><a 
+        href="tencent://message/?Menu=yes&uin=894519210 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#12B7F5'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconQQ "></i>
+      </a><a 
+        href="javascript:; "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#09BB07'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconwechat-fill "></i>
+      </a><a 
+        href="https://www.instagram.com/izhaoo/ "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#DA2E76'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconinstagram "></i>
+      </a><a 
+        href="https://github.com/zhaoo "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#9f7be1'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  icongithub-fill "></i>
+      </a><a 
+        href="mailto:izhaoo@163.com "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color=#FF3B00" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconmail"></i>
+      </a></div>
+  
+    <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+  
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
+      </section>
+      <section class="extra">
+        
+          <ul class="copyright">
+  
+    <li><strong>本文作者：</strong>John Doe</li>
+    <li><strong>本文链接：</strong><a href="http://example.com/2024/01/18/html%E5%9F%BA%E7%A1%80/index.html" title="http:&#x2F;&#x2F;example.com&#x2F;2024&#x2F;01&#x2F;18&#x2F;html%E5%9F%BA%E7%A1%80&#x2F;index.html">http:&#x2F;&#x2F;example.com&#x2F;2024&#x2F;01&#x2F;18&#x2F;html%E5%9F%BA%E7%A1%80&#x2F;index.html</a></li>
+    <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
+  
+</ul>
+        
+        
+          <section class="donate">
+  <div id="qrcode-donate">
+    <img   class="lazyload" data-original="https://pic.izhaoo.com/alipay.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        
+        
+  <nav class="nav">
+    <a href="/2024/01/18/helloworld/"><i class="iconfont iconleft"></i></a>
+    <a href="/2024/01/18/linux%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E4%B8%8E%E5%91%BD%E4%BB%A4/"><i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#main"><span class="toc-text">docker安装与html5基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E6%9C%BAdocker%E5%AE%89%E8%A3%85"><span class="toc-text">虚拟机docker安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#pip%E5%AE%89%E8%A3%85"><span class="toc-text">pip安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#bash%E8%84%9A%E6%9C%AC"><span class="toc-text">bash脚本</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ssh%E7%99%BB%E5%BD%95"><span class="toc-text">ssh登录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#html5%E5%9F%BA%E7%A1%80"><span class="toc-text">html5基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E5%85%83%E7%B4%A0"><span class="toc-text">基础元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%93%BE%E6%8E%A5"><span class="toc-text">链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#css"><span class="toc-text">css</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A8%E5%8D%95"><span class="toc-text">表单</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E7%B1%BB%E4%BC%BChttp-www-hunan-gov-cn-%E7%9A%84%E9%A1%B5%E9%9D%A2"><span class="toc-text">实现类似http:&#x2F;&#x2F;www.hunan.gov.cn&#x2F;的页面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#main"><span class="toc-text">文章目录：</span></a></li></ol></li></ol></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"><a 
+        href="tencent://message/?Menu=yes&uin=894519210 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#12B7F5'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconQQ "></i>
+      </a><a 
+        href="javascript:; "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#09BB07'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconwechat-fill "></i>
+      </a><a 
+        href="https://www.instagram.com/izhaoo/ "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#DA2E76'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconinstagram "></i>
+      </a><a 
+        href="https://github.com/zhaoo "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#9f7be1'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  icongithub-fill "></i>
+      </a><a 
+        href="mailto:izhaoo@163.com "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color=#FF3B00" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconmail"></i>
+      </a></div>
+  
+    <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+  
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

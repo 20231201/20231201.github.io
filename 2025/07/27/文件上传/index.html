@@ -1,0 +1,449 @@
+
+
+<!DOCTYPE html>
+<html lang="en" color-mode=light>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> - Hexo</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+  
+  <meta name="description" content="本地JS绕过禁用JS或删除JS语句
+将上传文件的后缀名...">
+  <meta name="author" content="John Doe">
+  <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_1445822_p6ry5n7lrr.css">
+
+  
+
+  
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+    
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css" name="highlight-style" mode="light">
+
+      
+        
+        
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/solarized-dark.min.css" name="highlight-style" mode="dark">
+
+      
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      loading: {
+        gif: '/images/theme/loading.gif',
+        lottie: ''
+      },
+      lazyload: {
+        enable: true,
+        only_post: 'false',
+        loading: {
+          gif: '/images/theme/loading.gif',
+          lottie: ''
+        }
+      },
+      donate: {
+        enable: true,
+        alipay: 'https://pic.izhaoo.com/alipay.jpg',
+        wechat: 'https://pic.izhaoo.com/wechat.jpg'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        always_show: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: false
+      },
+      preview: {
+        background: {
+          default: '',
+          api: ''
+        },
+        motto: {
+          default: '我在开了灯的床头下，想问问自己的心啊。',
+          typing: true,
+          api: 'https://v2.jinrishici.com/one.json',
+          data_contents: '["data","content"]'
+        },
+      },
+      qrcode: {
+        enable: true,
+        type: 'url',
+        image: 'https://pic.izhaoo.com/weapp-code.jpg',
+      },
+      toc: {
+        enable: true
+      },
+      scrollbar: {
+        type: 'default'
+      },
+      notification: {
+        enable: false,
+        delay: 4500,
+        list: '',
+        page_white_list: '',
+        page_black_list: ''
+      },
+      search: {
+        enable: false,
+        path: ''
+      }
+    }
+  </script>
+
+  
+
+  
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="lock-screen">
+  <div class="loading" id="loading"></div>
+  
+    
+
+
+  
+  
+
+<nav class="menu">
+  <div class="menu-container">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content"><li class="menu-item">
+        <a href="/ " class="underline "> 首页</a>
+      </li><li class="menu-item">
+        <a href="/galleries/ " class="underline "> 摄影</a>
+      </li><li class="menu-item">
+        <a href="/archives/ " class="underline "> 归档</a>
+      </li><li class="menu-item">
+        <a href="/tags/ " class="underline "> 标签</a>
+      </li><li class="menu-item">
+        <a href="/categories/ " class="underline "> 分类</a>
+      </li><li class="menu-item">
+        <a href="/about/ " class="underline "> 关于</a>
+      </li></ul>
+    
+      <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+    
+  </div>
+</nav>
+  <main id="main">
+  <div class="article-wrap">
+    <div class="row container">
+      <div class="col-xl-3"></div>
+      <div class="col-xl-6"><article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title"></h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>July 27, 2025</span>
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>3501</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        
+        <h2 id="本地JS绕过"><a href="#本地JS绕过" class="headerlink" title="本地JS绕过"></a>本地JS绕过</h2><p>禁用JS或删除JS语句</p>
+<p>将上传文件的后缀名从 .php 改为 .jpg，然后通过 Burp 抓包将 .jpg 改回 .php</p>
+<h2 id="黑名单绕过"><a href="#黑名单绕过" class="headerlink" title="黑名单绕过"></a>黑名单绕过</h2><p>尝试使用不在黑名单中的后缀名</p>
+<h3 id="相似后缀名绕过"><a href="#相似后缀名绕过" class="headerlink" title="相似后缀名绕过"></a>相似后缀名绕过</h3><table>
+<thead>
+<tr>
+<th>语言</th>
+<th>等价扩展名</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>php</td>
+<td>phtml，php2，php3，php4，php5，phps</td>
+</tr>
+<tr>
+<td>aspx</td>
+<td>ashx，asmx，ascx</td>
+</tr>
+<tr>
+<td>asp</td>
+<td>asa，cer，cdx</td>
+</tr>
+<tr>
+<td>jsp</td>
+<td>jspx，jspf</td>
+</tr>
+</tbody></table>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3><h3 id="大小写绕过"><a href="#大小写绕过" class="headerlink" title="大小写绕过"></a>大小写绕过</h3><p>仅适用于windows<br>由于匹配时区分大小写，而解析时不区分，所以可以绕过黑名单<br>方法：抓包，改文件名，任意选择部分字符转换大小写<br>例：test.php —–&gt;test.Php</p>
+<h3 id="空格绕过"><a href="#空格绕过" class="headerlink" title="空格绕过"></a>空格绕过</h3><p>在文件名前面或者后面添加空格（主要是加在后面，因为一般过滤后缀名），此时过滤函数匹配不到，但是带有空格不影响解析</p>
+<p>Windows系统下，对于文件名中空格会被作为空处理，程序中的检测代码却不能自动删除空格，从而绕过黑名单。</p>
+<p>“test.php” —–&gt; “test.php ”</p>
+<h3 id="点绕过"><a href="#点绕过" class="headerlink" title="点绕过"></a>点绕过</h3><p>与空格绕过类似，在文件后缀名后添加点，如 shell.php.</p>
+<p>或者空格+点号绕过 如test.php . .</p>
+<p>适用于windows系统<br>Windows 系统下，文件后缀名最后一个点会被自动去除。<br>Linux 系统下，文件后缀名最后一个点不会被自动去除。</p>
+<h3 id="DATA绕过"><a href="#DATA绕过" class="headerlink" title="::$DATA绕过"></a>::$DATA绕过</h3><p>只适用于windows系统<br>Windows系统在保存test.php::$DATA一类的文件时会自动去除文件后的::$DATA字符串，保存的文件名为test.php<br>test.php ——-&gt; test.php::$data<br>注：访问时文件名后不加::$data</p>
+<h3 id="双写绕过"><a href="#双写绕过" class="headerlink" title="双写绕过"></a>双写绕过</h3><p>当过滤方式是删除指定字符串时可以考虑双写绕过，将文件后缀名中的关键字重复写入，如 pphphp</p>
+<p>程序中的str_ireplace函数会将黑名单中的后缀替换为空，但是只替换了一次，因此可以使用双写绕过此函数。</p>
+<p>防御措施:使用递归循环过滤，不使用一次过滤</p>
+<h3 id="htaccess文件绕过"><a href="#htaccess文件绕过" class="headerlink" title=".htaccess文件绕过"></a><strong>.htaccess文件绕过</strong></h3><p>htaccess 文件生效前提条件为：<br>mod_rewrite 模块开启<br>AllowOverride All</p>
+<p>中间件得是Apache，不支持nginx</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-comment">#文件内容：</span><br><span class="hljs-section">&lt;FilesMatch <span class="hljs-string">&quot;test.jpg&quot;</span>&gt;</span><br><span class="hljs-attribute">SetHandler</span> application/x-httpd-php<br><span class="hljs-section">&lt;/FilesMatch&gt;</span><br><span class="hljs-comment">#意思是 .htaccess文件可以将test.jpg文件当作php文件解析执行。</span><br></code></pre></td></tr></table></figure>
+
+<p>.htaccess是一个纯文本文件是Apache服务器中的一个配置文件，它负责相关目录下的网页配置。通过  htaccess文件，可以实现：网页301重定向、自定义404错误页面、改变文件扩展名、允许&#x2F;阻止特定的用户或者目录的访问、禁止目录列表、配置默认文档等功能IIS平台上不存在该文件，该文件默认开启，启用和关闭在 httpd.conf 文件中配置</p>
+<h3 id="user-ini文件绕过"><a href="#user-ini文件绕过" class="headerlink" title=".user.ini文件绕过"></a><strong>.user.ini文件绕过</strong></h3><p>.user.ini实际上就是一个可以由用户“自定义”的php.ini，我们能够自定义的设置是模式为“PHP_INI_PERDIR 、 PHP_INI_USER”的设置。</p>
+<p>能够利用.user.ini的条件：</p>
+<p>1.服务器脚本语言为PHP<br>2.服务器使用CGI&#x2F;FastCGI模式<br>3.上传目录下要有可执行的php文件</p>
+<p>方法：</p>
+<p>1.新建文件名为.user.ini的文件，并将内容写为：auto_prepend_file&#x3D;test.txt</p>
+<p>2.将.user.ini上传至服务器</p>
+<p>3.新建一个文件名为test.txt的文件，并将内容写为webshell脚本</p>
+<p>4.将test.txt上传至服务器</p>
+<p>5.再访问上传目录下的readme.php，即可将test.txt内的内容脚本正常执行。</p>
+<p>php.ini是php的一个全局配置文件，对整个web服务起作用<br>而.user.ini和.htaccess一样是目录的配置文件，.user.ini就是用户自定义的一个php.ini，可以利用这个文件来构造后门和隐藏后门。</p>
+<p>.htaccess的配置文件只能在Apache服务器中起作用<br>.user.ini使用范围很广，不仅限于 Apache 服务器，同样适用于 Nginx 服务器，只要服务器启用了 fastcgi 模式 (通常非线程安全模式使用的就是 fastcgi 模式)</p>
+<h2 id="白名单绕过"><a href="#白名单绕过" class="headerlink" title="白名单绕过"></a>白名单绕过</h2><h3 id="MIME验证绕过"><a href="#MIME验证绕过" class="headerlink" title="MIME验证绕过"></a>MIME验证绕过</h3><p>由于MIME类型可以手动修改欺骗，在过滤时若检查MIME（Content-Type）类型，可以考虑将上传文件的 Content-Type 从 application&#x2F;octet-stream 改为 image&#x2F;png</p>
+<p>常见MIME类型列表：<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Guides/MIME_types/Common_types">常见 MIME 类型列表 - HTTP | MDN (mozilla.org)</a></p>
+<h3 id="00截断"><a href="#00截断" class="headerlink" title="%00截断"></a>%00截断</h3><p>利用 %00 截断文件路径，如 shell.php%00.jpg</p>
+<p>test.php ——&gt; test.php%00.jpg</p>
+<p>条件是php版本&lt;5.3 ,php.ini配置文件中 magic_quotes_gpc 为 off</p>
+<p>原理：系统在对文件名读取的时候，如果遇到0x00就会认为读取已经结束，从而忽略后面的内容</p>
+<h3 id="文件头检测绕过"><a href="#文件头检测绕过" class="headerlink" title="文件头检测绕过"></a>文件头检测绕过</h3><p>在数据最前面添加图片的文件头以绕过检测</p>
+<p>后端使用getimagesize()函数来获取文件的MIME类型，此时检测的不是数据包中的content-type，而是图片的文件头</p>
+<p>常见的图片文件头如下：</p>
+<p>gif(GIF89a) : 47 49 46 38 39 61</p>
+<p>jpg、jpeg : FF D8 FF</p>
+<p>png : 89 50 4E 47 0D 0A</p>
+<h3 id="二次渲染绕过"><a href="#二次渲染绕过" class="headerlink" title="二次渲染绕过"></a>二次渲染绕过</h3><p>上传文件后，网站会对图片进行二次处理（格式，尺寸要求等），然后生成一个新图片保存在服务器中。</p>
+<p>因此我们可以将一个正常显示的图片上传到服务器，寻找图片被渲染之后与原始图片部分对比仍然相同的数据块部分，将webshell代码插在该部分，进行上传</p>
+<p>方法：</p>
+<ol>
+<li>准备图片马</li>
+<li>将原图片上传，下载渲染后的图片进行对比 ，可以利用工具找相同处，在相同的地方覆盖字符串，插入一句话木马，或者恶意指令</li>
+</ol>
+<h2 id="其他绕过"><a href="#其他绕过" class="headerlink" title="其他绕过"></a>其他绕过</h2><h3 id="条件竞争"><a href="#条件竞争" class="headerlink" title="条件竞争"></a>条件竞争</h3><p>在文件被删除前访问文件，利用时间差进行绕过</p>
+<p>文件上传后，服务器会首先保存文件然后重命名，最后删除源文件。在文件删除之前，如果线程过大可能导致服务器处理数据变慢，因此在文件上传成功后和删除文件之间存在一个短暂的时间差（因为需要执行检查文件和删除文件的操作），攻击者可以利用这个时间差完成竞争条件的上传漏洞攻击。</p>
+<p>方法：</p>
+<p>先上传一个shell脚本test.php,内容为生成一个新的webshell脚本shell.php</p>
+<p>test.php内容如下</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span><br>	<span class="hljs-title function_ invoke__">fputs</span>(<span class="hljs-title function_ invoke__">fopen</span>(<span class="hljs-string">&quot;../shell.php&quot;</span>, <span class="hljs-string">&quot;w&quot;</span>),<span class="hljs-string">&#x27;&lt;?php @eval($_POST[&#x27;</span>cmd<span class="hljs-string">&#x27;]); ?&gt;&#x27;</span>);<br><span class="hljs-meta">?&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>当test.php上传完成后，客户端立即访问test.php,这样就会在服务端当前目录下自动生成shell.php,这时攻击者就利用了时间差完成了webshell的上传</p>
+<h3 id="多文件上传"><a href="#多文件上传" class="headerlink" title="多文件上传"></a>多文件上传</h3><p>上传多个文件只检查第一份文件</p>
+<p>第一份上传合法正常文件，第二份上传木马</p>
+<h3 id="php其他标签绕过"><a href="#php其他标签绕过" class="headerlink" title="php其他标签绕过"></a>php其他标签绕过</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span> @<span class="hljs-keyword">eval</span>(<span class="hljs-variable">$_POST</span>[<span class="hljs-string">&#x27;cmd&#x27;</span>]); <span class="hljs-meta">?&gt;</span>            <span class="hljs-comment">//正常写法</span><br><span class="hljs-meta">&lt;?=</span>@<span class="hljs-keyword">eval</span>(<span class="hljs-variable">$_POST</span>[<span class="hljs-string">&#x27;cmd&#x27;</span>]); <span class="hljs-meta">?&gt;</span>                <span class="hljs-comment">//短标签，适合过滤php</span><br>&lt;% @<span class="hljs-keyword">eval</span>(<span class="hljs-variable">$_POST</span>[<span class="hljs-string">&#x27;cmd&#x27;</span>]); %&gt;                <span class="hljs-comment">//asp风格</span><br>&lt;script language=<span class="hljs-string">&#x27;php&#x27;</span>&gt;@<span class="hljs-keyword">eval</span>(<span class="hljs-variable">$_POST</span>[<span class="hljs-string">&#x27;cmd&#x27;</span>]);&lt;/script&gt;         <span class="hljs-comment">//&lt;script&gt;风格，适合过滤&lt;?</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="防护建议"><a href="#防护建议" class="headerlink" title="防护建议"></a>防护建议</h2><p>文件扩展名白名单校验：只允许特定类型的文件上传。</p>
+<p>文件内容校验：检查文件内容是否符合预期。</p>
+<p>上传文件重命名：避免使用用户提供的文件名。</p>
+<p>隐藏上传文件路径：防止直接访问上传文件</p>
+
+      </section>
+      <section class="extra">
+        
+          <ul class="copyright">
+  
+    <li><strong>本文作者：</strong>John Doe</li>
+    <li><strong>本文链接：</strong><a href="http://example.com/2025/07/27/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/index.html" title="http:&#x2F;&#x2F;example.com&#x2F;2025&#x2F;07&#x2F;27&#x2F;%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0&#x2F;index.html">http:&#x2F;&#x2F;example.com&#x2F;2025&#x2F;07&#x2F;27&#x2F;%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0&#x2F;index.html</a></li>
+    <li><strong>版权声明：</strong>本博客所有文章均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" title="BY-NC-SA" target="_blank" rel="noopener">BY-NC-SA</a> 许可协议，转载请注明出处！</li>
+  
+</ul>
+        
+        
+          <section class="donate">
+  <div id="qrcode-donate">
+    <img   class="lazyload" data-original="https://pic.izhaoo.com/alipay.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" >
+  </div>
+  <div class="icon">
+    <a href="javascript:;" id="alipay"><i class="iconfont iconalipay"></i></a>
+    <a href="javascript:;" id="wechat"><i class="iconfont iconwechat-fill"></i></a>
+  </div>
+</section>
+        
+        
+        
+  <nav class="nav">
+    <a></a>
+    <a href="/2024/04/25/%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90%E6%95%99%E7%A8%8B/"><i class="iconfont iconright"></i></a>
+  </nav>
+
+      </section>
+      
+    </section>
+  </div>
+</article></div>
+      <div class="col-xl-3">
+        
+          
+  <aside class="toc-wrap">
+    <h3 class="toc-title">文章目录：</h3>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0JS%E7%BB%95%E8%BF%87"><span class="toc-text">本地JS绕过</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%BB%91%E5%90%8D%E5%8D%95%E7%BB%95%E8%BF%87"><span class="toc-text">黑名单绕过</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B8%E4%BC%BC%E5%90%8E%E7%BC%80%E5%90%8D%E7%BB%95%E8%BF%87"><span class="toc-text">相似后缀名绕过</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-text"></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%A7%E5%B0%8F%E5%86%99%E7%BB%95%E8%BF%87"><span class="toc-text">大小写绕过</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A9%BA%E6%A0%BC%E7%BB%95%E8%BF%87"><span class="toc-text">空格绕过</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%82%B9%E7%BB%95%E8%BF%87"><span class="toc-text">点绕过</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DATA%E7%BB%95%E8%BF%87"><span class="toc-text">::$DATA绕过</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8C%E5%86%99%E7%BB%95%E8%BF%87"><span class="toc-text">双写绕过</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#htaccess%E6%96%87%E4%BB%B6%E7%BB%95%E8%BF%87"><span class="toc-text">.htaccess文件绕过</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#user-ini%E6%96%87%E4%BB%B6%E7%BB%95%E8%BF%87"><span class="toc-text">.user.ini文件绕过</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%99%BD%E5%90%8D%E5%8D%95%E7%BB%95%E8%BF%87"><span class="toc-text">白名单绕过</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#MIME%E9%AA%8C%E8%AF%81%E7%BB%95%E8%BF%87"><span class="toc-text">MIME验证绕过</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#00%E6%88%AA%E6%96%AD"><span class="toc-text">%00截断</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E5%A4%B4%E6%A3%80%E6%B5%8B%E7%BB%95%E8%BF%87"><span class="toc-text">文件头检测绕过</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E6%AC%A1%E6%B8%B2%E6%9F%93%E7%BB%95%E8%BF%87"><span class="toc-text">二次渲染绕过</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E7%BB%95%E8%BF%87"><span class="toc-text">其他绕过</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6%E7%AB%9E%E4%BA%89"><span class="toc-text">条件竞争</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0"><span class="toc-text">多文件上传</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#php%E5%85%B6%E4%BB%96%E6%A0%87%E7%AD%BE%E7%BB%95%E8%BF%87"><span class="toc-text">php其他标签绕过</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%B2%E6%8A%A4%E5%BB%BA%E8%AE%AE"><span class="toc-text">防护建议</span></a></li></ol>
+  </aside>
+
+        
+      </div>
+    </div>
+  </div>
+</main>
+  
+
+<footer class="footer">
+  <div class="footer-social"><a 
+        href="tencent://message/?Menu=yes&uin=894519210 "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#12B7F5'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconQQ "></i>
+      </a><a 
+        href="javascript:; "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#09BB07'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconwechat-fill "></i>
+      </a><a 
+        href="https://www.instagram.com/izhaoo/ "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#DA2E76'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconinstagram "></i>
+      </a><a 
+        href="https://github.com/zhaoo "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color= '#9f7be1'" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  icongithub-fill "></i>
+      </a><a 
+        href="mailto:izhaoo@163.com "
+        target="_blank"
+        class="footer-social-item"
+        onMouseOver="this.style.color=#FF3B00" 
+        onMouseOut="this.style.color='#33333D'">
+          <i class="iconfont  iconmail"></i>
+      </a></div>
+  
+    <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+  
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+  
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+  
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+  
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+
+
+
+
+  <script>
+    (function () {
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
